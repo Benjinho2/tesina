@@ -11,6 +11,6 @@
 <body>
     <h1>ABOT</h1>
     <a href="autenticacion/login">login</a>
-    <a href="autenticacion/login">register</a>
+    <a href="autenticacion/register">register</a>
 </body>
 </html>
