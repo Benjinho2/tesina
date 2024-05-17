@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de ajustar el path según sea necesario -->
 </head>
 <body>
     <header>
