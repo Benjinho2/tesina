@@ -1,0 +1,809 @@
+CRITICAL - 2024-05-21 11:44:05 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:45:05 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:45:06 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:45:06 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:45:06 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:46:36 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:46:37 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:46:37 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:46:37 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:46:37 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:00 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:00 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:00 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:01 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:35 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:35 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:35 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:35 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:36 --> ErrorException: include(../header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:58 --> ErrorException: include(header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:58 --> ErrorException: include(header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:47:59 --> ErrorException: include(header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:07 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:08 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:08 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:08 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:36 --> ErrorException: include(C:/xampp/htdocs/common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:/xampp/htdocs/common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:36 --> ErrorException: include(C:/xampp/htdocs/common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:/xampp/htdocs/common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:52 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:53 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:53 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:53 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:48:53 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:51:49 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:51:49 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:07 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:08 --> ErrorException: include(common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:38 --> ErrorException: include(../common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:39 --> ErrorException: include(../common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:39 --> ErrorException: include(../common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:52:39 --> ErrorException: include(../common/header.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 8.
+ 1 APPPATH\Views\autenticacion\login.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../common/header.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 8)
+ 2 APPPATH\Views\autenticacion\login.php(8): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:14 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:15 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:15 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:15 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:15 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:16 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:16 --> ErrorException: include(footer.php): Failed to open stream: No such file or directory
+[Method: GET, Route: autenticacion/login]
+in APPPATH\Views\autenticacion\login.php on line 12.
+ 1 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(footer.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php', 12)
+ 2 APPPATH\Views\autenticacion\login.php(12): include()
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 6 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 11:54:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "footer/header.php"
+[Method: GET, Route: autenticacion/login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('footer/header.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('footer/header', null, true)
+ 3 APPPATH\Views\autenticacion\login.php(12): CodeIgniter\View\View->include('footer/header')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\tesina\\app\\Views\\autenticacion\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/login', [], true)
+ 7 APPPATH\Controllers\CAutenticacion.php(9): view('autenticacion/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:05:29 --> Error: Call to undefined function set_value()
+[Method: GET, Route: autenticacion/register]
+in APPPATH\Views\autenticacion\register.php on line 12.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('autenticacion/register', [], true)
+ 4 APPPATH\Controllers\CAutenticacion.php(14): view('autenticacion/register')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CAutenticacion->register()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CAutenticacion))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:26 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:27 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:27 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:27 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:27 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-21 12:40:28 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<"
+[Method: GET, Route: autenticacion/%3C]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('autenticacion/<')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('autenticacion/<')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

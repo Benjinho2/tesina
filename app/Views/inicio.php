@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-<?php include 'header.php'; ?>
+<?php include 'common/header.php'; ?>
+
     <h1>ABOT</h1>
     <a href="autenticacion/login">login</a>
     <a href="autenticacion/register">register</a>
-<?php include 'footer.php'; ?>
+<?php include 'common/footer.php'; ?>
 </body>
 </html>

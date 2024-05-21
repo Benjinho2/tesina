@@ -9,7 +9,7 @@
         <h1>Bienvenido a Mi Sitio Web</h1>
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="inicio.php">Inicio</a></li>
                 <li><a href="about.php">Acerca de</a></li>
                 <li><a href="contact.php">Contacto</a></li>
             </ul>
