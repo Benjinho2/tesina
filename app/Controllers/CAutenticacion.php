@@ -71,6 +71,48 @@ class CAutenticacion extends BaseController
 
     public function logueo()
     {
+        $validacion = $this->validate([
+            'email' => [
+                'rules' => 'required|valid_email|is_not_unique[usuarios.email]',
+                'errors' => [
+                    'required' => 'Se requiere Correo electrónico',
+                    'valid_email' => 'Introduzca una dirección de Correo Electrónico válida',
+                    'is_not_unique' => 'Este Correo Electrónico no está registrado en nuestro servicio.'
+                ]
+            ],
+            'contraseña' => [
+                'rules' => 'required|min_length[5]|max_length[12]',
+                'errors' => [
+                    'required' => 'Se requiere Contraseña',
+                    'min_length' => 'La Contraseña debe tener al menos 5 caracteres de longitud',
+                    'max_length' => 'La Contraseña no debe tener más de 12 caracteres de longitud'
+                ]
+            ]
+        ]);
 
+        if (!$validacion) 
+        {
+            return view('autenticacion/login', ['validacion' => $this->validator]);
+        } else {
+            $email = $this->request->getPost('email');
+            $contraseña = $this->request->getPost('contraseña');
+            $usuarioModel = new \App\Models\UsuarioModel();
+            $user_info = $usuarioModel->where('email', $email)->first();
+            
+            if (!$user_info) {
+                return redirect()->to('/autenticacion/login');
+            }
+            
+            $verificar_contraseña = password_verify($contraseña, $user_info['contraseña']);
+            
+            if (!$verificar_contraseña) {
+                session()->setFlashdata('fail', 'Contraseña Incorrecta');
+                return redirect()->to('/autenticacion/login');
+            } else {
+                // Aquí podrías configurar la sesión del usuario si todo es correcto
+                // session()->set('user_id', $user_info['id']);
+                return redirect()->to('/');
+            }
+        }
     }
 }
