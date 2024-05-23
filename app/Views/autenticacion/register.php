@@ -10,20 +10,35 @@
 <body>
     <div class="container">
         <h2>Register</h2>
-        <form action="#" method="post">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" value="" placeholder="Nombre Completo">
-            
-            <label for="email">Correo electrónico</label>
-            <input type="email" name="email" id="email" placeholder="Correo electrónico">
-            
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
-            
-            <label for="confirmar_contraseña">Confirmar Contraseña</label>
-            <input type="password" id="confirmar_contraseña" name="confirmar_contraseña" placeholder="Confirmar Contraseña">
-            
-            <input type="submit" value="Register">
+        <form action="autenticacion/registro" method="post">
+            <?php if(!empty(session()->getFlashdata('success'))) : ?>
+                  <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                  <?php endif ?>
+
+                  <div class="form-group">
+                    <label for="">Nombre completo</label>
+                    <input type="text" class="form-control my-1 py-2" name="nombre_completo" placeholder="Ingrese su Nombre Completo">
+                    <span class="text-danger"><?= isset($validacion) ? $validacion->getError('nombre_completo') : '' ?></span>      
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="">Correo electrónico</label>
+                    <input type="text" class="form-control my-1 py-2" name="email" placeholder="Ingrese un Correo">
+                    <span class="text-danger"><?= isset($validacion) ? $validacion->getError('email') : '' ?></span>      
+                  </div>
+
+                  <div class="form-group">
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control my-1 py-2" name="contraseña" placeholder="Ingrese una Contraseña">
+                    <span class="text-danger"><?= isset($validacion) ? $validacion->getError('contraseña') : '' ?></span>      
+                  </div>
+
+                  <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit" class="form-control ">Register</button>
+                  </div>
+                  <div class="container-panel">
+                <a href="login">Ya tengo una cuenta</a>
+            </div>
         </form>
     </div>
 </body>

@@ -8,11 +8,14 @@
     <?= $this->include('common/header') ?>
 
     <form action="#" method="post">
-        <label for="nombre">Correo electrónico</label><br>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el Email"><br>
-        <label for="contraseña">Contraseña</label><br>
-        <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese la Contraseña"><br><br>
+        <label for="nombre">Correo electrónico</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Email">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su Contraseña">
+        
         <input type="submit" value="Login">
+
+        <a href="register">No tengo una cuenta</a>
     </form>
 
     <?= $this->include('common/footer') ?>
