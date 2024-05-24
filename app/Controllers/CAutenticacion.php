@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+
 class CAutenticacion extends BaseController
 {
     public function login()
@@ -97,20 +98,20 @@ class CAutenticacion extends BaseController
             $email = $this->request->getPost('email');
             $contraseña = $this->request->getPost('contraseña');
             $usuarioModel = new \App\Models\UsuarioModel();
-            $user_info = $usuarioModel->where('email', $email)->first();
+            $informacion_usuario = $usuarioModel->where('email', $email)->first();
             
-            if (!$user_info) {
+            if (!$informacion_usuario) {
                 return redirect()->to('/autenticacion/login');
             }
             
-            $verificar_contraseña = password_verify($contraseña, $user_info['contraseña']);
+            $verificar_contraseña = password_verify($contraseña, $informacion_usuario['contraseña']);
             
             if (!$verificar_contraseña) {
                 session()->setFlashdata('fail', 'Contraseña Incorrecta');
                 return redirect()->to('/autenticacion/login');
             } else {
                 // Aquí podrías configurar la sesión del usuario si todo es correcto
-                // session()->set('user_id', $user_info['id']);
+                session()->set('user_id', $informacion_usuario['id_usuario']);
                 return redirect()->to('/');
             }
         }
