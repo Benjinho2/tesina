@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('public/estilo/header.css'); ?>">
+    <h4 class="logo"><img src="imagenes/planta.png" alt=""></h4>
+    <p>AquaBot</p>
     <title>Header</title>  
 </head>
 
@@ -70,6 +71,22 @@
         margin-left: auto;
     }
 
+    .logo {
+    display: flex;
+    align-items: center;
+    }
+
+    .logo img {
+    height: 50px; 
+
+    }
+        
+    p{
+        font-size: 50px;
+        margin-top: -74px;
+        margin-left: 70px;
+        font-family: Marcellus;
+    }
 
 </style>
     
