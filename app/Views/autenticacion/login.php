@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="estilo/autenticacion.css">
     <title>Login</title>
 </head>
 <body>
-<?= $this->include('common/header') ?>
+<?php include 'common/header.php'; ?>
 
 <div class="container">
     <h2>Login</h2>
