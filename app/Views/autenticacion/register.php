@@ -20,19 +20,19 @@
 
       <div class="form-group">
         <label for="nombre_completo">Nombre completo</label>
-        <input type="text" class="form-control my-1 py-2" name="nombre_completo" placeholder="Ingrese su Nombre Completo">
+        <input type="text" class="form-control my-1 py-2" name="nombre_completo" placeholder="Ingrese su nombre completo">
         <span class="text-danger"><?= isset($validacion) ? $validacion->getError('nombre_completo') : '' ?></span>      
       </div>
 
       <div class="form-group">
         <label for="email">Correo electrónico</label>
-        <input type="email" class="form-control my-1 py-2" name="email" placeholder="Ingrese un Correo">
+        <input type="email" class="form-control my-1 py-2" name="email" placeholder="Ingrese un correo ejemplo@gmail.com">
         <span class="text-danger"><?= isset($validacion) ? $validacion->getError('email') : '' ?></span>      
       </div>
 
       <div class="form-group">
         <label for="contraseña">Contraseña</label>
-        <input type="password" class="form-control my-1 py-2" name="contraseña" placeholder="Ingrese una Contraseña">
+        <input type="password" class="form-control my-1 py-2" name="contraseña" placeholder="Ingrese una contraseña">
         <span class="text-danger"><?= isset($validacion) ? $validacion->getError('contraseña') : '' ?></span>      
       </div>
 

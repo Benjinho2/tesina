@@ -19,14 +19,13 @@ class CAdmin extends BaseController
 
     public function index()
     {
-        $userData = session()->get('userData');
+        $DatosUsuario = session()->get('userData');
 
-        $data = [
-            'title' => 'Panel de Administrador',
-            'userAdmin' => $userData
+        $array = [
+            'userAdmin' => $DatosUsuario
         ];
 
-        return view('admin/index', $data);
+        return view('admin/index', $array);
     }
     
 }   

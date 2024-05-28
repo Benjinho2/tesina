@@ -10,17 +10,25 @@
 <body>
     <?= $this->include('common/header') ?>
 
-        <div class="container-admin">
-        <?php if (!empty($userAdmin['nombre_completo'])): ?>
-            <p>Nombre:</strong> <?= $userAdmin['nombre_completo']; ?></p>
-        <?php endif; ?>
-        <?php if (!empty($userAdmin['email'])): ?>
-            <p>Email:</strong> <?= $userAdmin['email']; ?></p>
-        <?php endif; ?>
-        <a href="<?= site_url('loggedOut'); ?>">Cerrar sesión</a>
+    <div class="container-admin">
+        <h2>Admin</h2>
+        <div class="info-admin">
+            <div>
+                <label>Nombre completo</label>
+                <span><?= ($userAdmin['nombre_completo'])?></span>
+            </div>
+            <div>
+                <label>Email</label>
+                <span><?= ($userAdmin['email'])?></span>
+            </div>
+            <div>
+                <label>Cerrar sesión</label>
+                <a href="<?= site_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>
+            </div>
+        </div>
     </div>
     
-    <div class="container-hover">
+    <div class="container-nuevoadmin">
         <a href="#">Nuevo Admin</a>
         <p>Esta página se ha creado para facilitar la creación de un nuevo administrador.</p>
     </div>

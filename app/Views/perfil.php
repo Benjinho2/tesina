@@ -15,19 +15,20 @@
         <div class="perfil-info">
             <div>
                 <label>Nombre completo</label>
-                <span><?= !empty($userPerfil['nombre_completo']) ? ucfirst($userPerfil['nombre_completo']) : ''; ?></span>
+                <span><?= ($userPerfil['nombre_completo'])?></span>
             </div>
             <div>
                 <label>Email</label>
-                <span><?= !empty($userPerfil['email']) ? $userPerfil['email'] : ''; ?></span>
+                <span><?= ($userPerfil['email'])?></span>
             </div>
             <div>
                 <label>Cerrar sesión</label>
-                <a href="<?= site_url('loggedOut'); ?>">Cerrar sesión</a>
+                <a href="<?= site_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>
             </div>
         </div>
     </div>
-    <?= $this->include('common/footer') ?>
+
+<?= $this->include('common/footer') ?>
 
 </body>
 

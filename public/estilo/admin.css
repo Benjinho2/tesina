@@ -14,20 +14,32 @@ body {
     border-radius: 10px;
 }
 
-.container-admin p {
-    margin-bottom: 10px;
+.info-admin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
-.container-admin a {
+.info-admin div {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.info-admin label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.info-admin span {
+    font-size: 16px;
+    color: #333;
+}
+.info-admin a {
     text-decoration: none;
     color: #337ab7;
 }
-
-.container-admin a:hover {
+.info-admin a:hover {
     text-decoration: underline;
 }
-
-.container-hover {
+.container-nuevoadmin {
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
@@ -38,18 +50,19 @@ body {
     margin-top: 20px;
 }
 
-.container-hover a {
+.container-nuevoadmin a {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
     color: #337ab7;
 }
 
-.container-hover a:hover {
+.container-nuevoadmin a:hover {
     text-decoration: underline;
 }
 
-.container-hover p {
+.container-nuevoadmin p {
     margin-bottom: 20px;
     color: #666;
 }
+

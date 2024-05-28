@@ -22,21 +22,20 @@ class CAutenticacion extends BaseController
             'nombre_completo' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Su Nombre completo es requerido'
+                    'required' => 'Nombre completo es requerido'
                 ]
             ],
             'email' => [
                 'rules' => 'required|valid_email|is_unique[usuarios.email]',
                 'errors' => [
                     'required' => 'Correo electrónico es requerido',
-                    'valid_email' => 'Debe ingresar un correo electrónico válido, por ejemplo:@gmail.com',
-                    'is_unique' => 'Correo electrónico ya está registrado'
+                    'is_unique' => 'El Correo electrónico ya está registrado'
                 ]
             ],
             'contraseña' => [
                 'rules' => 'required|min_length[5]|max_length[12]',
                 'errors' => [
-                    'required' => 'Se requiere Contraseña',
+                    'required' => 'Contraseña es requerida',
                     'min_length' => 'La Contraseña debe tener al menos 5 caracteres de longitud.',
                     'max_length' => 'La Contraseña no debe tener más de 12 caracteres de longitud'
                 ]
@@ -73,7 +72,7 @@ class CAutenticacion extends BaseController
             'email' => [
                 'rules' => 'required|valid_email|is_not_unique[usuarios.email]',
                 'errors' => [
-                    'required' => 'Se requiere Correo electrónico',
+                    'required' => 'Se requiere correo electrónico',
                     'valid_email' => 'Introduzca una dirección de Correo Electrónico válida',
                     'is_not_unique' => 'Este Correo Electrónico no está registrado en nuestro servicio.'
                 ]
@@ -81,7 +80,7 @@ class CAutenticacion extends BaseController
             'contraseña' => [
                 'rules' => 'required|min_length[5]|max_length[12]',
                 'errors' => [
-                    'required' => 'Se requiere Contraseña',
+                    'required' => 'Se requiere contraseña',
                     'min_length' => 'La Contraseña debe tener al menos 5 caracteres de longitud',
                     'max_length' => 'La Contraseña no debe tener más de 12 caracteres de longitud'
                 ]
@@ -132,9 +131,9 @@ class CAutenticacion extends BaseController
         }
     }
     
-    public function loggedOut()
+    public function cerrarSesion()
     {
         session()->destroy();
-        return redirect()->to('autenticacion/login');
+        return redirect()->to('/?sesión=cerrada');
     }
 }
