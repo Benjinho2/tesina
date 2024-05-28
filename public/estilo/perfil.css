@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.perfil-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.perfil-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.perfil-info div {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.perfil-info label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.perfil-info span {
+    font-size: 16px;
+    color: #333;
+}
+.perfil-info a {
+    text-decoration: none;
+    color: #337ab7;
+}
+.perfil-info a:hover {
+    text-decoration: underline;
+}

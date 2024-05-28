@@ -1,0 +1,74 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px; /* Adding border-radius to the header */
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo p {
+    margin-left: 10px; 
+    font-family: Marcellus, serif; /* Specify font family */
+    font-size: 20px;
+    color: #333;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 5px; /* Adding border-radius to the logo image */
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px; /* Adding border-radius to the nav links */
+}
+
+nav a:hover {
+
+    background-color: #e0e0e0; /* Adding background color on hover */
+}
+

@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url('estilo/login.css'); ?>">   
     <title>Login</title>
 </head>
 <body>
 
 <?= $this->include('common/header') ?>
 
-<div class="container">
+<div class="container-login">
     <h2>Login</h2>
     <hr>
     <form action="<?= base_url('autenticacion/logueo'); ?>" method="post">
@@ -39,79 +40,5 @@
 
 <?= $this->include('common/footer') ?>
 
-<style>
-    form {
-    margin-top: 20px;
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-group input:focus {
-    border-color: #007bff;
-}
-
-.btn-block {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-block:hover {
-    background-color: #0056b3;
-}
-
-.alert {
-    padding: 10px;
-    color: #fff;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-.alert-danger {
-    background-color: #ff4f4f;
-}
-
-.alert-success {
-    background-color: #4caf50;
-}
-
-.text-danger {
-    color: #ff4f4f;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-</style>
 </body>
 </html>

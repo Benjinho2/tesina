@@ -8,6 +8,6 @@ use CodeIgniter\Model;
     {
         protected $table = 'usuarios';
         protected $primaryKey = 'id_usuario';
-        protected $allowedFields = ['nombre_completo', 'email', 'contraseña'];
+        protected $allowedFields = ['nombre_completo', 'email', 'contraseña', 'rol'];
     }
 ?>
