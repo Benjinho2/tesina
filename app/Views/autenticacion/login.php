@@ -20,14 +20,12 @@
 
         <div class="form-group">
             <label for="email">Correo electrónico</label>
-            <input type="text" class="form-control" name="email" placeholder="Ingrese su correo">
-            <span class="text-danger"><?= isset($validacion) ? $validacion->getError('email') : '' ?></span>
+            <input type="text" class="form-control" name="email" placeholder="Ingrese su correo" required>
         </div>
 
         <div class="form-group">
             <label for="contraseña">Contraseña</label>
-            <input type="password" class="form-control" name="contraseña" placeholder="Ingrese una contraseña">
-            <span class="text-danger"><?= isset($validacion) ? $validacion->getError('contraseña') : '' ?></span>
+            <input type="password" class="form-control" name="contraseña" placeholder="Ingrese una contraseña" required>
         </div>
 
         <div class="form-group">

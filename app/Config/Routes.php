@@ -16,8 +16,3 @@ $routes->get('autenticacion/register', 'CAutenticacion::register');
 $routes->post('autenticacion/registro', 'CAutenticacion::registro');
 $routes->post('autenticacion/logueo', 'CAutenticacion::logueo');
 $routes->get('cerrarSesion', 'CAutenticacion::cerrarSesion');
-
-// Admin
-$routes->get('admin/index', 'CAdmin::index');
-// $routes->post('admin/crearadmin', 'CAdmin::crearAdmin');
-// $routes->get('admin/nuevoadmin', 'CAdmin::nuevoAdmin');

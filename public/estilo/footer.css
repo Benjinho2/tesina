@@ -8,9 +8,11 @@ body {
 .footer {
     background-color: #1f1e1e;
     color: white;
-    padding: 20px 0;
-    position: relative;
-    text-align: left;
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    padding: 20px; 
 }
 
 .footer::before {
@@ -67,7 +69,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
