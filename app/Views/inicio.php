@@ -3,60 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('estilo/inicio.css'); ?>">   
+   
     <title>Inicio</title>
 </head>
 
 
 <body>
-
+  
   <?= $this->include('common/header') ?>
-
+  <link rel="stylesheet" href="estilo/inicio.css">   
     <div class="hero">
-      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi odio quia earum voluptates! Error ratione explicabo dolor quidem alias delectus quia ea, nisi non, deserunt optio. Neque, reprehenderit maiores.</h1>
-      <p>Serving our customers locally, regionally, and nationally</p>
-      <a href="#"><button class="button">Contacto</button></a>
+      <div class="letras">
+        <h1>Bienvenido a nuestro sistema de riego automático</h1>
+        <br>
+        <p><strong>Riega Inteligentemente, Crece Saludablemente</strong></p>
+        <br>
+        <p>
+            Este sistema está diseñado para facilitar y optimizar el riego de tus cultivos o jardín.
+            <br>
+             Utilizando la más avanzada tecnología, nuestro sistema puede ajustar el riego según 
+             <br>
+             las necesidades específicas de cada planta y las condiciones climáticas.
+        </p>
+        <p>
+            En las próximas secciones, podrás encontrar más información sobre cómo funciona el sistema,
+            <br>
+             cómo configurarlo y consejos para obtener el máximo beneficio de su uso.
+        </p>
+        
+        <br>
+        <ul>
+            <li><a href="#">Cómo funciona</a></li>
+            <br>
+            <li><a href="#">Configuración</a></li>
+            <br>
+            <li><a href="#">Consejos y trucos</a></li>
+            
+        </ul>
+        </div>
+      <style>
+      .hero {
+      background-image: url("imagenes/inicio.jpg");
+      }
+      </style>
     </div>
 
+    
+
   <?= $this->include('common/footer') ?>
-
-  <style>
-  body{
-    background-color: #fff;
-  }
-  .hero {
-    background-image: url("imagenes/inicio.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-      
-  }
-    
-  .hero h1 {
-    font-size: 3em;
-  }
-    
-  .hero p {
-    font-size: 1.5em;
-  }
-    
-  .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-</style>
-
-
 </body>
 
 </html>

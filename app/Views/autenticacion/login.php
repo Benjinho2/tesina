@@ -10,6 +10,8 @@
 
 <?= $this->include('common/header') ?>
 
+<body>
+
 <div class="container-login">
     <h2>Login</h2>
     <hr>
@@ -34,8 +36,16 @@
 
         <a href="<?= base_url('autenticacion/register') ?>">No tengo una cuenta</a>
     </form>
+    <style>
+      body {
+        background-image: url("<?php echo base_url('imagenes/inicio.jpg'); ?>");
+      }
+      </style>
+
 </div>
 
+    </body>
+ 
 <?= $this->include('common/footer') ?>
 
 </body>
