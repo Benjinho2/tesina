@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Inicio</title>
+    <link rel="stylesheet" href="<?= base_url('estilo/inicio.css'); ?>">   
+    <title>Login</title>
 </head>
-
-
 <body>
-  
-  <?= $this->include('common/header') ?>
+
+<?= $this->include('common/header') ?>
+
   <link rel="stylesheet" href="estilo/inicio.css">   
     <div class="hero">
       <div class="letras">
-        <h1>Bienvenido a nuestro sistema de riego automático</h1>
+      <h1>Bienvenido a nuestro sistema de riego automático</h1>
         <br>
         <p><strong>Riega Inteligentemente, Crece Saludablemente</strong></p>
         <br>
@@ -34,23 +33,28 @@
         <br>
         <ul>
             <li><a href="#">Cómo funciona</a></li>
-            <br>
+         
             <li><a href="#">Configuración</a></li>
-            <br>
+      
             <li><a href="#">Consejos y trucos</a></li>
-            
         </ul>
+
         </div>
+
       <style>
+
       .hero {
+
       background-image: url("imagenes/inicio.jpg");
+
       }
+
       </style>
+
     </div>
 
-    
 
   <?= $this->include('common/footer') ?>
-</body>
 
+</body>
 </html>
