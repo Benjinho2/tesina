@@ -2,12 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position:static
+    position: static;
+    height: 100px;
 }
-
 
 .container-register {
     width: 100%;
@@ -16,7 +13,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-height: 60vh;
+    min-height: 54vh;
 }
 
 h2 {
@@ -79,6 +76,7 @@ button.btn-primary:hover {
     color: #155724;
     border: 1px solid #c3e6cb;
 }
+
 .alert-danger {
     background-color: #f1b5b5;
     color: #000000;
@@ -95,6 +93,7 @@ form a {
     margin-top: 10px;
     color: #007bff;
     text-decoration: none;
+    text-align: left; 
 }
 
 form a:hover {

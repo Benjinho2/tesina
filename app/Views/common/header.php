@@ -25,6 +25,7 @@
                     <?php endif; ?>
                 <?php else: ?>
                     <li><a href="http://localhost/tesina/public/autenticacion/login">Login</a></li>
+                    <li><a href="http://localhost/tesina/public/autenticacion/register">Register</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

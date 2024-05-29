@@ -28,6 +28,11 @@
         </div>
     </div>
 
+    <style>
+      body {
+        background-image: url("<?php echo base_url('imagenes/inicio.jpg'); ?>");
+      }
+      </style>
 <?= $this->include('common/footer') ?>
 
 </body>

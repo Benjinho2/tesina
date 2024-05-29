@@ -43,15 +43,13 @@
         </div>
         <a href="<?= base_url('autenticacion/login') ?>">Ya tengo una cuenta</a>
     </form>
+</div>
 
-    <style>
+<style>
       body {
         background-image: url("<?php echo base_url('imagenes/inicio.jpg'); ?>");
       }
       </style>
-
-</div>
-
 </body>
 
 <?= $this->include('common/footer') ?>
