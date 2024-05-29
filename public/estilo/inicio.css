@@ -5,40 +5,41 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position:static
+  position: static;
 }
 
 .hero {
-  background-size: cover; 
-  background-position: center; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  min-height: 80vh; 
+  min-height: 80vh;
   padding: 20px;
 }
 
-
 .letras {
-  width: 100%;
-  max-width: 80vh;
-  margin: 60px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.202); /* Fondo semitransparente */
+  padding: 25px; /* Ajuste de padding para dar más espacio interno */
   border-radius: 8px;
-  max-height: 54vh;
+  max-width: 560px; /* Ajuste para el ancho máximo de la caja de texto */
+  margin-left: 1%; /* Margen izquierdo para separar del borde */
 }
 
 .hero h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5em; 
-  color: #000000; 
+  font-size: 2em;
+  color: #000000;
+  margin-bottom: 25px; /* Margen inferior para separar del párrafo */
 }
 
 .hero p {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em; 
-  color: #000000; 
+  font-size: 1em;
+  color: #000000;
+  margin-bottom: 30px; /* Margen inferior para separar de la lista */
 }
-
 
 .hero ul {
   list-style: none;
@@ -47,16 +48,71 @@ body {
 }
 
 .hero ul li {
-  display: inline-block; 
-  margin-right: 10px; 
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .hero ul li a {
   background-color: hsl(108, 21%, 49%);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+}
+
+.hero ul li a:hover {
+  background-color: #8cc63f; /* Color de hover */
+}
+
+@media (max-width: 1200px) {
+  .letras {
+    max-width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    padding: 20px;
+  }
+
+  .letras {
+    margin: 10px;
+    padding: 5px;
+    max-width: 90vw;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .letras {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .hero ul li a {
+    padding: 8px 16px; /* Ajustar padding en móviles */
+  }
 }

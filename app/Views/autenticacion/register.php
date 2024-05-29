@@ -39,12 +39,6 @@
         </div>
 
         <div class="form-group">
-            <label for="concontraseña">Confirmar Contraseña</label>
-            <input type="password" class="form-control my-1 py-2" name="concontraseña" placeholder="Ingrese la contraseña" required>
-        </div>
-
-
-        <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit" class="form-control">Register</button>
         </div>
         <a href="<?= base_url('autenticacion/login') ?>">Ya tengo una cuenta</a>
