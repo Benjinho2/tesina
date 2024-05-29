@@ -38,7 +38,7 @@
     </form>
     <style>
       body {
-        background-image: url("<?php echo base_url('imagenes/inicio.jpg'); ?>");
+        background-image: url("<?php echo base_url('imagenes/planta3.jpg'); ?>");
       }
       </style>
 

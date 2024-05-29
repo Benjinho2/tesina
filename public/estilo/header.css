@@ -52,3 +52,38 @@ nav a {
     border-radius: 5px;
 }
 
+
+@media (max-width: 480px) {
+    .container {
+       flex-direction: column;
+       align-items: center;
+     }
+   
+    .logo {
+       margin-bottom: 10px;
+     }
+   
+    .logo img {
+       height: 30px;
+     }
+   
+    .logo p {
+       font-size: 20px;
+     }
+   
+     nav {
+       flex-direction: column;
+     }
+   
+     nav ul {
+       flex-direction: column;
+     }
+   
+     nav li {
+       margin-left: 0;
+     }
+   
+     nav a {
+       padding: 10px;
+     }
+   }

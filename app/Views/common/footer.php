@@ -18,8 +18,8 @@
                 <ul>
                     <li><a href="#">Sobre Nosotros</a></li>
                     <li><a href="#">Contacto</a></li>
-                    <li><a href="http://localhost/tesina/public/autenticacion/login">Login</a></li>
-                    <li><a href="http://localhost/tesina/public/autenticacion/register">Register</a></li>
+                    <li><a href="#">Cómo funciona</a></li>
+                    <li><a href="#">Configuración</a></li>
                 </ul>
             </div>
             <div class="footer-section">

@@ -20,13 +20,10 @@
                 <li><a href="#">Contacto</a></li>
                 <div class="nombre">
                 <?php if (session()->has('userData')): ?>
-                        <a href="<?= site_url('perfil'); ?>">
-                            <?= session()->get('userData')['nombre_completo']; ?>
-                        </a>
+                    <a href="http://localhost/tesina/public/perfil"><?= session('userData')['nombre_completo']; ?></a>
                 <?php else: ?>
                 </div>
                     <li><a href="<?= site_url('autenticacion/login'); ?>">Login</a></li>
-                    <li><a href="<?= site_url('autenticacion/register'); ?>">Register</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

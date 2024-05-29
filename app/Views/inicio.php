@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/inicio.css'); ?>">   
+    <link rel="shortcut icon" href="<?= base_url('imagenes/logo-chico.ico'); ?>" type="image/x-icon">
     <title>Login</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
 
 <style>
   .hero {
-    background-image: url("imagenes/inicio.jpg");
+    background-image: url("imagenes/planta3.jpg");
   }
 </style>
 

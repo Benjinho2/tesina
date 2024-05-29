@@ -51,7 +51,6 @@
 .instagram a:hover{
     color: #8cc63f;
 }
-
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
