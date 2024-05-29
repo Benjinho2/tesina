@@ -46,7 +46,7 @@ class CAutenticacion extends BaseController
         $UsuarioModel = new UsuarioModel();
 
         $email = $this->request->getPost('email');
-        $contraseña = trim($this->request->getPost('contraseña'));
+        $contraseña =($this->request->getPost('contraseña'));
 
         $informacion_usuario = $UsuarioModel->ObtenerUsuarioEmail($email);
 
@@ -54,9 +54,9 @@ class CAutenticacion extends BaseController
             session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrectos');
             return redirect()->to('autenticacion/login');
         }else {
-                $user_id = $informacion_usuario['id_usuario'];
+                $id_usuario = $informacion_usuario['id_usuario'];
             session()->set('Tipo', 'Usuario');
-            session()->set('userData', $UsuarioModel->find($user_id));
+            session()->set('userData', $UsuarioModel->find($id_usuario));
             return redirect()->to('/');
         }
     }

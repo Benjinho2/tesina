@@ -2,17 +2,18 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position:static
+    background-size: cover;
+    background-position: center;
+    position: static;
 }
-
+  
 .container-login {
-    width: 100%;
     max-width: 400px;
-    margin: 60px;
+    margin: 100px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    min-height: 54vh;
+    height: 36vh;
 }
 
 h2 {
@@ -43,10 +44,6 @@ input.form-control {
     font-size: 16px;
 }
 
-input.form-control:focus {
-    border-color: #007bff;
-    outline: none;
-}
 
 button.btn-primary {
     width: 100%;
@@ -82,8 +79,7 @@ button.btn-primary:hover {
 }
 
 form a {
-    display: block;
-    margin-top: 5px;
+
     color: #007bff;
     text-decoration: none;
 }

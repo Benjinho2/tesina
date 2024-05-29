@@ -15,11 +15,11 @@
         <div class="perfil-info">
             <div>
                 <label>Nombre completo</label>
-                <span><?= ($userPerfil['nombre_completo'])?></span>
+                <span><?= session('userData')['nombre_completo']; ?></span>
             </div>
             <div>
                 <label>Email</label>
-                <span><?= ($userPerfil['email'])?></span>
+                <span><?= session('userData')['email']; ?></span>
             </div>
             <div>
                 <label>Cerrar sesión</label>

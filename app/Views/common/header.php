@@ -10,22 +10,23 @@
 
 <header>
     <div class="container">
+        
         <a href="http://localhost/tesina/public/" class="logo">
         <img src="<?= base_url('imagenes/planta.png'); ?>" ><p>AquaBot</p></a>
+
         <nav>
             <ul>
                 <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
-                
+                <div class="nombre">
                 <?php if (session()->has('userData')): ?>
-                    <?php if (session()->get('Tipo') === 'Admin'): ?>
-                        <li><a href="<?= site_url('admin/index'); ?>">Panel Admin</a></li>
-                    <?php else: ?>
-                        <li><a href="<?= site_url('perfil'); ?>">Perfil</a></li>
-                    <?php endif; ?>
+                        <a href="<?= site_url('perfil'); ?>">
+                            <?= session()->get('userData')['nombre_completo']; ?>
+                        </a>
                 <?php else: ?>
-                    <li><a href="http://localhost/tesina/public/autenticacion/login">Login</a></li>
-                    <li><a href="http://localhost/tesina/public/autenticacion/register">Register</a></li>
+                </div>
+                    <li><a href="<?= site_url('autenticacion/login'); ?>">Login</a></li>
+                    <li><a href="<?= site_url('autenticacion/register'); ?>">Register</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

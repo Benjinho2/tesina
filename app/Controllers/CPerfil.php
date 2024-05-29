@@ -6,14 +6,7 @@ class CPerfil extends BaseController{
 
     function perfil()
     {
-        
-        $DatosUsuario = session()->get('userData');
-
-        $array = [
-            'userPerfil' => $DatosUsuario
-        ];
-
-        return view('perfil', $array);
+        return view('perfil');
     }
 
 }
