@@ -15,12 +15,10 @@
             </div>
             <div class="footer-section">
                 <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Cómo funciona</a></li>
-                    <li><a href="#">Configuración</a></li>
-                </ul>
+                    <p><a href="#">Sobre nosotros</a></p>
+                    <p><a href="#">Contacto</a></p>
+                    <p><a href="#">Configuración</a></p>
+                    <p><a href="#">Cómo funcona</a></p>
             </div>
             <div class="footer-section">
                 <h4>Contacta con nosotros</h4>

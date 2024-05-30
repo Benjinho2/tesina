@@ -10,24 +10,32 @@
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 100rem;
     margin: 0 auto;
 }
 
+
 .footer-section h4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #8cc63f;
+    left: 50rem;
 }
 
 
-.footer-section ul li a {
+.footer-section p a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s;    
+}
+
+.footer-section p a:hover {
+    color: #8cc63f;
+
 }
 
 .footer-section p {
     margin: 5px 0;
+    margin-bottom: 8px;
 }
 
 .logo {
