@@ -27,6 +27,7 @@
         </div>
 
         <div class="form-group">
+            <img src="<?= base_url('imagenes/email.png'); ?>" alt="">
             <label for="contraseña">Contraseña</label>
             <input type="password" class="form-control" name="contraseña" placeholder="Ingrese una contraseña" required>
         </div>

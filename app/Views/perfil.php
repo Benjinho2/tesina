@@ -9,9 +9,11 @@
 </head>
 
 <body>
+    
 <?= $this->include('common/header') ?>
 
     <div class="perfil-container">
+        <img src="<?= base_url('imagenes/perfil.png'); ?>">
         <h2>Perfil</h2>
         <div class="perfil-info">
             <div>
@@ -24,16 +26,11 @@
             </div>
             <div>
                 <label>Cerrar sesión</label>
-                <a href="<?= site_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>
+                <a href="<?= site_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>        
             </div>
         </div>
     </div>
-
-    <!-- <style>
-      body {
-        background-image: url("<?php echo base_url('imagenes/inicio.jpg'); ?>");
-      }
-      </style> -->
+    
 <?= $this->include('common/footer') ?>
 
 </body>

@@ -17,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="http://localhost/tesina/public/contacto">Contacto</a></li>
                 <div class="nombre">
                 <?php if (session()->has('userData')): ?>
                     <a href="http://localhost/tesina/public/perfil"><?= session('userData')['nombre_completo']; ?></a>

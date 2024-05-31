@@ -1,44 +1,44 @@
 header {
-    background-color: hsl(108, 21%, 49%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: hsl(108, 21%, 49%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
-    max-width: 860px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .logo p {
-    margin-left: 10px; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
-    color: #ffffff;
+  margin-left: 10px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: #ffffff;
 }
 
 .logo img {
-    height: 40px;
+  height: 40px;
 }
 
 nav {
-    display: flex;
+  display: flex;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  display: flex;
 }
 
 nav li {
@@ -46,44 +46,48 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #8cc63f;
 }
 
 
 @media (max-width: 480px) {
-    .container {
-       flex-direction: column;
-       align-items: center;
-     }
-   
-    .logo {
-       margin-bottom: 10px;
-     }
-   
-    .logo img {
-       height: 30px;
-     }
-   
-    .logo p {
-       font-size: 20px;
-     }
-   
-     nav {
-       flex-direction: column;
-     }
-   
-     nav ul {
-       flex-direction: column;
-     }
-   
-     nav li {
-       margin-left: 0;
-     }
-   
-     nav a {
-       padding: 10px;
-     }
+  .container {
+     flex-direction: column;
+     align-items: center;
    }
+   
+  .logo {
+     margin-bottom: 10px;
+  }
+   
+  .logo img {
+    height: 30px;
+  }
+   
+ .logo p {
+   font-size: 20px;
+  }
+   
+  nav {
+    flex-direction: column;
+  }
+   
+  nav ul {
+    flex-direction: column;
+  }
+   
+  nav li {
+    margin-left: 0;
+  }
+   
+  nav a {
+    padding: 10px;
+  }
+}

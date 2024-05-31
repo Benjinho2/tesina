@@ -9,5 +9,9 @@ class Home extends BaseController
         return view('inicio');
     }
 
+    public function contacto()
+    {
+        return view('contacto');
+    }
 }
 

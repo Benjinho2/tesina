@@ -64,6 +64,7 @@ class CAutenticacion extends BaseController
     public function cerrarSesion()
     {
         session()->destroy();
+        
         return redirect()->to('/?sesión=cerrada');
     }
 }

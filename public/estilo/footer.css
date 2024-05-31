@@ -1,72 +1,85 @@
+body {
+    overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
 .footer {
     background-color: hsl(108, 21%, 49%);
     color: white;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
+    padding: 1.25rem;
     width: 100%;
+    position: fixed;
+    bottom: 0; /* Ajusta el footer al borde inferior */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 100rem;
+    max-width: 80rem;
     margin: 0 auto;
 }
 
-
 .footer-section h4 {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     color: #8cc63f;
-    left: 50rem;
 }
-
 
 .footer-section p a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;    
+    transition: color 0.3s;
 }
 
 .footer-section p a:hover {
     color: #8cc63f;
-
 }
 
 .footer-section p {
-    margin: 5px 0;
-    margin-bottom: 8px;
+    margin: 0.3125rem 0;
 }
 
 .logo {
-    width: 100px;
-    margin-bottom: 10px;
+    width: 6.25rem;
+    margin-bottom: 0.625rem;
 }
 
 .social-icon {
-    width: 25px;
+    width: 1.5625rem;
     vertical-align: middle;
-    margin-right: 15px;
-    margin-top: 2px;
-    margin-bottom: 5px;
+    margin-right: 0.9375rem;
+    margin-top: 0.125rem;
+    margin-bottom: 0.3125rem;
 }
 
-.instagram a{
-   color: aliceblue;
-   text-decoration: none;
+.instagram a {
+    color: aliceblue;
+    text-decoration: none;
 }
 
-.instagram a:hover{
+.instagram a:hover {
     color: #8cc63f;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 48rem) {
     .footer-container {
         flex-direction: column;
         align-items: center;
     }
 
     .footer-section {
-        margin: 10px 0;
+        margin: 0.625rem auto;
         text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 0.3125rem;
+    }
+
+    .social-icon {
+        margin-right: 0.625rem;
+        margin-top: 0.0625rem;
+        margin-bottom: 0.15625rem;
     }
 }

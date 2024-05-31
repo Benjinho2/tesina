@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('perfil', 'CPerfil::perfil');
-
+$routes->get('contacto', 'Home::contacto');
 // Vista Login y Register
 $routes->get('autenticacion/login', 'CAutenticacion::login');
 $routes->get('autenticacion/register', 'CAutenticacion::register');
