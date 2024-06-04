@@ -32,7 +32,6 @@
       </div>
     </div>  
 
-    <div>
       <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sunt incidunt molestiae debitis corrupti deleniti dolor perferendis cum perspiciatis, laboriosam deserunt. Facere sequi tempore nihil illum delectus iusto tenetur nam!</p>
       </div>
@@ -42,7 +41,7 @@
 
   <style>
     .hero {
-      background-image: url("imagenes/planta3.jpg");
+      background-image: url("imagenes/inicio.png");
     }
   </style>
 
