@@ -26,7 +26,7 @@
             </div>
             <div>
                 <label>Cerrar sesión</label>
-                <a href="<?= site_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>        
+                <a href="<?= base_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>        
             </div>
         </div>
     </div>

@@ -13,5 +13,10 @@ class Home extends BaseController
     {
         return view('contacto');
     }
+
+    public function sobrenosotros()
+    {
+        return view('sobrenosotros');
+    }
 }
 

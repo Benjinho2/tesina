@@ -12,6 +12,7 @@
 
 <?= $this->include('common/header') ?>
 
+<main>
     <div class="formulario-container">
         <h2>Formulario de Contacto</h2>
         <form action="#" method="post">
@@ -32,8 +33,10 @@
             </div>
         </form>
     </div>
+</main>
 
 <?= $this->include('common/footer') ?>
 
 </body>
+
 </html>

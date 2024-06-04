@@ -16,32 +16,31 @@ class CAutenticacion extends BaseController
         return view('autenticacion/register');
     }
 
-    public function registro()
+    public function registrarse()
     {
         $UsuarioModel = new UsuarioModel();
     
+        $nombreCompleto = $this->request->getPost('nombre_completo');
         $email = $this->request->getPost('email');
+        $contraseña = $this->request->getPost('contraseña');
     
-        // Verificar si el correo electrónico ya está registrado
         if ($UsuarioModel->exitenteEmail($email)) {
             return redirect()->to('autenticacion/register')->with('fail', 'El correo ya esta registrado');
         }
     
         $array = [
-            'nombre_completo' => $this->request->getPost('nombre_completo'),
+            'nombre_completo' => $nombreCompleto,
             'email' => $email,
-            'contraseña' => password_hash($this->request->getPost('contraseña'), PASSWORD_BCRYPT),
+            'contraseña' => password_hash($contraseña, PASSWORD_BCRYPT),
         ];
     
         if ($UsuarioModel->insertarUsuario($array)) {
             return redirect()->to('autenticacion/register')->with('success', '¡Ahora estás registrado/a!');
-        } else {
-            return redirect()->back()->with('fail', 'Algo salió mal');
         }
     }
     
 
-    public function logueo()
+    public function iniciarSesion()
     {
         $UsuarioModel = new UsuarioModel();
 
@@ -54,7 +53,7 @@ class CAutenticacion extends BaseController
             session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrectos');
             return redirect()->to('autenticacion/login');
         }else {
-                $id_usuario = $informacion_usuario['id_usuario'];
+            $id_usuario = $informacion_usuario['id_usuario'];
             session()->set('Tipo', 'Usuario');
             session()->set('userData', $UsuarioModel->find($id_usuario));
             return redirect()->to('/');

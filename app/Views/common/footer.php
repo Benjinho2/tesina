@@ -7,6 +7,11 @@
     <title>Footer</title>
 </head>
 <body>
+
+    <main>
+        <!-- Contenido principal de la página -->
+    </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
@@ -15,10 +20,10 @@
             </div>
             <div class="footer-section">
                 <h4>Enlaces</h4>
-                    <p><a href="#">Sobre nosotros</a></p>
-                    <p><a href="#">Contacto</a></p>
-                    <p><a href="#">Configuración</a></p>
-                    <p><a href="#">Cómo funcona</a></p>
+                <p><a href="<?= base_url('sobrenosotros'); ?>">Sobre nosotros</a></p>
+                <p><a href="<?= base_url('contacto'); ?>">Contacto</a></p>
+                <p><a href="#">Configuración</a></p>
+                <p><a href="#">Cómo funciona</a></p>
             </div>
             <div class="footer-section">
                 <h4>Contacta con nosotros</h4>
@@ -29,11 +34,16 @@
             <div class="footer-section">
                 <h4>Seguinos</h4>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Creador</a><br>
-                    <a href="https://www.instagram.com/oviedo_benj4/" ><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Creador</a>
+                    <a href="https://www.instagram.com/nahuelalvarez._/">
+                        <img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Creador
+                    </a><br>
+                    <a href="https://www.instagram.com/oviedo_benj4/">
+                        <img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Creador
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
+
 </body>
 </html>

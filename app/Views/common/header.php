@@ -11,16 +11,16 @@
 <header>
     <div class="container">
         
-        <a href="http://localhost/tesina/public/" class="logo">
+        <a href="<?= base_url('/'); ?>" class="logo">
         <img src="<?= base_url('imagenes/planta.png'); ?>" ><p>AquaBot</p></a>
 
         <nav>
             <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="http://localhost/tesina/public/contacto">Contacto</a></li>
+                <li><a href="<?= base_url('sobrenosotros'); ?>">Sobre nosotros</a></li>
+                <li><a href="<?= base_url('contacto'); ?>">Contacto</a></li>
                 <div class="nombre">
                 <?php if (session()->has('userData')): ?>
-                    <a href="http://localhost/tesina/public/perfil"><?= session('userData')['nombre_completo']; ?></a>
+                    <a href="<?= base_url('perfil'); ?>"><?= session('userData')['nombre_completo']; ?></a>
                 <?php else: ?>
                 </div>
                     <li><a href="<?= site_url('autenticacion/login'); ?>">Login</a></li>

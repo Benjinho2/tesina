@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('estilo/register.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('estilo/register.css'); ?>">   
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
     <title>Register</title>
 </head>
@@ -11,12 +11,10 @@
 
 <?= $this->include('common/header') ?>
 
-<body>
-
 <div class="container-register">
     <h2>Register</h2>
     <hr>
-    <form action="registro" method="post">
+    <form action="<?= base_url('registrarse'); ?>" method="post">
         <?php if (!empty(session()->getFlashdata('success'))) : ?>
             <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
         <?php endif ?>
@@ -42,18 +40,18 @@
         <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit" class="form-control">Register</button>
         </div>
-        <a href="<?= base_url('autenticacion/login') ?>">Ya tengo una cuenta</a>
+        <a href="<?= base_url('autenticacion/login'); ?>">Ya tengo una cuenta</a>
     </form>
 </div>
 
-<style>
-      body {
-        background-image: url("<?php echo base_url('imagenes/planta3.jpg'); ?>");
-      }
-      </style>
-</body>
-
 <?= $this->include('common/footer') ?>
 
+<style>
+    body {
+        background-image: url("<?= base_url('imagenes/planta3.jpg'); ?>");
+    }
+</style>
+
 </body>
+
 </html>

@@ -2,27 +2,40 @@ body {
     overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
     margin: 0;
     padding: 0;
-    position: relative;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Asegura que el contenido principal ocupe el espacio disponible */
 }
 
 .footer {
     background-color: hsl(108, 21%, 49%);
     color: white;
-    padding: 1.25rem;
+    padding: 0.8rem;
     width: 100%;
-    position: fixed;
-    bottom: 0; /* Ajusta el footer al borde inferior */
+    position: relative; /* Cambiado a relative */
+    bottom: 0;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 80rem;
+    max-width: 100rem; /* 1280px */
     margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.footer-section {
+    flex: 1; /* Permite que los elementos se distribuyan equitativamente */
+    min-width: 15rem; /* Asegura un mínimo de ancho para cada sección */
+    padding: 0.625rem; /* Espaciado interno */
 }
 
 .footer-section h4 {
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.9375rem; /* 15px */
     color: #8cc63f;
 }
 
@@ -37,22 +50,21 @@ body {
 }
 
 .footer-section p {
-    margin: 0.3125rem 0;
+    margin: 0.3125rem 0; /* 5px */
 }
 
 .logo {
-    width: 6.25rem;
-    margin-bottom: 0.625rem;
+    width: 6.25rem; /* 100px */
+    margin-bottom: 0.625rem; /* 10px */
 }
 
 .social-icon {
-    width: 1.5625rem;
+    width: 1.5625rem; /* 25px */
     vertical-align: middle;
-    margin-right: 0.9375rem;
-    margin-top: 0.125rem;
-    margin-bottom: 0.3125rem;
+    margin: 0.125rem 0.9375rem 0.3125rem 0; /* 2px 15px 5px 0 */
 }
 
+/* Estilos específicos para la clase Instagram */
 .instagram a {
     color: aliceblue;
     text-decoration: none;
@@ -62,24 +74,27 @@ body {
     color: #8cc63f;
 }
 
-@media (max-width: 48rem) {
+
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 48rem) { /* 768px */
     .footer-container {
         flex-direction: column;
         align-items: center;
+        text-align: center; /* Alinea el contenido al centro */
     }
 
     .footer-section {
-        margin: 0.625rem auto;
-        text-align: center;
+        margin: 0.625rem 0; /* 10px */
     }
 
     .logo {
-        margin-bottom: 0.3125rem;
+        margin-bottom: 0.3125rem; /* 5px */
     }
 
     .social-icon {
-        margin-right: 0.625rem;
-        margin-top: 0.0625rem;
-        margin-bottom: 0.15625rem;
+        margin-right: 0.625rem; /* 10px */
+        margin-top: 0.0625rem; /* 1px */
+        margin-bottom: 0.15625rem; /* 2.5px */
     }
 }
