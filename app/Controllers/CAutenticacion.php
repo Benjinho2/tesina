@@ -24,8 +24,8 @@ class CAutenticacion extends BaseController
         $email = $this->request->getPost('email');
         $contraseña = $this->request->getPost('contraseña');
     
-        if ($UsuarioModel->exitenteEmail($email)) {
-            return redirect()->to('autenticacion/register')->with('fail', 'El correo ya esta registrado');
+        if ($UsuarioModel->existenteEmail($email)) {
+            return redirect()->to('autenticacion/register')->with('fail', 'El correo ya está registrado');
         }
     
         $array = [
@@ -43,22 +43,23 @@ class CAutenticacion extends BaseController
     public function iniciarSesion()
     {
         $UsuarioModel = new UsuarioModel();
-
+    
         $email = $this->request->getPost('email');
-        $contraseña =($this->request->getPost('contraseña'));
-
+        $contraseña = $this->request->getPost('contraseña');
+    
         $informacion_usuario = $UsuarioModel->ObtenerUsuarioEmail($email);
-
-        if (!$informacion_usuario || !password_verify($contraseña, $informacion_usuario['contraseña'])) {
-            session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrectos');
-            return redirect()->to('autenticacion/login');
-        }else {
+    
+        if ($informacion_usuario && password_verify($contraseña, $informacion_usuario['contraseña'])) {
             $id_usuario = $informacion_usuario['id_usuario'];
             session()->set('Tipo', 'Usuario');
-            session()->set('userData', $UsuarioModel->find($id_usuario));
-            return redirect()->to('/');
+            session()->set('userData', $informacion_usuario); 
+                return redirect()->to('/');
+        } else {
+            session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
+            return redirect()->to('autenticacion/login');
         }
     }
+    
 
     public function cerrarSesion()
     {
