@@ -12,7 +12,7 @@
 <?= $this->include('common/header') ?>
 
 <main>
-    <div class="container-auth">
+    <div class="container-register">
         <img src="<?= base_url('imagenes/login.png'); ?>">
         <h2>Register</h2>
         <form action="<?= base_url('registrarse'); ?>" method="post">

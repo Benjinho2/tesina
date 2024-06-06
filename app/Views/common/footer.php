@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/footer.css'); ?>">   
+    
     <title>Footer</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
                 <h4>Contacta con nosotros</h4>
                 <p>2 de Abril 1175, X5850<br>Río Tercero, Córdoba</p>
                 <p>Número: 9 3571 51-1369</p>
-                <p>Email: aquabot_info@gmail.com</p>
+                <p>Email: aquabotinfo@gmail.com</p>
             </div>
             <div class="footer-section">
                 <h4>Seguinos</h4>

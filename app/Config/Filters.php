@@ -108,7 +108,7 @@ class Filters extends BaseFilters
     'autenticacion' => [
             'before' => [
                 'autenticacion/login',
-             'autenticacion/register'
+                'autenticacion/register'
             ],
         ],
     ];

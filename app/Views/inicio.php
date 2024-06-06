@@ -35,6 +35,9 @@
       <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sunt incidunt molestiae debitis corrupti deleniti dolor perferendis cum perspiciatis, laboriosam deserunt. Facere sequi tempore nihil illum delectus iusto tenetur nam!</p>
       </div>
+      <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+            <?php endif ?>
   </main>
 
 <?= $this->include('common/footer') ?>

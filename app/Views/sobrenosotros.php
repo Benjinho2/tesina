@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('estilo/sobrenosotros.css'); ?>">   
+    <link rel="stylesheet" href="<?= base_url('estilo/sobrenosotros.css'); ?>"> 
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
     <title>Sobre nosotros</title>
 </head>
@@ -24,7 +24,7 @@
 
 <style>
     .hero {
-        background-image: url("<?= base_url('imagenes/inicio2.png'); ?>");
+        background-image: url("<?= base_url('imagenes/sobrenos.png'); ?>");
     }
 </style>
 
