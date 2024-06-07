@@ -15,17 +15,24 @@
 <main>
     <div class="formulario-container">
         <h2>Formulario de Contacto</h2>
-        <form action="#" method="post">
+        <form action="<?= base_url('enviar'); ?>" method="post">
+        <?php if (!empty(session()->getFlashdata('success'))) : ?>
+                <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+            <?php endif ?>
+            <?php if (!empty(session()->getFlashdata('fail'))) : ?>
+                <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+            <?php endif ?>
+            
             <div class="formulario-input">
-                <label for="nombre">Nombre:</label>
+                <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
             </div>
             <div class="formulario-input">
-                <label for="email">Email:</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="formulario-input">
-                <label for="mensaje">Mensaje:</label>
+                <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
             </div>
             <div class="formulario-input">

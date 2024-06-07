@@ -18,5 +18,10 @@ class Home extends BaseController
     {
         return view('sobrenosotros');
     }
+
+    public function perfil()
+    {
+        return view('perfil');
+    }
 }
 
