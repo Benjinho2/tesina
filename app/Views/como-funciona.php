@@ -38,11 +38,13 @@
     <div class="use-case">
         <h2>3. Activación del Riego</h2>
         <p>Basado en los datos analizados y la comparación con los niveles óptimos, 
-           el sistemase activara el riego para ajustar la humedad del suelo.</p>
+           el sistema activara el riego para ajustar la humedad del suelo.</p>
         <ol>
-            <li>Si el nivel de humedad está por debajo del rango óptimo configurado por el usuario, 
-                el sistema activa el riego automáticamente.</li>
+            <li>Si la humedad del suelo está por debajo del nivel mínimo configurado, el sistema activa el riego. 
+                Una vez que se alcanza el nivel máximo de humedad, el riego se detiene. </li>
             <li>El usuario recibe una notificación sobre la activación del riego a través de nuestra página Web.</li>
+            <li>Esta funcionalidad asegura un riego eficiente y preciso, 
+                adaptado a las necesidades específicas del suelo y las plantas.</li>
         </ol>
     </div>
 
