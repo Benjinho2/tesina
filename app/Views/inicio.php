@@ -16,8 +16,8 @@
         <h1>Bienvenido a nuestro sistema de riego automático</h1>
         <p><strong>Riega Inteligentemente, Crece Saludablemente</strong></p>
         <p>
-            Este sistema está diseñado para facilitar y optimizar el riego de tus cultivos o jardín.
-            Utilizando la más avanzada tecnología, nuestro sistema puede ajustar el riego según 
+            Este sistema está diseñado para facilitar y optimizar el riego de tus cultivos.
+            Utilizando la tecnología, nuestro sistema puede ajustar el riego según 
             las necesidades específicas de cada planta y las condiciones climáticas.
         </p>
         <p>
@@ -25,19 +25,65 @@
             cómo configurarlo y consejos para obtener el máximo beneficio de su uso.
         </p>
         <ul>
-            <li><a href="#">Cómo funciona</a></li>
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Consejos y trucos</a></li>
+            <li><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></li>
+            <?php if (session('userData')): ?>
+                <li><a href="<?= base_url('configuracion'); ?>">Configuración</a></li>
+            <?php else: ?> 
+                <!-- Si no existe 'userData', no mostrar el enlace -->
+            <?php endif; ?>
+            <li><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></li>
         </ul>
       </div>
     </div>  
 
-      <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sunt incidunt molestiae debitis corrupti deleniti dolor perferendis cum perspiciatis, laboriosam deserunt. Facere sequi tempore nihil illum delectus iusto tenetur nam!</p>
+    <section class="features">
+      <h2>Nuestras Características</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>Configuración Personalizada</h3>
+          <p>Ajusta los niveles de humedad y riego según las necesidades específicas de tus cultivos.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Seguimiento de Humedad</h3>
+          <p>Utiliza sensores para medir la humedad del suelo y ajustar el riego en consecuencia.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Fácil Configuración</h3>
+          <p>
+              Interfaz amigable que permite una configuración rápida 
+              y sencilla para usuarios de todos los niveles.
+          </p>
+        </div>
       </div>
-      <?php if (!empty(session()->getFlashdata('success'))) : ?>
-                <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
-            <?php endif ?>
+   </section>
+   
+    <section class="contact">
+      <h2>Contacto</h2>
+      <p>Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarnos.</p>
+      <a href="<?= base_url('contacto'); ?>" class="cta-button">Contáctanos</a>
+    </section>
+
+    <section class="faq">
+      <h2>Preguntas Generales</h2>
+
+      <div class="faq-item">
+        <h3>¿Cómo funciona el sistema de riego?</h3>
+        <p>
+            El sistema utiliza sensores para medir la humedad del suelo 
+            y ajusta el riego en consecuencia. Para más información, <a href="<?= base_url('como-funciona'); ?>">haz click aquí</a>
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Es difícil de configurar?</h3>
+        <p>
+            No, nuestro sistema está diseñado para ser fácil de configurar, 
+            incluso para principiantes. 
+            Sigue estos consejos acá, <a href="<?= base_url('consejo-truco'); ?>">haz click aquí</a>.
+        </p>
+      </div>
+    </section>
+
   </main>
 
 <?= $this->include('common/footer') ?>

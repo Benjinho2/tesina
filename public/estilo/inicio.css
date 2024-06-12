@@ -11,10 +11,11 @@ body {
   background-repeat: no-repeat;
   padding: 2rem;
   min-height: 50vh;
+  display: flex;
 }
 
 .letras {
-  background-color: rgba(255, 255, 255, 0.589);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 1.25rem;
   max-width: 35rem;
@@ -22,16 +23,14 @@ body {
 }
 
 .hero h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
-  color: #000000;
+  font-size: 2rem;
+  color: #000;
   margin-bottom: 1.3rem;
 }
 
 .hero p {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
-  color: #000000;
+  color: #000;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
@@ -51,13 +50,108 @@ body {
   background-color: hsl(108, 21%, 49%);
   padding: 0.625rem 0.9375rem;
   border-radius: 0.625rem;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
 .hero ul li a:hover {
   background-color: #8cc63f;
+}
+
+.features, .testimonials, .contact, .gallery, .faq {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  margin: 1rem auto;
+  border-radius: 0.625rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+.features h2, .testimonials h2, .contact h2, .gallery h2, .faq h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 30%;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.testimonials .testimonial-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-item {
+  width: 45%;
+  min-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.testimonial-item p {
+  font-style: italic;
+}
+
+.testimonial-item cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact .cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.625rem;
+  background-color: hsl(108, 21%, 49%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact .cta-button:hover {
+  background-color: #8cc63f;
+}
+
+.gallery .gallery-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery-images img {
+  width: 30%;
+  min-width: 150px;
+  border-radius: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.faq .faq-item {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.faq .faq-item h3 {
+  font-size: 1.5rem;
+}
+
+.faq .faq-item a{
+  text-decoration: none;
 }
 
 @media (max-width: 48rem) {

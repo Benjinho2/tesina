@@ -6,7 +6,7 @@ header {
 }
 
 .container {
-  max-width: 860px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -48,8 +48,7 @@ nav li {
 nav a {
   text-decoration: none;
   color: #ffffff;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 0.85rem;
 }
 
 nav a:hover {

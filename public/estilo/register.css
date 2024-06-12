@@ -62,7 +62,7 @@ main {
 .container-register a {
     display: block;
     margin-top: 1rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: #007bff;
     text-decoration: none;
 }

@@ -21,14 +21,15 @@
             </div>
             <div class="footer-section">
                 <h4>Enlaces</h4>
+                <p><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></p>
+                <p><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></p>
                 <p><a href="<?= base_url('sobrenosotros'); ?>">Sobre nosotros</a></p>
                 <p><a href="<?= base_url('contacto'); ?>">Contacto</a></p>
-                <p><a href="#">Configuración</a></p>
-                <p><a href="#">Cómo funciona</a></p>
             </div>
+
             <div class="footer-section">
                 <h4>Contacta con nosotros</h4>
-                <p>2 de Abril 1175, X5850<br>Río Tercero, Córdoba</p>
+                <p>Av. Vélez Sarsfield 241, X5850<br>Río Tercero, Córdoba</p>
                 <p>Número: 9 3571 51-1369</p>
                 <p>Email: aquabotinfo@gmail.com</p>
             </div>

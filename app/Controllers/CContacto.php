@@ -8,10 +8,10 @@ class CContacto extends Controller{
     public function enviar()
     {
         $nombre  = $this->request->getPost('nombre');
-        $emails   = $this->request->getPost('email');
+        $emails  = $this->request->getPost('email');
         $mensaje = $this->request->getPost('mensaje');
 
-        $email = \Config\Services::email();
+        $email   = \Config\Services::email();
         
         $email->setFrom($emails);
         $email->setTo('aquabotinfo@gmail.com');

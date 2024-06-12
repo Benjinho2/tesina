@@ -1,30 +1,68 @@
 body {
     margin: 0;
     padding: 0;
-  }
+}
 
 .hero {
+    display: flex;
     align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem;
-    min-height: 70vh;
+    padding: 1rem;
+    min-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
 }
 
 h1 {
     color: white;
-    animation-name: opacidad;
-    animation-duration: 3s;
-    font-size: calc(38px + (46 - 38) * (100vw - 400px) / (1920 - 400));
+    font-size: calc(36px + (46 - 38) * (100vw - 400px) / (1920 - 400));
     line-height: 1;
-    font-size: calc(22px + (70 - 22) * (100vw - 400px) / (1920 - 400));
     text-transform: uppercase;
     margin: 0 auto;
-    max-width: 50rem;
-    padding: 11rem 0;
+    max-width: 64rem;
+    padding: 3rem 0;
     font-weight: 600;
     z-index: 9;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.5;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.386);
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.box h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.box p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
 }

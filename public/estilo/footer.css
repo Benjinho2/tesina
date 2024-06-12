@@ -14,7 +14,7 @@ main {
 .footer {
     background-color: hsl(108, 21%, 49%);
     color: white;
-    padding: 1.5rem;
+    padding: 1rem; /* Reduce el padding para hacer el footer más compacto */
     width: 100%;
     position: relative; /* Cambiado a relative */
     bottom: 0;
@@ -24,18 +24,17 @@ main {
     display: flex;
     justify-content: space-between;
     max-width: 100rem; /* 1280px */
-    margin: -10px auto;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
 .footer-section {
     flex: 1; /* Permite que los elementos se distribuyan equitativamente */
     min-width: 15rem; /* Asegura un mínimo de ancho para cada sección */
-    padding: 0.625rem; /* Espaciado interno */
+    padding: 0.3125rem; /* Reduce el padding interno */
 }
 
 .footer-section h4 {
-    margin-bottom: 0.9375rem; /* 15px */
+    margin-bottom: 0.5rem; /* Reduce el margen inferior */
     color: #8cc63f;
 }
 
@@ -50,18 +49,18 @@ main {
 }
 
 .footer-section p {
-    margin: 0.3125rem 0; /* 5px */
+    margin: 0.15625rem 0; /* Reduce el margen superior e inferior */
 }
 
 .logo {
     width: 6.25rem; /* 100px */
-    margin-bottom: 0.625rem; /* 10px */
+    margin-bottom: 0.3125rem; /* Reduce el margen inferior */
 }
 
 .social-icon {
     width: 1.5625rem; /* 25px */
     vertical-align: middle;
-    margin: 0.125rem 0.9375rem 0.3125rem 0; /* 2px 15px 5px 0 */
+    margin: 0.0625rem 0.46875rem 0.15625rem 0; /* Reduce los márgenes */
 }
 
 /* Estilos específicos para la clase Instagram */
@@ -74,8 +73,6 @@ main {
     color: #8cc63f;
 }
 
-
-
 /* Media queries para pantallas pequeñas */
 @media (max-width: 48rem) { /* 768px */
     .footer-container {
@@ -85,16 +82,16 @@ main {
     }
 
     .footer-section {
-        margin: 0.625rem 0; /* 10px */
+        margin: 0.3125rem 0; /* Reduce el margen superior e inferior */
     }
 
     .logo {
-        margin-bottom: 0.3125rem; /* 5px */
+        margin-bottom: 0.15625rem; /* Reduce el margen inferior */
     }
 
     .social-icon {
-        margin-right: 0.625rem; /* 10px */
-        margin-top: 0.0625rem; /* 1px */
-        margin-bottom: 0.15625rem; /* 2.5px */
+        margin-right: 0.3125rem; /* Reduce el margen derecho */
+        margin-top: 0.03125rem; /* Reduce el margen superior */
+        margin-bottom: 0.078125rem; /* Reduce el margen inferior */
     }
 }

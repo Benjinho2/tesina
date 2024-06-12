@@ -6,9 +6,11 @@ use App\Models\UsuarioModel;
 
 class CAutenticacion extends BaseController
 {
+    
     public function login()
     {
         return view('autenticacion/login');
+        
     }
 
     public function register()
@@ -18,23 +20,23 @@ class CAutenticacion extends BaseController
 
     public function registrarse()
     {
-        $UsuarioModel = new UsuarioModel();
+        $usuarioModel   = new UsuarioModel();
     
         $nombreCompleto = $this->request->getPost('nombre_completo');
-        $email = $this->request->getPost('email');
-        $contraseña = $this->request->getPost('contraseña');
+        $email          = $this->request->getPost('email');
+        $contraseña     = $this->request->getPost('contraseña');
     
-        if ($UsuarioModel->existenteEmail($email)) {
+        if ($usuarioModel->where('email', $email)->first()) {
             return redirect()->to('autenticacion/register')->with('fail', 'El correo electrónico ya está registrado');
         }
     
         $array = [
             'nombre_completo' => $nombreCompleto,
-            'email' => $email,
-            'contraseña' => password_hash($contraseña, PASSWORD_BCRYPT),
+            'email'           => $email,
+            'contraseña'      => password_hash($contraseña, PASSWORD_BCRYPT),
         ];
     
-        if ($UsuarioModel->insertarUsuario($array)) {
+        if ($usuarioModel->insert($array)) {
             return redirect()->to('autenticacion/register')->with('success', '¡Ahora estás registrado/a!');
         }
     }
@@ -42,17 +44,17 @@ class CAutenticacion extends BaseController
 
     public function iniciarSesion()
     {
-        $UsuarioModel = new UsuarioModel();
+        $usuarioModel = new UsuarioModel();
     
-        $email = $this->request->getPost('email');
-        $contraseña = $this->request->getPost('contraseña');
+        $email        = $this->request->getPost('email');
+        $contraseña   = $this->request->getPost('contraseña');
     
-        $informacion_usuario = $UsuarioModel->ObtenerUsuarioEmail($email);
+        $informacionUsuario = $usuarioModel->where('email', $email)->first();
     
-        if ($informacion_usuario && password_verify($contraseña, $informacion_usuario['contraseña'])) {
+        if ($informacionUsuario && password_verify($contraseña, $informacionUsuario['contraseña'])){
             session()->set('Tipo', 'Usuario');
-            session()->set('userData', $informacion_usuario); 
-                return redirect()->to('/');
+            session()->set('userData', $informacionUsuario); 
+            return redirect()->to('/');
         } else {
             session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
@@ -67,6 +69,5 @@ class CAutenticacion extends BaseController
         return redirect()->to('/');
     }
 }
-
 
 ?>

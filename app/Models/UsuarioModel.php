@@ -6,8 +6,8 @@ use CodeIgniter\Model;
 
     class UsuarioModel extends Model
     {
-        protected $table = 'usuarios';
-        protected $primaryKey = 'id_usuario';
+        protected $table         = 'usuarios';
+        protected $primaryKey    = 'id_usuario';
         protected $allowedFields = ['nombre_completo', 'email', 'contraseña'];
 
         public function insertarUsuario($array)
@@ -17,7 +17,7 @@ use CodeIgniter\Model;
         
         public function existenteEmail($email)
         {
-        return $this->where('email', $email)->countAllResults() > 0;
+            return $this->where('email', $email)->countAllResults() > 0;
         }       
 
         public function ObtenerUsuarioEmail($email)

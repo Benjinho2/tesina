@@ -19,13 +19,12 @@
             <ul>
                 <li><a href="<?= base_url('sobrenosotros'); ?>">Sobre nosotros</a></li>
                 <li><a href="<?= base_url('contacto'); ?>">Contacto</a></li>
-                <div class="nombre">
-                <?php if (session()->has('userData')): ?>
-                    <a href="<?= base_url('perfil'); ?>"><?= session('userData')['nombre_completo']; ?></a>
+                <?php if (session('userData')): ?>
+                    <li><a href="<?= base_url('perfil'); ?>"><?= session('userData')['nombre_completo']; ?></a></li>
                 <?php else: ?>
-                </div>
-                    <li><a href="<?= site_url('autenticacion/login'); ?>">Login</a></li>
+                <li><a href="<?= site_url('autenticacion/login'); ?>">Login</a></li>
                 <?php endif; ?>
+
             </ul>
         </nav>
     </div>
