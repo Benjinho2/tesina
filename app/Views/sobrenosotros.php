@@ -17,7 +17,7 @@
 
 <div class="content">
     <section class="box">
-        <h2>Sobre Nosotros</h2>
+        <h2>Quienes Somos</h2>
         <p>Somos Nahuel Alvarez y Benja Oviedo, estudiantes del Instituto Técnico de Río Tercero. 
            Nos apasiona la tecnología y la innovación, y juntos hemos emprendido este proyecto 
            con el objetivo de marcar una diferencia en nuestro campo.</p>

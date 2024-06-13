@@ -11,7 +11,6 @@
 
 <header>
     <div class="container">
-        
         <a href="<?= base_url('/'); ?>" class="logo">
         <img src="<?= base_url('imagenes/planta.png'); ?>" ><p>AquaBot</p></a>
 

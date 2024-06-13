@@ -14,6 +14,7 @@
     </main>
 
     <footer class="footer">
+ 
         <div class="footer-container">
             <div class="footer-section">
                 <img src="<?= base_url('imagenes/planta.png'); ?>" alt="Logo" class="logo">
@@ -30,7 +31,7 @@
             <div class="footer-section">
                 <h4>Contacta con nosotros</h4>
                 <p>Av. Vélez Sarsfield 241, X5850<br>Río Tercero, Córdoba</p>
-                <p>Número: 9 3571 51-1369</p>
+                <p>Número: +54 9 3571 69-3098</p>
                 <p>Email: aquabotinfo@gmail.com</p>
             </div>
             <div class="footer-section">
@@ -46,6 +47,8 @@
             </div>
         </div>
     </footer>
+
+</style>
 
 </body>
 </html>

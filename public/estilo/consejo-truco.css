@@ -5,8 +5,9 @@ body {
 }
 
 main {
-    margin-top: 6rem;
+    margin-top: 15rem;
     text-align: center; /* Alinea horizontalmente el texto */
+    align-items: center;
 }
 
 .consejo-truco h1 {

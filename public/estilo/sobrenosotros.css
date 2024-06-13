@@ -10,8 +10,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 52vh;
-    padding: 1rem;
+    min-height: 50vh;
+    padding: 0.2rem;
     text-align: center;
 }
 

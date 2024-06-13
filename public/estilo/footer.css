@@ -21,20 +21,20 @@ main {
     display: flex;
     justify-content: center; /* Centra el footer-container horizontalmente */
 }
+  
 
 .footer-container {
     display: flex;
     justify-content: center; /* Centra las secciones horizontalmente */
     max-width: 100rem; /* 1280px */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    gap: 10rem; /* Agrega espacio entre las secciones */
+    gap: 8rem; /* Agrega espacio entre las secciones */
 }
 
 .footer-section {
     flex: 1; /* Permite que los elementos se distribuyan equitativamente */
     min-width: 15rem; /* Asegura un mínimo de ancho para cada sección */
-    padding: 0.3125rem; /* Reduce el padding interno */
-    text-align: center; /* Centra el contenido dentro de cada sección */
+    padding: 0.5rem; /* Reduce el padding interno */
 }
 
 .footer-section h4 {

@@ -4,9 +4,9 @@ body {
 }
 
 .perfil-container {
-    max-width: 600px;
-    margin: 5rem auto;
-    padding: 25px;
+    max-width: 30rem;
+    margin: 10rem auto;
+    padding: 2rem;
     background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -16,7 +16,7 @@ body {
 .perfil-header {
     display: flex;
     align-items: center; /* Alinea verticalmente */
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .perfil-header .perfil-img {
