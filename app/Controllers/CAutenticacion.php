@@ -26,7 +26,7 @@ class CAutenticacion extends BaseController
         $email          = $this->request->getPost('email');
         $contraseña     = $this->request->getPost('contraseña');
     
-        if ($usuarioModel->where('email', $email)->first()) {
+        if ($usuarioModel->existenteEmail($email)) {
             return redirect()->to('autenticacion/register')->with('fail', 'El correo electrónico ya está registrado');
         }
     
@@ -36,7 +36,7 @@ class CAutenticacion extends BaseController
             'contraseña'      => password_hash($contraseña, PASSWORD_BCRYPT),
         ];
     
-        if ($usuarioModel->insert($array)) {
+        if ($usuarioModel->insertarUsuario($array)) {
             return redirect()->to('autenticacion/register')->with('success', '¡Ahora estás registrado/a!');
         }
     }
@@ -48,8 +48,8 @@ class CAutenticacion extends BaseController
     
         $email        = $this->request->getPost('email');
         $contraseña   = $this->request->getPost('contraseña');
-    
-        $informacionUsuario = $usuarioModel->where('email', $email)->first();
+
+        $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
     
         if ($informacionUsuario && password_verify($contraseña, $informacionUsuario['contraseña'])){
             session()->set('Tipo', 'Usuario');

@@ -18,19 +18,23 @@ main {
     width: 100%;
     position: relative; /* Cambiado a relative */
     bottom: 0;
+    display: flex;
+    justify-content: center; /* Centra el footer-container horizontalmente */
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centra las secciones horizontalmente */
     max-width: 100rem; /* 1280px */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    gap: 10rem; /* Agrega espacio entre las secciones */
 }
 
 .footer-section {
     flex: 1; /* Permite que los elementos se distribuyan equitativamente */
     min-width: 15rem; /* Asegura un mínimo de ancho para cada sección */
     padding: 0.3125rem; /* Reduce el padding interno */
+    text-align: center; /* Centra el contenido dentro de cada sección */
 }
 
 .footer-section h4 {
@@ -79,6 +83,7 @@ main {
         flex-direction: column;
         align-items: center;
         text-align: center; /* Alinea el contenido al centro */
+        gap: 1rem; /* Reduce el espacio entre las secciones en pantallas pequeñas */
     }
 
     .footer-section {
