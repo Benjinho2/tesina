@@ -28,7 +28,7 @@ main {
     justify-content: center; /* Centra las secciones horizontalmente */
     max-width: 100rem; /* 1280px */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    gap: 8rem; /* Agrega espacio entre las secciones */
+    gap: 6.5rem; /* Agrega espacio entre las secciones */
 }
 
 .footer-section {
@@ -80,9 +80,7 @@ main {
 /* Media queries para pantallas pequeñas */
 @media (max-width: 48rem) { /* 768px */
     .footer-container {
-        flex-direction: column;
         align-items: center;
-        text-align: center; /* Alinea el contenido al centro */
         gap: 1rem; /* Reduce el espacio entre las secciones en pantallas pequeñas */
     }
 

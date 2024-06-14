@@ -21,7 +21,7 @@ header {
 }
 
 .logo p {
-  margin-left: 10px; 
+  margin-left: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
   color: #ffffff;
@@ -32,17 +32,18 @@ header {
 }
 
 nav {
-  display: flex;
+  position: relative;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-direction: row;
 }
 
 nav li {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 nav a {
@@ -55,38 +56,66 @@ nav a:hover {
   color: #8cc63f;
 }
 
+.menu-button {
+  display: none; /* Oculto en pantallas grandes */
+  font-size: 18px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+#menu-toggle {
+  display: none;
+}
 
 @media (max-width: 480px) {
   .container {
-     flex-direction: column;
-     align-items: center;
-   }
-   
-  .logo {
-     margin-bottom: 10px;
+    padding: 0 auto; /* Agregar padding para separarlos del borde */
   }
-   
+
+  .logo p {
+    font-size: 1.2rem;
+  }
+
   .logo img {
-    height: 30px;
+    height: 2rem;
   }
-   
- .logo p {
-   font-size: 20px;
-  }
-   
-  nav {
-    flex-direction: column;
-  }
-   
+
   nav ul {
-    flex-direction: column;
+    display: none; /* Ocultar el menú por defecto */
+    position: static;
+    top: 4rem; /* Ajustar la posición según el diseño */
+    right: 5rem;
+    background-color: hsl(108, 21%, 49%); /* Fondo del menú desplegable */
+    border-radius: 5px; /* Añadir bordes redondeados */
+    padding: 4px; /* Añadir padding interno */
+    align-items: center;
   }
-   
+
+  nav ul.open {
+    display: flow-root; /* Mostrar el menú cuando se haga clic */
+    right: 20px; /* Mover el menú a la izquierda */
+  }
+
   nav li {
-    margin-left: 0;
+    margin: 1rem;
   }
-   
-  nav a {
-    padding: 10px;
+
+  .menu-button {
+    display: block; /* Mostrar en pantallas pequeñas */
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .menu-button{
+    left: 7rem;
+  }
+
+  .menu-button::before {
+    content: '\2630'; /* Unicode para el ícono de hamburguesa */
+    font-size: 1.5rem;
   }
 }
