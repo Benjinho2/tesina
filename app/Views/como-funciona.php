@@ -15,7 +15,9 @@
 
     <div class="use-case">
         <h2>1. Registro de Datos de Humedad</h2>
-        <p>El sistema recoge datos de humedad del suelo a través de sensores ubicados en tus cultivos. Estos sensores están diseñados para medir la humedad del suelo en tiempo real y proporcionar información precisa sobre las condiciones del terreno.</p>
+        <p> El sistema recoge datos de humedad del suelo a través de sensores ubicados en tus cultivos. 
+            Estos sensores están diseñados para medir la humedad del suelo en tiempo real 
+            y proporcionar información precisa sobre las condiciones del terreno.</p>
         <ol>
             <li>Los sensores miden la humedad del suelo cada cierto intervalo de tiempo.</li>
             <li>Los datos se almacenan en el sistema y el usuario también puede ingresar los niveles óptimos de humedad máximo y mínimo que desean mantener para su cultivo.</li>
@@ -27,7 +29,7 @@
         <h2>2. Comparación de Datos</h2>
         <p>Una vez que los datos de humedad se han registrado, 
             el sistema los analiza y compara con los niveles de los sensores
-            ,y los ingresados por el usuario.</p>
+            ,y con la configuración optima que realiza el usuario.</p>
         <ol>
             <li>El sistema evalúa y compara los datos obtenido por los sensores con los niveles óptimos establecidos por el usuario.</li>
             <li>Si la humedad del suelo se encuentra fuera del rango óptimo predefinido por el usuario, 

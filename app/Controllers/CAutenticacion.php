@@ -41,31 +41,34 @@ class CAutenticacion extends BaseController
         }
     }
     
-
     public function iniciarSesion()
     {
         $usuarioModel = new UsuarioModel();
     
-        $email        = $this->request->getPost('email');
-        $contraseña   = $this->request->getPost('contraseña');
-
+        $email      = $this->request->getPost('email');
+        $contraseña = $this->request->getPost('contraseña');
+    
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
     
-        if ($informacionUsuario && password_verify($contraseña, $informacionUsuario['contraseña'])){
-            session()->set('Tipo', 'Usuario');
-            session()->set('userData', $informacionUsuario); 
+        if ($informacionUsuario === null) {
+           session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
+            return redirect()->to('autenticacion/login');
+        }
+    
+        if (password_verify($contraseña, $informacionUsuario['contraseña'])) {
+           session()->set('Tipo', 'Usuario');
+           session()->set('userData', $informacionUsuario);
             return redirect()->to('/');
         } else {
-            session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
+           session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
         }
     }
-    
 
     public function cerrarSesion()
     {
         session()->destroy();
-        
+
         return redirect()->to('/');
     }
 }

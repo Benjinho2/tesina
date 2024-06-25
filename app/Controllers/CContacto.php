@@ -13,10 +13,10 @@ class CContacto extends Controller{
 
         $email   = \Config\Services::email();
         
-        $email->setFrom($emails);
-        $email->setTo('aquabotinfo@gmail.com');
-        $email->setSubject($nombre);
-        $email->setMessage($mensaje);
+        $email   ->setFrom($emails);
+        $email   ->setTo('aquabotinfo@gmail.com');
+        $email   ->setSubject($nombre);
+        $email   ->setMessage($mensaje);
 
           if ($email->send()) {
             return redirect()->back()->with('success', 'Correo enviado exitosamente');

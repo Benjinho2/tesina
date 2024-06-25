@@ -27,3 +27,6 @@ $routes->get('cerrarSesion', 'CAutenticacion::cerrarSesion');
 
 //Funcionamiento Formulario de contacto
 $routes->post('enviar', 'CContacto::enviar');
+
+//Funcionamiento Guardar
+$routes->post('guardar', 'CConfiguracion::guardar');
