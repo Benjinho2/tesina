@@ -14,8 +14,8 @@
             <img src="<?= base_url('imagenes/login.png'); ?>" alt="Imagen de Login">
             <h2>Login</h2>
             <form action="<?= base_url('iniciarSesion'); ?>" method="post">
-                <?php if (session()->getFlashdata('fail')) : ?>
-                    <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                <?php if (session()->get('fail')) : ?>
+                    <div class="alert alert-danger"><?= session()->get('fail'); ?></div>
                 <?php endif ?>
 
                 <div class="form-group">

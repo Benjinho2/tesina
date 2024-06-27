@@ -51,7 +51,7 @@ class CAutenticacion extends BaseController
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
     
         if ($informacionUsuario === null) {
-           session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
+           session()->set('fail', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
         }
     
@@ -60,7 +60,7 @@ class CAutenticacion extends BaseController
            session()->set('userData', $informacionUsuario);
             return redirect()->to('/');
         } else {
-           session()->setFlashdata('fail', 'Correo electrónico o contraseña incorrecto');
+           session()->set('fail', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
         }
     }

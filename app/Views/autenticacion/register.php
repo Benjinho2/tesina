@@ -16,13 +16,13 @@
         <img src="<?= base_url('imagenes/login.png'); ?>">
         <h2>Register</h2>
         <form action="<?= base_url('registrarse'); ?>" method="post">
-            <?php if (session()->getFlashdata('success')) : ?>
+            <?php if (session()->get('success')) : ?>
                 <div class="alert alert-success">
-                    <?= session()->getFlashdata('success'); ?>
+                    <?= session()->get('success'); ?>
                 </div>
             <?php endif ?>
-            <?php if (session()->getFlashdata('fail')) : ?>
-                <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+            <?php if (session()->get('fail')) : ?>
+                <div class="alert alert-danger"><?= session()->get('fail'); ?></div>
             <?php endif ?>
 
             <div class="form-group">
