@@ -73,15 +73,6 @@
             y ajusta el riego en consecuencia. Para más información, <a href="<?= base_url('como-funciona'); ?>">haz click aquí</a>
         </p>
       </div>
-
-      <div class="faq-item">
-        <h3>¿Es difícil de configurar?</h3>
-        <p>
-            No, nuestro sistema está diseñado para ser fácil de configurar, 
-            incluso para principiantes. 
-            Sigue estos consejos acá, <a href="<?= base_url('consejo-truco'); ?>">haz click aquí</a>.
-        </p>
-      </div>
     </section>
 
   </main>

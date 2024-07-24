@@ -9,12 +9,7 @@
 </head>
 <body>
 
-    <main>
-        <!-- Contenido principal de la página -->
-    </main>
-
     <footer class="footer">
- 
         <div class="footer-container">
             <div class="footer-section">
                 <img src="<?= base_url('imagenes/planta.png'); ?>" alt="Logo" class="logo">
@@ -37,18 +32,13 @@
             <div class="footer-section">
                 <h4>Seguinos</h4>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/nahuelalvarez._/">
-                        <img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Creador
-                    </a><br>
-                    <a href="https://www.instagram.com/oviedo_benj4/">
-                        <img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Creador
-                    </a>
+                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Creador</a><br>
+                    <a href="https://www.instagram.com/oviedo_benj4/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Creador</a>
                 </div>
             </div>
         </div>
     </footer>
 
-</style>
 
 </body>
 </html>

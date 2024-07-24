@@ -14,16 +14,16 @@
             <img src="<?= base_url('imagenes/login.png'); ?>" alt="Imagen de Login">
             <h2>Login</h2>
             <form action="<?= base_url('iniciarSesion'); ?>" method="post">
-                <?php if (session()->get('fail')) : ?>
-                    <div class="alert alert-danger"><?= session()->get('fail'); ?></div>
+                <?php if (session()->get('error')) : ?>
+                    <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                 <?php endif ?>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Email">
+                    <input type="text" class="form-control" name="email" placeholder="Email" required>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" name="contraseña" placeholder="Contraseña">
+                    <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required>
                 </div>
 
                 <div class="form-group">

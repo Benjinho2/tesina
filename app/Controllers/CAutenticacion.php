@@ -27,7 +27,7 @@ class CAutenticacion extends BaseController
         $contraseña     = $this->request->getPost('contraseña');
     
         if ($usuarioModel->existenteEmail($email)) {
-            return redirect()->to('autenticacion/register')->with('fail', 'El correo electrónico ya está registrado');
+            return redirect()->to('autenticacion/register')->with('error', 'El correo electrónico ya está registrado');
         }
     
         $array = [
@@ -37,7 +37,7 @@ class CAutenticacion extends BaseController
         ];
     
         if ($usuarioModel->insertarUsuario($array)) {
-            return redirect()->to('autenticacion/register')->with('success', '¡Ahora estás registrado/a!');
+            return redirect()->to('autenticacion/register')->with('exito', '¡Ahora estás registrado/a!');
         }
     }
     
@@ -51,7 +51,7 @@ class CAutenticacion extends BaseController
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
     
         if ($informacionUsuario === null) {
-           session()->set('fail', 'Correo electrónico o contraseña incorrecto');
+           session()->set('error', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
         }
     
@@ -60,7 +60,7 @@ class CAutenticacion extends BaseController
            session()->set('userData', $informacionUsuario);
             return redirect()->to('/');
         } else {
-           session()->set('fail', 'Correo electrónico o contraseña incorrecto');
+           session()->set('error', 'Correo electrónico o contraseña incorrecto');
             return redirect()->to('autenticacion/login');
         }
     }

@@ -8,7 +8,9 @@
     <title>Perfil</title>
 </head>
 <body>
-    <?= $this->include('common/header') ?>
+
+<?= $this->include('common/header') ?>
+<main>
     <div class="perfil-container">
         <div class="perfil-header">
         <img src="<?= base_url('imagenes/perfil.png'); ?>" alt="Imagen de Perfil" class="perfil-img">
@@ -30,6 +32,7 @@
             </div>
         </div>
     </div>
+    </main>
     <?= $this->include('common/footer') ?>
 </body>
 </html>

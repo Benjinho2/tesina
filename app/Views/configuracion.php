@@ -9,7 +9,7 @@
 </head>
 <body>
 <?= $this->include('common/header') ?>
-
+<main>
     <div class="configuracion">
         <h1>Configuración de Riego</h1>
         <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
@@ -29,7 +29,7 @@
             <button type="submit" class="btn-submit">Guardar Configuración</button>
         </form>
     </div>
-    
+</main>
 <?= $this->include('common/footer') ?>
 </body>
 </html>

@@ -26,12 +26,6 @@
             </ul>
         </nav>
     </div>
-    <a href="#nav" class="menu nav__hamburguer">
-        <img src="<?= base_url('imagenes/menu.svg'); ?>" class="nav__icon">
-    </a>
-    <a href="#" class="menu nav__close">
-        <img src="<?= base_url('imagenes/close.svg'); ?>" class="nav__icon">
-    </a>
 </header>
 
 </body>

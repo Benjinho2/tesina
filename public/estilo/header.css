@@ -67,9 +67,6 @@ nav a:hover {
   z-index: 2;
 }
 
-#menu-toggle {
-  display: none;
-}
 
 @media (max-width: 480px) {
   .container {
