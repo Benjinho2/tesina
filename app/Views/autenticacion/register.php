@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/register.css'); ?>">   
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Register</title>
+    <title>Register | AquaBot</title>
 </head>
 <body>
 
@@ -23,11 +23,17 @@
             <?php endif ?>
             <?php if (session()->get('error')) : ?>
                 <div class="alert alert-danger"><?= session()->get('error'); ?></div>
+                <?php session()->remove('error'); ?>
             <?php endif ?>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="nombre_completo" placeholder="Nombre completo" required>
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
             </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+            </div>
+
 
             <div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="Email" required>
@@ -41,7 +47,6 @@
                 <button class="btn" type="submit">Register</button>
             </div>
 
-            <a href="<?= base_url('autenticacion/login'); ?>">Ya tengo una cuenta</a>
         </form>
     </div>
 </main>

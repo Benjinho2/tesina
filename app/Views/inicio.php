@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/inicio.css'); ?>">   
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Inicio</title>
+    <title>Inicio | AquaBot</title>
 </head>
 <body>
 

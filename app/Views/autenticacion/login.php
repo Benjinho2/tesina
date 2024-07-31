@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/login.css'); ?>">
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Login</title>
+    <title>Login | AquaBot</title>
 </head>
 <body>
     <?= $this->include('common/header') ?>
@@ -16,6 +16,7 @@
             <form action="<?= base_url('iniciarSesion'); ?>" method="post">
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
+                    <?php session()->remove('error'); ?>
                 <?php endif ?>
 
                 <div class="form-group">
@@ -29,8 +30,8 @@
                 <div class="form-group">
                     <button class="btn" type="submit">Login</button>
                 </div>
-
-                <a href="<?= base_url('autenticacion/register'); ?>">No tengo una cuenta</a>
+                <p>¿Olvidaste tu contraseña? <a href="<?= base_url(''); ?>">Restablece tu contraseña</a></p>
+                <p >¿No tienes cuenta? <a href="<?= base_url('autenticacion/register'); ?>">Crea tu usuario</a></p>            
             </form>
         </div>
     </main>

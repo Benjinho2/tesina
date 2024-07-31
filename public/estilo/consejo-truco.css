@@ -14,7 +14,7 @@ main .consejo {
 }
 
 main .consejo h2 {
-    color: #4CAF50;
+    color: hsl(108, 21%, 49%);
     margin-top: 0;
 }
 

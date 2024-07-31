@@ -15,13 +15,21 @@
             <img src="<?= base_url('imagenes/planta.png'); ?>"><p>AquaBot</p></a>
 
         <nav class="nav" id="nav">
-            <ul class="nav__links">
-                <li class="nav__item"><a href="<?= base_url('sobrenosotros'); ?>" class="nav__link">Sobre nosotros</a></li>
-                <li class="nav__item"><a href="<?= base_url('contacto'); ?>" class="nav__link">Contacto</a></li>
+            <ul>
+                <li>
+                    <a href="<?= base_url('sobrenosotros'); ?>"">Sobre nosotros</a>
+                </li>
+                <li>
+                    <a href="<?= base_url('contacto'); ?>"">Contacto</a>
+                </li>
                 <?php if (session('userData')): ?>
-                    <li class="nav__item"><a href="<?= base_url('perfil'); ?>" class="nav__link"><?= session('userData')['nombre_completo']; ?></a></li>
+                <li>
+                    <a href="<?= base_url('perfil'); ?>""><?= session('userData')['nombre']; ?></a>
+                </li>
                 <?php else: ?>
-                <li class="nav__item"><a href="<?= site_url('autenticacion/login'); ?>" class="nav__link">Login</a></li>
+                <li>
+                    <a href="<?= site_url('autenticacion/login'); ?>"">Login</a>
+                </li>
                 <?php endif; ?>
             </ul>
         </nav>

@@ -22,16 +22,33 @@ class CAutenticacion extends BaseController
     {
         $usuarioModel   = new UsuarioModel();
     
-        $nombreCompleto = $this->request->getPost('nombre_completo');
+        $nombre         = $this->request->getPost('nombre');
+        $apellido       = $this->request->getPost('apellido');
         $email          = $this->request->getPost('email');
         $contraseña     = $this->request->getPost('contraseña');
     
-        if ($usuarioModel->existenteEmail($email)) {
+          // Validación de nombre completo (solo letras)
+        if (!preg_match('/^[a-zA-Z\s]+$/', $nombre)) {
+            return redirect()->to('autenticacion/register')->with('error', 'El nombre y apellido solo puede contener letras');
+        }
+        
+          // Validación de apellido (solo letras)
+          if (!preg_match('/^[a-zA-Z\s]+$/', $apellido)) {
+            return redirect()->to('autenticacion/register')->with('error', 'El apellido solo puede contener letras');
+        }
+
+        // Valida que las contraseñas tengan al menos 6 caracteres
+        if (strlen($contraseña) < 6 ){
+            return redirect()->back()->with('error', 'La nueva contraseña debe tener al menos 6 caracteres');
+        }
+    
+        if ($usuarioModel ->existenteEmail($email)) {
             return redirect()->to('autenticacion/register')->with('error', 'El correo electrónico ya está registrado');
         }
     
         $array = [
-            'nombre_completo' => $nombreCompleto,
+            'nombre'         => $nombre,
+            'apellido'        => $apellido,
             'email'           => $email,
             'contraseña'      => password_hash($contraseña, PASSWORD_BCRYPT),
         ];
@@ -42,29 +59,22 @@ class CAutenticacion extends BaseController
     }
     
     public function iniciarSesion()
-    {
+    {   
         $usuarioModel = new UsuarioModel();
-    
+
         $email      = $this->request->getPost('email');
         $contraseña = $this->request->getPost('contraseña');
-    
-        $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
-    
-        if ($informacionUsuario === null) {
-           session()->set('error', 'Correo electrónico o contraseña incorrecto');
-            return redirect()->to('autenticacion/login');
-        }
-    
-        if (password_verify($contraseña, $informacionUsuario['contraseña'])) {
-           session()->set('Tipo', 'Usuario');
-           session()->set('userData', $informacionUsuario);
-            return redirect()->to('/');
-        } else {
-           session()->set('error', 'Correo electrónico o contraseña incorrecto');
-            return redirect()->to('autenticacion/login');
-        }
-    }
 
+        $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
+
+        if ($informacionUsuario === null || !password_verify($contraseña, $informacionUsuario['contraseña'])) {
+            return redirect()->to('autenticacion/login')->with('error', 'Correo electrónico o contraseña incorrecto');
+        }
+        session()->set('Tipo', 'Usuario');
+        session()->set('userData', $informacionUsuario);
+        return redirect()->to('/');
+    }
+    
     public function cerrarSesion()
     {
         session()->destroy();

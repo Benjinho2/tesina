@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/perfil.css'); ?>">
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Perfil</title>
+    <title>Perfil | AquaBot</title>
 </head>
 <body>
 
@@ -19,13 +19,20 @@
         </div>
         <div class="perfil-info">
             <div>
-                <label>Nombre completo</label>
-                <span><?= session('userData')['nombre_completo']; ?></span>
+                <label>Nombre</label>
+                <span><?= session('userData')['nombre']; ?></span>
             </div>
+
+            <div>
+                <label>Apellido</label>
+                <span><?= session('userData')['apellido']; ?></span>
+            </div>
+
             <div>
                 <label>Email</label>
                 <span><?= session('userData')['email']; ?></span>
             </div>
+
             <div>
                 <label>Cerrar sesión</label>
                 <a href="<?= base_url('cerrarSesion'); ?>"><button type="button">Cerrar sesión</button></a>

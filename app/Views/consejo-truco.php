@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('estilo/consejo-truco.css'); ?>">   
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Consejos y Trucos</title>
+    <title>Consejos y Trucos | AquaBot</title>
 </head>
 <body>
 <?= $this->include('common/header') ?>
@@ -26,8 +26,9 @@
             <p>Para ahorrar agua y asegurar un riego eficiente:</p>
             <ol>
                 <li>Utiliza sistemas de riego por goteo para dirigir el agua directamente a las raíces de las plantas.</li>
-                <li>Implementa sensores de humedad para monitorizar el nivel de humedad del suelo y ajustar el riego automáticamente.</li>
-                <li>Evita el riego excesivo para prevenir la saturación del suelo y el crecimiento de hongos.</li>
+                <li>Implementa los sensores de humedad para monitorizar el nivel de humedad del suelo y ajustar el riego automáticamente.</li>
+                <li>Evita el riego excesivo para prevenir la saturación del suelo, nuestro sistema ya detiene el riego cuando el cultivo recibe la cantidad de agua adecuada
+                    y el crecimiento de hongos.</li>
             </ol>
         </section>
 
@@ -36,7 +37,7 @@
             <p>Para proteger tus cultivos de plagas:</p>
             <ol>
                 <li>Inspecciona tus plantas regularmente para detectar signos de plagas a tiempo.</li>
-                <li>Utiliza insecticidas naturales o caseros para mantener a raya a las plagas sin dañar el medio ambiente.</li>
+                <li>Utiliza insecticidas naturales o caseros para mantener cuidadas a las plagas sin dañar el medio ambiente.</li>
                 <li>Planta hierbas aromáticas como albahaca y menta que actúan como repelentes naturales de insectos.</li>
             </ol>
         </section>
