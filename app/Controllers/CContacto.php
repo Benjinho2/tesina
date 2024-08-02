@@ -2,17 +2,17 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use Config\Services;
 
 class CContacto extends Controller{
 
     public function enviar()
-    {
+    {   
         $nombre  = $this->request->getPost('nombre');
         $emails  = $this->request->getPost('email');
         $mensaje = $this->request->getPost('mensaje');
 
-        $email   = \Config\Services::email();
-        
+        $email   = Services::email();
         $email   ->setFrom($emails);
         $email   ->setTo('aquabotinfo@gmail.com');
         $email   ->setSubject($nombre);

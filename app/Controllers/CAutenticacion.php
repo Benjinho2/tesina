@@ -54,7 +54,7 @@ class CAutenticacion extends BaseController
         ];
     
         if ($usuarioModel->insertarUsuario($array)) {
-            return redirect()->to('autenticacion/register')->with('exito', '¡Ahora estás registrado/a!');
+            return redirect()->to('autenticacion/login')->with('exito', '¡Ahora estás registrado/a!');
         }
     }
     

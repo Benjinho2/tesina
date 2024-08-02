@@ -15,14 +15,18 @@ $routes->get('configuracion', 'Home::configuracion');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 
-// Vista Login y Register
+// Vista Login ,Register y Reseteo de contraseña
 $routes->get('autenticacion/login', 'CAutenticacion::login', ['filter' => 'autenticacion']);
 $routes->get('autenticacion/register', 'CAutenticacion::register', ['filter' => 'autenticacion']);
-
+$routes->get('autenticacion/correo', 'CCorreo::index');
+$routes->get('autenticacion/codigo', 'CCodigo::index');
+$routes->get('autenticacion/nueva-contrasena', 'CNuevacontrasena::index');
 
 // Funcionamiento Login, Register y Sesión afuera
 $routes->post('registrarse', 'CAutenticacion::registrarse');
 $routes->post('iniciarSesion', 'CAutenticacion::iniciarSesion');
+$routes->post('correo', 'CCorreo::correo');
+$routes->post('verificar', 'CCodigo::codigo');
 $routes->get('cerrarSesion', 'CAutenticacion::cerrarSesion');
 
 //Funcionamiento Formulario de contacto

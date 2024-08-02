@@ -14,6 +14,11 @@
             <img src="<?= base_url('imagenes/login.png'); ?>" alt="Imagen de Login">
             <h2>Login</h2>
             <form action="<?= base_url('iniciarSesion'); ?>" method="post">
+                <?php if (session()->get('exito')) : ?>
+                    <div class="alert alert-exito">
+                        <?= session()->get('exito'); ?>
+                    </div>
+                <?php endif ?>
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                     <?php session()->remove('error'); ?>
@@ -30,7 +35,7 @@
                 <div class="form-group">
                     <button class="btn" type="submit">Login</button>
                 </div>
-                <p>¿Olvidaste tu contraseña? <a href="<?= base_url(''); ?>">Restablece tu contraseña</a></p>
+                <p>¿Olvidaste tu contraseña? <a href="<?= base_url('autenticacion/correo'); ?>">Restablece tu contraseña</a></p>
                 <p >¿No tienes cuenta? <a href="<?= base_url('autenticacion/register'); ?>">Crea tu usuario</a></p>            
             </form>
         </div>

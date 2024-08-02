@@ -14,6 +14,10 @@
         <h1>Configuración de Riego</h1>
         <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
 
+            
+            <label for="id_dispositivo">Sensor Nro:</label>
+            <input type="number" id="id_dispositivo" name="id_dispositivo" required><br>
+
             <label for="nivel_minimo_humedad">Nivel Mínimo de Humedad:</label>
             <input type="number" id="nivel_minimo_humedad" name="nivel_minimo_humedad" required><br>
 
