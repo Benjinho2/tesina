@@ -14,24 +14,18 @@
         <h1>Configuración de Riego</h1>
         <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
 
-            
-            <label for="id_dispositivo">Sensor Nro:</label>
-            <input type="number" id="id_dispositivo" name="id_dispositivo" required><br>
+            <label for="id_dispositivo">ID Dispositivo:</label>
+            <input type="text" name="id_dispositivo" id="id_dispositivo" required>
 
             <label for="nivel_minimo_humedad">Nivel Mínimo de Humedad:</label>
-            <input type="number" id="nivel_minimo_humedad" name="nivel_minimo_humedad" required><br>
+            <input type="number" step="0.1" name="nivel_minimo_humedad" id="nivel_minimo_humedad" required>
 
             <label for="nivel_maximo_humedad">Nivel Máximo de Humedad:</label>
-            <input type="number" id="nivel_maximo_humedad" name="nivel_maximo_humedad" required><br>
+            <input type="number" step="0.1" name="nivel_maximo_humedad" id="nivel_maximo_humedad" required>
 
-            <label for="duracion_riego">Duración de Riego (minutos):</label>
-            <input type="number" id="duracion_riego" name="duracion_riego" required><br>
-
-            <label for="intervalo_riego">Intervalo de Riego (horas):</label>
-            <input type="number" id="intervalo_riego" name="intervalo_riego" required><br>
-
-            <button type="submit" class="btn-submit">Guardar Configuración</button>
+            <button type="submit">Agregar Configuración</button>
         </form>
+        
     </div>
 </main>
 <?= $this->include('common/footer') ?>

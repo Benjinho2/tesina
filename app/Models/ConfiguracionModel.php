@@ -10,8 +10,6 @@ class ConfiguracionModel extends Model{
     'id_dispositivo', 
     'nivel_minimo_humedad',
     'nivel_maximo_humedad',
-    'duracion_riego',
-    'intervalo_riego'
     ];
 
     public function guardarConfiguracion($array)
