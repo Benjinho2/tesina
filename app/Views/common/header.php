@@ -24,6 +24,7 @@
                 </li>
                 <?php if (session('userData')): ?>
                 <li>
+                    <a href="<?= base_url('configuracion'); ?>">Configuración</a>
                     <a href="<?= base_url('perfil'); ?>""><?= session('userData')['nombre']; ?></a>
                 </li>
                 <?php else: ?>

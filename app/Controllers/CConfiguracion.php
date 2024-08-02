@@ -11,7 +11,7 @@ class CConfiguracion extends Controller{
     {
         $configuracionModel = new ConfiguracionModel();
         
-        $iddispositivo  = $this->request->getPost('id_dispositivo');
+        $iddispositivo  = 3;
         $nivelMinimo    = $this->request->getPost('nivel_minimo_humedad');
         $nivelMaximo    = $this->request->getPost('nivel_maximo_humedad');
       

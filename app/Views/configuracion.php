@@ -14,14 +14,11 @@
         <h1>Configuración de Riego</h1>
         <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
 
-            <label for="id_dispositivo">ID Dispositivo:</label>
-            <input type="text" name="id_dispositivo" id="id_dispositivo" required>
-
             <label for="nivel_minimo_humedad">Nivel Mínimo de Humedad:</label>
-            <input type="number" step="0.1" name="nivel_minimo_humedad" id="nivel_minimo_humedad" required>
+            <input type="number"  name="nivel_minimo_humedad" id="nivel_minimo_humedad"  placeholder="700-1000"required>
 
             <label for="nivel_maximo_humedad">Nivel Máximo de Humedad:</label>
-            <input type="number" step="0.1" name="nivel_maximo_humedad" id="nivel_maximo_humedad" required>
+            <input type="number"  name="nivel_maximo_humedad" id="nivel_maximo_humedad" placeholder="1200-1500" require>
 
             <button type="submit">Agregar Configuración</button>
         </form>

@@ -30,6 +30,14 @@ body {
     box-sizing: border-box;
 }
 
+.config-form select,
+.config-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
 .config-form button {
     background-color: #4CAF50;
     color: white;
