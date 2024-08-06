@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UsuarioModel;
+use App\Models\CodigoModel;
 use Config\Services;
 
 class CCorreo extends Controller{
@@ -12,18 +13,24 @@ class CCorreo extends Controller{
         return view ('autenticacion/correo');  
     }
 
-    public function correo()
-    {
-        $emailUsuario = $this->request->getPost('email');
-        $usuarioModel   = new UsuarioModel();
+    public function correo() {
+        $usuarioModel = new UsuarioModel();
 
-        $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($emailUsuario);
+        $emailUsuario = $this->request->getPost('email');
+
+        $informacionUsuario = $usuarioModel->ObtenerUsuarioEmail($emailUsuario);
 
         if ($informacionUsuario) {
             $verificacionCodigo = rand(100000, 999999);
+            $codigoModel = new CodigoModel();
 
-            session()->set('codigo_verificacion', $verificacionCodigo);
-            session()->set('email', $emailUsuario);
+            // Guardar el código en la base de datos
+            $array = [
+                'id_usuario'          => $informacionUsuario['id_usuario'],
+                'codigo_verificacion' => $verificacionCodigo,
+            ];
+
+            $codigoModel->insertarDatosCodigo($array);
 
             $email = Services::email();
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
@@ -32,7 +39,7 @@ class CCorreo extends Controller{
             $email->setMessage("Su código de verificación es: $verificacionCodigo");
 
             if ($email->send()) {
-                return redirect()->to(base_url('codigo'));
+                return redirect()->to('autenticacion/codigo');
             } else {
                 return redirect()->back()->with('error', 'Error al enviar el correo');
             }

@@ -47,7 +47,7 @@ class CAutenticacion extends BaseController
         }
     
         $array = [
-            'nombre'         => $nombre,
+            'nombre'          => $nombre,
             'apellido'        => $apellido,
             'email'           => $email,
             'contraseña'      => password_hash($contraseña, PASSWORD_BCRYPT),

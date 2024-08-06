@@ -20,13 +20,14 @@ $routes->get('autenticacion/login', 'CAutenticacion::login', ['filter' => 'auten
 $routes->get('autenticacion/register', 'CAutenticacion::register', ['filter' => 'autenticacion']);
 $routes->get('autenticacion/correo', 'CCorreo::index');
 $routes->get('autenticacion/codigo', 'CCodigo::index');
-$routes->get('autenticacion/nueva-contrasena', 'CNuevacontrasena::index');
+$routes->get('autenticacion/nueva-contrasena', 'CNuevacontraseña::index');
 
 // Funcionamiento Login, Register y Sesión afuera
 $routes->post('registrarse', 'CAutenticacion::registrarse');
 $routes->post('iniciarSesion', 'CAutenticacion::iniciarSesion');
 $routes->post('correo', 'CCorreo::correo');
-$routes->post('verificar', 'CCodigo::codigo');
+$routes->post('verificar', 'CCodigo::verificar');
+$routes->post('actualizar', 'CNuevacontraseña::actualizar');
 $routes->get('cerrarSesion', 'CAutenticacion::cerrarSesion');
 
 //Funcionamiento Formulario de contacto
@@ -34,3 +35,4 @@ $routes->post('enviar', 'CContacto::enviar');
 
 //Funcionamiento Guardar
 $routes->post('guardar', 'CConfiguracion::guardar');
+

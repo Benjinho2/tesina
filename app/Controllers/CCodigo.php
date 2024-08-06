@@ -1,40 +1,39 @@
-<?php 
+<?php
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\CodigoModel;
+use App\Models\UsuarioModel;
 
-class CCodigo extends Controller{
+class CCodigo extends Controller {
     
-    public function index()
-    {
+    public function index() {
         return view('autenticacion/codigo');
     }
 
-    public function verificar()
-    {
+    public function verificar() {
         $codigoIngresado = $this->request->getPost('codigo');
-        $codigoSesion = session()->get('verificacion_codigo');
-        $emailSesion = session()->get('email');
 
-        if ($codigoIngresado == $codigoSesion) {
-            return redirect()->to(base_url('nueva_contrasena'));
-        } else {
-            // Generar un nuevo código de verificación
-            $nuevoCodigo = rand(100000, 999999);
-            session()->set('verificacion_codigo', $nuevoCodigo);
+        // Cargar el modelo de Código
+        $codigoModel = new CodigoModel();
+        
+        // Verificar el código en la base de datos
+        $codigo = $codigoModel->verificarCodigoPorCodigo($codigoIngresado);
 
-            // Enviar el nuevo código de verificación por correo electrónico
-            $email = Services::email();
-            $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
-            $email->setTo($emailSesion);
-            $email->setSubject('Nuevo Código de Verificación');
-            $email->setMessage("Su nuevo código de verificación es: $nuevoCodigo");
+        if ($codigo) {
+            // Código válido, obtener el usuario
+            $usuarioModel = new UsuarioModel();
+            $usuario = $usuarioModel->find($codigo['id_usuario']);
 
-            if ($email->send()) {
-                return redirect()->back()->with('error', 'Código de verificación incorrecto. Se ha enviado un nuevo código a su correo.');
+            if ($usuario) {
+                // Pasar id_usuario  a la vista de nueva contraseña
+                return view('autenticacion/nueva-contrasena', ['id_usuario' => $codigo['id_usuario'],]);
             } else {
-                return redirect()->back()->with('error', 'Código de verificación incorrecto y error al enviar el nuevo código.');
+                return redirect()->back()->with('error', 'Usuario no encontrado.');
             }
+        } else {
+            // Código inválido
+            return redirect()->back()->with('error', 'Código de verificación incorrecto.');
         }
     }
 }
