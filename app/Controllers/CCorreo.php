@@ -18,11 +18,10 @@ class CCorreo extends Controller{
 
         $emailUsuario = $this->request->getPost('email');
 
-        $informacionUsuario = $usuarioModel->ObtenerUsuarioEmail($emailUsuario);
+        $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($emailUsuario);
 
         if ($informacionUsuario) {
             $verificacionCodigo = rand(100000, 999999);
-            $codigoModel = new CodigoModel();
 
             // Guardar el código en la base de datos
             $array = [
@@ -30,6 +29,7 @@ class CCorreo extends Controller{
                 'codigo_verificacion' => $verificacionCodigo,
             ];
 
+            $codigoModel = new CodigoModel();
             $codigoModel->insertarDatosCodigo($array);
 
             $email = Services::email();
@@ -39,7 +39,7 @@ class CCorreo extends Controller{
             $email->setMessage("Su código de verificación es: $verificacionCodigo");
 
             if ($email->send()) {
-                return redirect()->to('autenticacion/codigo');
+                return redirect()->to('autenticacion/nueva-contrasena');
             } else {
                 return redirect()->back()->with('error', 'Error al enviar el correo');
             }

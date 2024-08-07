@@ -13,11 +13,14 @@
         <div class="login-container">
             <form action="<?= base_url('actualizar') ?>" method="post">
                 <h1>Restablecer Contraseña</h1>
-                <p>Ingresa tu correo electrónico y la nueva contraseña</p>
+                <p>Ingresa tu código de recuperación y la nueva contraseña</p>
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                     <?php session()->remove('error'); ?>
                 <?php endif ?>
+                <div class="code-container">
+                    <input type="text" name="codigo" id="codigo" required placeholder="Código de Recuperación" required>
+                </div>
                 <div class="password-container">
                     <input type="password" name="nueva_contraseña" id="nueva_contraseña" required placeholder="Nueva Contraseña" required>
                 </div>

@@ -12,8 +12,14 @@ class CodigoModel extends Model{
     {
         return $this->insert($array);
     }
-    public function verificarCodigoPorCodigo($codigoVerificacion) {
-        return $this->where('codigo_verificacion', $codigoVerificacion)
-                    ->first();
+    
+    public function obtenerCodigo($codigoVerificacion)
+    {
+        return $this->where('codigo_verificacion', $codigoVerificacion)->first();
+    }
+
+    public function deleteCodigo($codigo)
+    {
+        return $this->where('codigo_verificacion', $codigo)->delete();
     }
 }

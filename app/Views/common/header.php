@@ -30,6 +30,7 @@
                 <?php else: ?>
                 <li>
                     <a href="<?= site_url('autenticacion/login'); ?>"">Login</a>
+                    <a href="<?= site_url('autenticacion/register'); ?>"">Register</a>
                 </li>
                 <?php endif; ?>
             </ul>

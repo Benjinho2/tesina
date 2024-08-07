@@ -20,14 +20,14 @@ class UsuarioModel extends Model
         return $this->where('email', $email)->countAllResults() > 0;
     }
 
-    public function ObtenerUsuarioEmail($email)
+    public function obtenerUsuarioEmail($email)
     {
         return $this->where('email', $email)->first();
     }
 
-    public function Actualizarcontraseña($hashedContraseña, $idUsuario)
+    public function actualizarcontraseña($hashedContraseña, $idUsuario)
     {
-        return $this->set('contraseña', $hashedContraseña) // Usa 'contraseña'
+        return $this->set('contraseña', $hashedContraseña) 
                      ->where('id_usuario', $idUsuario)
                      ->update();
     }
