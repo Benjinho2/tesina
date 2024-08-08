@@ -19,7 +19,7 @@
                     <?php session()->remove('error'); ?>
                 <?php endif ?>
                 <div class="code-container">
-                    <input type="text" name="codigo" id="codigo" required placeholder="Código de Recuperación" required>
+                    <input type="text" name="token" id="token" required placeholder="Código de Recuperación" required>
                 </div>
                 <div class="password-container">
                     <input type="password" name="nueva_contraseña" id="nueva_contraseña" required placeholder="Nueva Contraseña" required>

@@ -6,20 +6,24 @@ use CodeIgniter\Model;
 class CodigoModel extends Model{
     protected $table      = 'codigo';
     protected $primaryKey = 'id_codigo';
-    protected $allowedFields = ['id_usuario','codigo_verificacion'];
+    protected $allowedFields = ['id_usuario','token', 'token_expires'];
     
-    public function insertarDatosCodigo($array)
+    public function insertarToken($array)
     {
         return $this->insert($array);
     }
-    
-    public function obtenerCodigo($codigoVerificacion)
+
+    public function obtenerUsuarioPorToken($token)
     {
-        return $this->where('codigo_verificacion', $codigoVerificacion)->first();
+        return $this->where('token', $token)
+                    ->where('token_expires >=', date('Y-m-d H:i:s'))
+                    ->first();
     }
 
-    public function deleteCodigo($codigo)
+    public function eliminarTokenPorUsuario($idUsuario)
     {
-        return $this->where('codigo_verificacion', $codigo)->delete();
+        $this->where('id_usuario', $idUsuario)->delete();
+
     }
+    
 }

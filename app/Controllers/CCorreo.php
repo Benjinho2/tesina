@@ -13,33 +13,44 @@ class CCorreo extends Controller{
         return view ('autenticacion/correo');  
     }
 
+    public function info()
+    {
+        return view ('autenticacion/info');  
+    }
+
+
     public function correo() {
         $usuarioModel = new UsuarioModel();
+        $codigoModel = new CodigoModel();
 
         $emailUsuario = $this->request->getPost('email');
-
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($emailUsuario);
 
         if ($informacionUsuario) {
-            $verificacionCodigo = rand(100000, 999999);
+            $token = bin2hex(random_bytes(16)); // Generar un token único
+            $expiresAt = date('Y-m-d H:i:s', strtotime('+15 minutes')); // Token válido por 15 minutos
 
-            // Guardar el código en la base de datos
             $array = [
-                'id_usuario'          => $informacionUsuario['id_usuario'],
-                'codigo_verificacion' => $verificacionCodigo,
+                'id_usuario' => $informacionUsuario['id_usuario'],
+                'token' => $token,
+                'token_expires' => $expiresAt
             ];
 
-            $codigoModel = new CodigoModel();
-            $codigoModel->insertarDatosCodigo($array);
+            $codigoModel->insertarToken($array);
 
+            // Construir la URL segura con el token
+            $baseURL = base_url();
+            $url = $baseURL . '/autenticacion/nueva-contrasena';
+
+            // Enviar el correo
             $email = Services::email();
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
             $email->setTo($emailUsuario);
-            $email->setSubject('Código de Verificación');
-            $email->setMessage("Su código de verificación es: $verificacionCodigo");
+            $email->setSubject('Restablecimiento de Contraseña');
+            $email->setMessage("Para restablecer su contraseña, haga clic en el siguiente enlace: " . $url . " y use el siguiente código de verificación: $token.");
 
             if ($email->send()) {
-                return redirect()->to('autenticacion/nueva-contrasena');
+                return redirect()->to('autenticacion/info')->with('exito', 'Se ha enviado un correo para restablecer su contraseña.');
             } else {
                 return redirect()->back()->with('error', 'Error al enviar el correo');
             }
@@ -47,5 +58,4 @@ class CCorreo extends Controller{
             return redirect()->back()->with('error', 'Correo no encontrado');
         }
     }
-
 }

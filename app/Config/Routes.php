@@ -19,14 +19,13 @@ $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('autenticacion/login', 'CAutenticacion::login', ['filter' => 'autenticacion']);
 $routes->get('autenticacion/register', 'CAutenticacion::register', ['filter' => 'autenticacion']);
 $routes->get('autenticacion/correo', 'CCorreo::index');
-$routes->get('autenticacion/codigo', 'CCodigo::index');
 $routes->get('autenticacion/nueva-contrasena', 'CNuevacontrasena::index');
+$routes->get('autenticacion/info', 'CCorreo::info');
 
 // Funcionamiento Login, Register y Sesión afuera
 $routes->post('registrarse', 'CAutenticacion::registrarse');
 $routes->post('iniciarSesion', 'CAutenticacion::iniciarSesion');
 $routes->post('correo', 'CCorreo::correo');
-$routes->post('verificar', 'CCodigo::verificar');
 $routes->post('actualizar', 'CNuevacontrasena::actualizar');
 $routes->get('cerrarSesion', 'CAutenticacion::cerrarSesion');
     
