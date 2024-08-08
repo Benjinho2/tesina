@@ -14,18 +14,23 @@
             <form action="<?= base_url('actualizar') ?>" method="post">
                 <h1>Restablecer Contraseña</h1>
                 <p>Ingresa tu código de recuperación y la nueva contraseña</p>
+                <?php if (session()->get('exito')) : ?>
+                    <div class="alert alert-exito">
+                        <?= session()->get('exito'); ?>
+                    </div>
+                <?php endif ?>     
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                     <?php session()->remove('error'); ?>
                 <?php endif ?>
                 <div class="code-container">
-                    <input type="text" name="token" id="token" required placeholder="Código de Recuperación" required>
+                    <input type="text" name="codigo" id="codigo" placeholder="Ingrese el código" required>
                 </div>
                 <div class="password-container">
-                    <input type="password" name="nueva_contraseña" id="nueva_contraseña" required placeholder="Nueva Contraseña" required>
+                    <input type="password" name="nueva_contrasena" id="nueva_contrasena" placeholder="Nueva Contraseña"  required>
                 </div>
                 <div class="password-container">
-                    <input type="password" name="repetir_contraseña" id="repetir_contraseña" required placeholder="Repetir Contraseña" required>
+                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
                 </div>
                 <button type="submit">Actualizar Contraseña</button>
             </form>

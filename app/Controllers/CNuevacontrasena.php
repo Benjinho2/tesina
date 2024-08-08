@@ -8,23 +8,22 @@ use App\Models\CodigoModel;
 class CNuevacontrasena extends Controller
 {
     public function index() {
-        $token = $this->request->getGet('token');
-        return view('autenticacion/nueva-contrasena', ['token' => $token]);
+        return view('autenticacion/nueva-contrasena');
     }
 
     public function actualizar() {
         $usuarioModel = new UsuarioModel();
         $codigoModel = new CodigoModel();
 
-        $token = $this->request->getPost('token');
-        $nuevaContrasena = $this->request->getPost('nueva_contraseña');
-        $repetirContrasena = $this->request->getPost('repetir_contrasena');
+        $codigo = $this->request->getPost('codigo');
+        $nuevaContrasena = $this->request->getPost('nueva_contrasena');
+        $confirmarContrasena = $this->request->getPost('confirmar_contrasena');
 
-        // Verificar el token
-        $codigoData = $codigoModel->obtenerUsuarioPorToken($token);
+        // Verificar el código
+        $codigoData = $codigoModel->obtenerUsuarioPorCodigo($codigo);
 
         if (!$codigoData) {
-            return redirect()->back()->with('error', 'Token inválido o expirado.');
+            return redirect()->back()->with('error', 'Código inválido o expirado.');
         }
 
         $idUsuario = $codigoData['id_usuario'];
@@ -32,7 +31,7 @@ class CNuevacontrasena extends Controller
         // Verificar que la nueva contraseña no sea igual a la antigua
         $usuario = $usuarioModel->find($idUsuario);
         if (password_verify($nuevaContrasena, $usuario['contraseña'])) {
-            return redirect()->back()->with('error', 'La nueva contraseña no puede ser igual a la contraseña actual.');
+            return redirect()->back()->with('error', 'La nueva contraseña no puede ser igual a la contraseña anterior.');
         }
 
         // Validar que las contraseñas tengan al menos 6 caracteres, una mayúscula y un símbolo
@@ -41,8 +40,8 @@ class CNuevacontrasena extends Controller
         }
 
         // Validar que las contraseñas coincidan
-        if ($nuevaContrasena !== $repetirContrasena) {
-            return redirect()->back()->with('error', 'Las contraseñas no coinciden.');
+        if ($nuevaContrasena !== $confirmarContrasena) {
+             return redirect()->back()->with('error', 'Las contraseñas no coinciden.');
         }
 
         // Hashear la nueva contraseña
@@ -50,8 +49,8 @@ class CNuevacontrasena extends Controller
 
         // Actualizar la contraseña del usuario usando el método del modelo
         if ($usuarioModel->actualizarcontraseña($hashedContraseña, $idUsuario)) {
-            // Eliminar el token de recuperación
-            $codigoData = $codigoModel->eliminarTokenPorUsuario($idUsuario);
+            // Eliminar el código de recuperación
+            $codigoModel->eliminarCodigoPorUsuario($idUsuario);
 
             return redirect()->to('autenticacion/login')->with('exito', 'Contraseña actualizada correctamente.');
         } else {

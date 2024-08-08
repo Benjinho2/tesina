@@ -32,8 +32,8 @@
             <div class="footer-section">
                 <h4>Seguinos</h4>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Creador</a><br>
-                    <a href="https://www.instagram.com/oviedo_benj4/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Creador</a>
+                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Desarrollador Full-Stack</a><br>
+                    <a href="https://www.instagram.com/oviedo_benj4/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Desarrolador Fronted</a>
                 </div>
             </div>
         </div>

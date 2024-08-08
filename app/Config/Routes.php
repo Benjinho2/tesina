@@ -20,7 +20,6 @@ $routes->get('autenticacion/login', 'CAutenticacion::login', ['filter' => 'auten
 $routes->get('autenticacion/register', 'CAutenticacion::register', ['filter' => 'autenticacion']);
 $routes->get('autenticacion/correo', 'CCorreo::index');
 $routes->get('autenticacion/nueva-contrasena', 'CNuevacontrasena::index');
-$routes->get('autenticacion/info', 'CCorreo::info');
 
 // Funcionamiento Login, Register y Sesión afuera
 $routes->post('registrarse', 'CAutenticacion::registrarse');

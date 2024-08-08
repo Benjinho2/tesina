@@ -27,30 +27,26 @@ class CCorreo extends Controller{
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($emailUsuario);
 
         if ($informacionUsuario) {
-            $token = bin2hex(random_bytes(16)); // Generar un token único
-            $expiresAt = date('Y-m-d H:i:s', strtotime('+15 minutes')); // Token válido por 15 minutos
+            $codigo = rand(100000, 999999); // Generar un código de 6 dígitos
+            $expiresAt = date('Y-m-d H:i:s', strtotime('+15 minutes')); // Código válido por 15 minutos
 
             $array = [
                 'id_usuario' => $informacionUsuario['id_usuario'],
-                'token' => $token,
-                'token_expires' => $expiresAt
+                'codigo' => $codigo,
+                'codigo_expires' => $expiresAt
             ];
 
-            $codigoModel->insertarToken($array);
-
-            // Construir la URL segura con el token
-            $baseURL = base_url();
-            $url = $baseURL . '/autenticacion/nueva-contrasena';
+            $codigoModel->insertarCodigo($array);
 
             // Enviar el correo
             $email = Services::email();
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
             $email->setTo($emailUsuario);
-            $email->setSubject('Restablecimiento de Contraseña');
-            $email->setMessage("Para restablecer su contraseña, haga clic en el siguiente enlace: " . $url . " y use el siguiente código de verificación: $token.");
+            $email->setSubject('Código de Verificación para Restablecer Contraseña');
+            $email->setMessage("Use el siguiente código para restablecer su contraseña: $codigo. El código es válido por 15 minutos.");
 
             if ($email->send()) {
-                return redirect()->to('autenticacion/info')->with('exito', 'Se ha enviado un correo para restablecer su contraseña.');
+                return redirect()->to('autenticacion/nueva-contrasena')->with('exito', 'Ingresa el código enviado por email');
             } else {
                 return redirect()->back()->with('error', 'Error al enviar el correo');
             }
