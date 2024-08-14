@@ -25,6 +25,14 @@ form p {
     margin-bottom: 20px;
 }
 
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -54,6 +62,9 @@ button {
     transition: background 0.3s;
 }
 
+button:hover {
+    background: hsl(108, 21%, 39%);
+}
 
 .login-container .alert {
     padding: 0.75rem 1rem;

@@ -22,15 +22,22 @@
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                     <?php session()->remove('error'); ?>
                 <?php endif ?>
+                
                 <div class="code-container">
+                    <label for="codigo">Código de verificación</label>
                     <input type="text" name="codigo" id="codigo" placeholder="Ingrese el código" required>
                 </div>
+
                 <div class="password-container">
-                    <input type="password" name="nueva_contrasena" id="nueva_contrasena" placeholder="Nueva Contraseña"  required>
+                    <label for="nueva_contrasena">Contraseña</label>
+                    <input type="password" name="nueva_contrasena" id="nueva_contrasena" placeholder="Nueva contraseña" required>
                 </div>
+
                 <div class="password-container">
-                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
+                    <label for="confirmar_contrasena">Confirmar contraseña</label>
+                    <input type="password" name="confirmar_contrasena" id="confirmar_contrasena" placeholder="Confirmar contraseña" required>
                 </div>
+
                 <button type="submit">Actualizar Contraseña</button>
             </form>
         </div>

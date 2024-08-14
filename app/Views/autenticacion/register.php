@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <button class="btn" type="submit">Register</button>
                 </div>
-                <p>¿Ya tienes una cuenta? <a href="<?= base_url('autenticacion/login'); ?>">Entra aca</a></p>            
+                <p>¿Ya tienes una cuenta?<a href="<?= base_url('autenticacion/login'); ?>">Entra aca.</a></p>            
             </form>
         </div>
     </main>

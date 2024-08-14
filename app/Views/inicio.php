@@ -68,10 +68,10 @@
       <h2>Preguntas Generales</h2>
 
       <div class="faq-item">
-        <h3>¿Cómo funciona el sistema de riego?</h3>
+        <h3>1) ¿Cómo funciona el sistema de riego?</h3>
         <p>
             El sistema utiliza sensores para medir la humedad del suelo 
-            y ajusta el riego en consecuencia. Para más información, <a href="<?= base_url('como-funciona'); ?>">haz click aquí</a>
+            y ajusta el riego en consecuencia. Para más información, <a href="<?= base_url('como-funciona'); ?>">haz click aquí.</a>
         </p>
       </div>
     </section>
