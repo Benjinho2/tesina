@@ -4,20 +4,20 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UsuarioModel;
 use App\Models\CodigoModel;
+use App\Controllers\CAutenticacion;
 use Config\Services;
 
 class CCorreo extends Controller{
     
     public function index()
     {
+          // Verifica si hay datos de usuario en la sesión
+        if (session()->get('userData')) {
+            // Redirige al usuario autenticado a la página principal
+            return redirect()->to('/');
+        }
         return view ('autenticacion/correo');  
     }
-
-    public function info()
-    {
-        return view ('autenticacion/info');  
-    }
-
 
     public function correo() {
         $usuarioModel = new UsuarioModel();
@@ -37,21 +37,25 @@ class CCorreo extends Controller{
             ];
 
             $codigoModel->insertarCodigo($array);
-
+            
+            session()->set('emailValido', $emailUsuario);
             // Enviar el correo
             $email = Services::email();
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
             $email->setTo($emailUsuario);
-            $email->setSubject('Código de Verificación para Restablecer Contraseña');
+            $email->setSubject('Código de verificación para restablecer contraseña');
             $email->setMessage("Use el siguiente código para restablecer su contraseña: $codigo. El código es válido por 15 minutos.");
 
             if ($email->send()) {
-                return redirect()->to('autenticacion/nueva-contrasena')->with('exito', 'Ingresa el código enviado por email');
+                session()->set('exito', 'Ingresa el código enviado por email.');
+                return redirect()->to('autenticacion/nueva-contrasena');
             } else {
-                return redirect()->back()->with('error', 'Error al enviar el correo');
+                session()->set('error', 'Error al enviar el correo.');
+                return redirect()->back();
             }
         } else {
-            return redirect()->back()->with('error', 'Correo no encontrado');
+            session()->set('error', 'Correo no encontrado.');
+            return redirect()->back();
         }
     }
 }

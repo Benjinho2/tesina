@@ -19,9 +19,6 @@
                 <li>
                     <a href="<?= base_url('sobrenosotros'); ?>"">Sobre nosotros</a>
                 </li>
-                <li>
-                    <a href="<?= base_url('contacto'); ?>"">Contacto</a>
-                </li>
                 <?php if (session('userData')): ?>
                 <li>
                     <a href="<?= base_url('configuracion'); ?>">Configuración</a>

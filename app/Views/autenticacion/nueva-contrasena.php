@@ -15,9 +15,8 @@
                 <h1>Restablecer Contraseña</h1>
                 <p>Ingresa tu código de recuperación y la nueva contraseña</p>
                 <?php if (session()->get('exito')) : ?>
-                    <div class="alert alert-exito">
-                        <?= session()->get('exito'); ?>
-                    </div>
+                    <div class="alert alert-exito"><?= session()->get('exito'); ?></div>
+                    <?php session()->remove('exito'); ?>
                 <?php endif ?>     
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>

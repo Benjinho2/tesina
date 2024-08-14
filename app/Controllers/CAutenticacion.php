@@ -5,16 +5,25 @@ namespace App\Controllers;
 use App\Models\UsuarioModel;
 
 class CAutenticacion extends BaseController
-{
-    
+{   
     public function login()
     {
+        // Verifica si el usuario ya está autenticado
+        if (session()->get('userData')) {
+            // Redirige al usuario autenticado a la página principal
+            return redirect()->to('/');
+        }
+
         return view('autenticacion/login');
-        
     }
 
     public function register()
     {
+        // Verifica si el usuario ya está autenticado
+        if (session()->get('userData')) {
+            // Redirige al usuario autenticado a la página principal
+            return redirect()->to('/');
+        }
         return view('autenticacion/register');
     }
 
@@ -27,25 +36,28 @@ class CAutenticacion extends BaseController
         $email          = $this->request->getPost('email');
         $contraseña     = $this->request->getPost('contraseña');
     
-          // Validación de nombre completo (solo letras)
+        // Validación de nombre completo (solo letras)
         if (!preg_match('/^[a-zA-Z\s]+$/', $nombre)) {
-            return redirect()->to('autenticacion/register')->with('error', 'El nombre y apellido solo puede contener letras');
+            session()->set('error', 'El nombre y apellido solo puede contener letras.');
+            return redirect()->to('autenticacion/register');
         }
         
-          // Validación de apellido (solo letras)
-          if (!preg_match('/^[a-zA-Z\s]+$/', $apellido)) {
-            return redirect()->to('autenticacion/register')->with('error', 'El apellido solo puede contener letras');
+        // Validación de apellido (solo letras)
+        if (!preg_match('/^[a-zA-Z\s]+$/', $apellido)) {
+            session()->set('error', 'El apellido solo puede contener letras.');
+            return redirect()->to('autenticacion/register');
+        }
+        if ($usuarioModel->existenteEmail($email)) {
+            session()->set('error', 'El correo electrónico ya está registrado.');
+            return redirect()->to('autenticacion/register');
         }
 
-         // Validar que las contraseñas tengan al menos 6 caracteres, una mayúscula y un símbolo
-         if (strlen($contraseña) < 6 || !preg_match('/[A-Z]/', $contraseña) || !preg_match('/[!@#$%]/', $contraseña)) {
-            return redirect()->back()->with('error', 'La nueva contraseña debe tener al menos 6 caracteres, una letra mayúscula y un símbolo(!@#$%).');
+        // Validar que las contraseñas tengan al menos 6 caracteres, una mayúscula y un símbolo
+        if (strlen($contraseña) < 6 || !preg_match('/[A-Z]/', $contraseña) || !preg_match('/[!@#$%]/', $contraseña)) {
+            session()->set('error', 'La nueva contraseña debe tener al menos 6 caracteres, una letra mayúscula y un símbolo (!@#$%).');
+            return redirect()->back();
         }
         
-        if ($usuarioModel ->existenteEmail($email)) {
-            return redirect()->to('autenticacion/register')->with('error', 'El correo electrónico ya está registrado');
-        }
-    
         $array = [
             'nombre'          => $nombre,
             'apellido'        => $apellido,
@@ -54,7 +66,8 @@ class CAutenticacion extends BaseController
         ];
     
         if ($usuarioModel->insertarUsuario($array)) {
-            return redirect()->to('autenticacion/login')->with('exito', '¡Ahora estás registrado/a!');
+            session()->set('exito', 'Registro exitoso.');     
+            return redirect()->to('autenticacion/login');   
         }
     }
     
@@ -68,7 +81,8 @@ class CAutenticacion extends BaseController
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($email);
 
         if ($informacionUsuario === null || !password_verify($contraseña, $informacionUsuario['contraseña'])) {
-            return redirect()->to('autenticacion/login')->with('error', 'Correo electrónico o contraseña incorrecto');
+            session()->set('error', 'Correo electrónico o contraseña incorrecto.');
+            return redirect()->to('autenticacion/login');
         }
         session()->set('Tipo', 'Usuario');
         session()->set('userData', $informacionUsuario);
@@ -82,5 +96,3 @@ class CAutenticacion extends BaseController
         return redirect()->to('/');
     }
 }
-
-?>

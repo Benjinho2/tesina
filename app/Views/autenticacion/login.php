@@ -15,9 +15,9 @@
             <h2>Login</h2>
             <form action="<?= base_url('iniciarSesion'); ?>" method="post">
                 <?php if (session()->get('exito')) : ?>
-                    <div class="alert alert-exito">
-                        <?= session()->get('exito'); ?>
-                    </div>
+                    <div class="alert alert-exito"><?= session()->get('exito'); ?></div>
+                        <?php session()->remove('exito'); ?>
+                        <?php session()->remove('emailValido'); ?>
                 <?php endif ?>
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
@@ -25,18 +25,20 @@
                 <?php endif ?>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="email" placeholder="Email" required>
+                    <label for="">Correo electrónico</label>
+                    <input type="text" class="form-control" name="email" placeholder="Ingresa su correo" required>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required>
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control" name="contraseña" placeholder="Ingresa su contraseña" required>
                 </div>
 
                 <div class="form-group">
                     <button class="btn" type="submit">Login</button>
                 </div>
-                <p>¿Olvidaste tu contraseña? <a href="<?= base_url('autenticacion/correo'); ?>">Restablece tu contraseña</a></p>
                 <p >¿No tienes cuenta? <a href="<?= base_url('autenticacion/register'); ?>">Crea tu usuario</a></p>            
+                <p>¿Olvidaste tu contraseña? <a href="<?= base_url('autenticacion/correo'); ?>">Restablece tu contraseña</a></p>
             </form>
         </div>
     </main>

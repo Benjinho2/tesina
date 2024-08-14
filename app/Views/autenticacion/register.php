@@ -22,26 +22,30 @@
                 <?php endif ?>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese un nombre" required>
                 </div>
                 
-                <div class="form-group">
-                    <input type="text" class="form-control" name="apellido" placeholder="Apellido" required>
+                <div class="form-group">    
+                    <label for="">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" placeholder="Ingrese un apellido" required>
                 </div>
 
 
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="email@aquabot.com" required>
+                    <label for="">Correo electrónico</label>
+                    <input type="email" class="form-control" name="email" placeholder="Ingrese un correo" required>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" name="contraseña" placeholder="Contraseña" required>
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control" name="contraseña" placeholder="Ingrese una contraseña" required>
                 </div>
 
                 <div class="form-group">
                     <button class="btn" type="submit">Register</button>
                 </div>
-
+                <p>¿Ya tienes una cuenta? <a href="<?= base_url('autenticacion/login'); ?>">Entra aca</a></p>            
             </form>
         </div>
     </main>

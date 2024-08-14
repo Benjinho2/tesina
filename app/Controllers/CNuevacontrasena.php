@@ -1,17 +1,32 @@
 <?php
+
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UsuarioModel;
 use App\Models\CodigoModel;
-
+use App\Controllers\CAutenticacion;
 class CNuevacontrasena extends Controller
 {
-    public function index() {
+    public function index()
+    {  
+          // Verifica si hay datos de usuario en la sesión
+        if (session()->get('userData')) {
+            // Redirige al usuario autenticado a la página principal
+            return redirect()->to('/');
+        }
+
+        $emailValido = session()->get('emailValido');
+        if (!$emailValido) {
+            session()->set('error', 'Ingrese su email para restablecer la ontraseña.');
+            return redirect()->to('autenticacion/correo');
+        }
+
         return view('autenticacion/nueva-contrasena');
     }
 
-    public function actualizar() {
+    public function actualizar()
+    {
         $usuarioModel = new UsuarioModel();
         $codigoModel = new CodigoModel();
 
@@ -23,7 +38,8 @@ class CNuevacontrasena extends Controller
         $codigoData = $codigoModel->obtenerUsuarioPorCodigo($codigo);
 
         if (!$codigoData) {
-            return redirect()->back()->with('error', 'Código inválido o expirado.');
+            session()->set('error', 'Código inválido o expirado.');
+            return redirect()->back();
         }
 
         $idUsuario = $codigoData['id_usuario'];
@@ -31,17 +47,20 @@ class CNuevacontrasena extends Controller
         // Verificar que la nueva contraseña no sea igual a la antigua
         $usuario = $usuarioModel->find($idUsuario);
         if (password_verify($nuevaContrasena, $usuario['contraseña'])) {
-            return redirect()->back()->with('error', 'La nueva contraseña no puede ser igual a la contraseña anterior.');
+            session()->set('error', 'La nueva contraseña no puede ser igual a la contraseña anterior.');
+            return redirect()->back();
         }
 
         // Validar que las contraseñas tengan al menos 6 caracteres, una mayúscula y un símbolo
         if (strlen($nuevaContrasena) < 6 || !preg_match('/[A-Z]/', $nuevaContrasena) || !preg_match('/[!@#$%]/', $nuevaContrasena)) {
-            return redirect()->back()->with('error', 'La nueva contraseña debe tener al menos 6 caracteres, una letra mayúscula y un símbolo(!@#$%).');
+            session()->set('error', 'La nueva contraseña debe tener al menos 6 caracteres, una letra mayúscula y un símbolo (!@#$%).');
+            return redirect()->back();
         }
 
         // Validar que las contraseñas coincidan
         if ($nuevaContrasena !== $confirmarContrasena) {
-             return redirect()->back()->with('error', 'Las contraseñas no coinciden.');
+            session()->set('error', 'Las contraseñas no coinciden.');
+            return redirect()->back();
         }
 
         // Hashear la nueva contraseña
@@ -52,9 +71,11 @@ class CNuevacontrasena extends Controller
             // Eliminar el código de recuperación
             $codigoModel->eliminarCodigoPorUsuario($idUsuario);
 
-            return redirect()->to('autenticacion/login')->with('exito', 'Contraseña actualizada correctamente.');
+            session()->set('exito', 'Contraseña actualizada correctamente.');
+            return redirect()->to('autenticacion/login');
         } else {
-            return redirect()->back()->with('error', 'Error al actualizar la contraseña.');
+            session()->set('error', 'Error al actualizar la contraseña.');
+            return redirect()->back();
         }
     }
 }

@@ -41,16 +41,17 @@
       <div class="feature-list">
         <div class="feature-item">
           <h3>Configuración Personalizada</h3>
-          <p>Ajusta los niveles de humedad y riego según las necesidades específicas de tus cultivos.</p>
+          <p>Ajusta los niveles de humedad según las necesidades específicas de tus cultivos.</p>
         </div>
         <div class="feature-item">
           <h3>Seguimiento de Humedad</h3>
-          <p>Utiliza sensores para medir la humedad del suelo y ajustar el riego en consecuencia.</p>
+          <p>Utiliza sensores para medir la humedad del suelo en base a la configuración, 
+             se activa el riego en consecuencia.</p>
         </div>
         <div class="feature-item">
           <h3>Fácil Configuración</h3>
           <p>
-              Interfaz amigable que permite una configuración rápida 
+              Ofrecemos interfaz amigable que permite una configuración rápida 
               y sencilla para usuarios de todos los niveles.
           </p>
         </div>

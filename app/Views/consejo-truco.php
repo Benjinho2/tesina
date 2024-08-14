@@ -25,10 +25,11 @@
             <h2>2. Técnicas de Riego Eficiente</h2>
             <p>Para ahorrar agua y asegurar un riego eficiente:</p>
             <ol>
-                <li>Utiliza sistemas de riego por goteo para dirigir el agua directamente a las raíces de las plantas.</li>
-                <li>Implementa los sensores de humedad para monitorizar el nivel de humedad del suelo y ajustar el riego automáticamente.</li>
-                <li>Evita el riego excesivo para prevenir la saturación del suelo, nuestro sistema ya detiene el riego cuando el cultivo recibe la cantidad de agua adecuada
-                    y el crecimiento de hongos.</li>
+                <li>Utiliza nuestro sistema de riego para dirigir el agua directamente a las raíces de las plantas.</li>
+                <li>Implementa nuestros sensores de humedad para monitorizar el nivel de humedad del suelo.</li>
+                <li>No utilices otros medios de riego, 
+                    nuestro sistema ya detiene el riego cuando el cultivo recibe la cantidad de agua adecuada, 
+                    evitando así el crecimiento de hongos.</li>
             </ol>
         </section>
 
@@ -47,7 +48,7 @@
             <p>Para mejorar la calidad de tu suelo:</p>
             <ol>
                 <li>Realiza pruebas de suelo para determinar sus características y necesidades específicas.</li>
-                <li>Añade materia orgánica regularmente para mantener la fertilidad y estructura del suelo.</li>
+                <li>Añade materia orgánica regularmente para mantener la fertilidad y firmeza del suelo.</li>
                 <li>Implementa la rotación de cultivos para evitar el agotamiento de nutrientes y mejorar la salud del suelo.</li>
             </ol>
         </section>

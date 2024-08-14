@@ -24,7 +24,8 @@
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>
                     <?php session()->remove('error'); ?>
                 <?php endif ?>
-            <input type="text" name="email" id="email" required placeholder="Ingrese su gmail registrado">
+            <label for="">Correo electrónico</label>
+            <input type="text" name="email" id="email" required placeholder="Ingrese su correo">
             <button type="submit">Enviar Correo</button>
         </form>
     </div>
@@ -32,4 +33,3 @@
 
 <?= $this->include('common/footer')?>
 </body>
-</html>

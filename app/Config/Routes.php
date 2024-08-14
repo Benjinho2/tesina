@@ -16,8 +16,8 @@ $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 
 // Vista Login ,Register y Reseteo de contraseña
-$routes->get('autenticacion/login', 'CAutenticacion::login', ['filter' => 'autenticacion']);
-$routes->get('autenticacion/register', 'CAutenticacion::register', ['filter' => 'autenticacion']);
+$routes->get('autenticacion/login', 'CAutenticacion::login');
+$routes->get('autenticacion/register', 'CAutenticacion::register');
 $routes->get('autenticacion/correo', 'CCorreo::index');
 $routes->get('autenticacion/nueva-contrasena', 'CNuevacontrasena::index');
 
