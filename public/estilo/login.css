@@ -52,7 +52,7 @@ main {
 }
 
 .btn {
-    background-color: #007bff;
+    background: hsl(108, 21%, 49%);
     color: white;
     border: none;
     padding: 0.6rem;
@@ -64,7 +64,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background: hsl(108, 21%, 49%);
 }
 
 .container-login a {
