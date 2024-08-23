@@ -44,7 +44,6 @@
                 <div class="form-group">
                     <button class="btn" type="submit">Register</button>
                 </div>
-                <p>¿Ya tienes una cuenta?<a href="<?= base_url('autenticacion/login'); ?>">Entra acá.</a></p>            
             </form>
          </div>
     </main>

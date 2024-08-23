@@ -16,13 +16,13 @@
     <div class="formulario-container">
         <h2>Formulario de Contacto</h2>
         <form action="<?= base_url('enviar'); ?>" method="post">
-        <?php if (!empty(session()->getFlashdata('success'))) : ?>
-                <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+            <?php if (session()->get('exito')) : ?>
+                <div class="alert alert-exito"><?= session()->get('exito'); ?></div>
             <?php endif ?>
-            <?php if (!empty(session()->getFlashdata('fail'))) : ?>
-                <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+            <?php if (session()->get('error')) : ?>
+                    <div class="alert alert-danger"><?= session()->get('error'); ?></div>
             <?php endif ?>
-            
+
             <div class="formulario-input">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>

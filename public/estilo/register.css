@@ -4,7 +4,6 @@ body {
 }
 
 main {
-    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +11,8 @@ main {
 
 .container-register {
     background-color: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 2.5rem;
+    border-radius: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 20rem;
     margin: 2.5em;
@@ -21,7 +20,7 @@ main {
 }
 
 .container-register img {
-    width: 80px;
+    width: 5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -60,7 +59,7 @@ main {
     font-size: 1rem;
     border-radius: 0.25rem;
     cursor: pointer;
-    width: 100%;
+    width: 105%;
 }
 
 .container-register .btn:hover {
