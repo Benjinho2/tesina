@@ -22,32 +22,30 @@
                 <?php endif ?>
 
                 <div class="form-group">
-                    <label for="">Nombre</label>
+                    <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" name="nombre" placeholder="Ingrese un nombre" required>
                 </div>
-                
-                <div class="form-group">    
-                    <label for="">Apellido</label>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
                     <input type="text" class="form-control" name="apellido" placeholder="Ingrese un apellido" required>
                 </div>
 
-
                 <div class="form-group">
-                    <label for="">Correo electrónico</label>
+                    <label for="email">Correo electrónico</label>
                     <input type="email" class="form-control" name="email" placeholder="Ingrese un correo" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="">Contraseña</label>
+                    <label for="contraseña">Contraseña</label>
                     <input type="password" class="form-control" name="contraseña" placeholder="Ingrese una contraseña" required>
                 </div>
 
                 <div class="form-group">
                     <button class="btn" type="submit">Register</button>
                 </div>
-                <p>¿Ya tienes una cuenta?<a href="<?= base_url('autenticacion/login'); ?>">Entra aca.</a></p>            
             </form>
-        </div>
+         </div>
     </main>
 
 <?= $this->include('common/footer') ?>

@@ -9,29 +9,33 @@ class CConfiguracion extends Controller{
 
     public function guardar()
     {
-        $configuracionModel = new ConfiguracionModel();
-        
-        $iddispositivo  = 3;
-        $nivelMinimo    = $this->request->getPost('nivel_minimo_humedad');
-        $nivelMaximo    = $this->request->getPost('nivel_maximo_humedad');
-      
+    $configuracionModel = new ConfiguracionModel();
+    
+    $iddispositivo  = 2;
+    $nombrePlanta   = $this->request->getPost('nombre_planta');
+    $ubicacion      = $this->request->getPost('location');
+    $nivelMinimo    = $this->request->getPost('nivel_minimo_humedad');
+    $nivelMaximo    = $this->request->getPost('nivel_maximo_humedad');
 
-        // Obtener los datos del formulario
+    $array = [
+        'id_dispositivo'       =>  $iddispositivo,
+        'nivel_minimo_humedad' =>  $nivelMinimo,
+        'nivel_maximo_humedad' =>  $nivelMaximo
+    ];
 
-        $array = [
-            'id_dispositivo'       =>  $iddispositivo,
-            'nivel_minimo_humedad' =>  $nivelMinimo,
-            'nivel_maximo_humedad' =>  $nivelMaximo
-        ];
-
-        // Guardar los datos en la base de datos
-
-        if ($configuracionModel->guardarConfiguracion($array)) {
-            echo "Configuración agregada correctamente.";
-        } else {
-            echo "Error al agregar la configuración.";
-        }
+    if ($configuracionModel->guardarConfiguracion($array)) {
+        return view('dispositivo', [
+            'success' => 'Configuración agregada correctamente.',
+            'nombre_planta' => $nombrePlanta,
+            'ubicacion' => $ubicacion,
+            'nivel_minimo_humedad' => $nivelMinimo,
+            'nivel_maximo_humedad' => $nivelMaximo
+        ]);
+    } else {
+        echo "Error al agregar la configuración.";
+    }
 }
 }
+
 
       

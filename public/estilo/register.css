@@ -4,7 +4,6 @@ body {
 }
 
 main {
-    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,15 +11,16 @@ main {
 
 .container-register {
     background-color: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 2.5rem;
+    border-radius: 1em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 20rem;
+    margin: 2.5em;
     text-align: center;
 }
 
 .container-register img {
-    width: 80px;
+    width: 5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -37,7 +37,6 @@ main {
     align-items: flex-start;
 }
 
-
 .container-register .form-group label {
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -53,7 +52,7 @@ main {
 }
 
 .container-register .btn {
-    background-color: #007bff;
+    background: hsl(108, 21%, 49%);
     color: white;
     border: none;
     padding: 0.6rem;
@@ -61,11 +60,10 @@ main {
     border-radius: 0.25rem;
     cursor: pointer;
     width: 105%;
-    margin-top: 0.5rem;
 }
 
 .container-register .btn:hover {
-    background-color: #0056b3;
+    background: hsl(108, 21%, 49%);
 }
 
 .container-register a {
@@ -93,6 +91,6 @@ main {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    width: 94%;
+    width: 100%;
     text-align: center;
 }
