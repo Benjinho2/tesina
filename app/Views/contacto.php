@@ -14,7 +14,7 @@
 
 <main>
     <div class="formulario-container">
-        <h2>Formulario de Contacto</h2>
+        <h2>Contacto</h2>
         <form action="<?= base_url('enviar'); ?>" method="post">
         <?php if (!empty(session()->getFlashdata('success'))) : ?>
                 <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
@@ -36,7 +36,7 @@
                 <textarea id="mensaje" name="mensaje" required></textarea>
             </div>
             <div class="formulario-input">
-                <input type="submit" value="Enviar Mensaje">
+                <input type="submit" value="Enviar">
             </div>
         </form>
     </div>
