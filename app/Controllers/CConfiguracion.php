@@ -7,6 +7,18 @@ use CodeIgniter\Controller;
 
 class CConfiguracion extends Controller{
 
+    
+    public function configuracion()
+    {
+     // Verifica si el usuario ya está autenticado
+        if (!session()->get('userData')) {
+            // Redirige al usuario autenticado a la página principal
+            return redirect()->to('/');
+        }
+
+        return view ('configuracion');
+    }
+
     public function guardar()
     {
     $configuracionModel = new ConfiguracionModel();

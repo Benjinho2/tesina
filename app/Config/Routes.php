@@ -11,7 +11,7 @@ $routes->get('/', 'Home::index');
 $routes->get('perfil', 'Home::perfil');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('sobrenosotros', 'Home::sobrenosotros');
-$routes->get('configuracion', 'Home::configuracion');
+$routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 

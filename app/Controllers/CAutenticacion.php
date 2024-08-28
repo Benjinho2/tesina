@@ -66,7 +66,7 @@ class CAutenticacion extends BaseController
         ];
     
         if ($usuarioModel->insertarUsuario($array)) {
-            session()->set('exito', 'Registro exitoso.');     
+            session()->set('exito', 'Usuario registrado.');     
             return redirect()->to('autenticacion/login');   
         }
     }

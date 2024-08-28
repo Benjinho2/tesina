@@ -24,11 +24,6 @@ class Home extends BaseController
         return view('perfil');
     }
 
-    public function configuracion()
-    {
-        return view ('configuracion');
-    }
-
     public function funcionamiento()
     {
         return view ('como-funciona');
