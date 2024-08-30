@@ -28,12 +28,10 @@ class CCorreo extends Controller{
 
         if ($informacionUsuario) {
             $codigo = rand(100000, 999999); // Generar un código de 6 dígitos
-            $expiresAt = date('Y-m-d H:i:s', strtotime('+15 minutes')); // Código válido por 15 minutos
 
             $array = [
                 'id_usuario' => $informacionUsuario['id_usuario'],
                 'codigo' => $codigo,
-                'codigo_expires' => $expiresAt
             ];
 
             $codigoModel->insertarCodigo($array);

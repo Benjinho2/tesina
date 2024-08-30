@@ -19,6 +19,16 @@ main {
     text-align: center;
 }
 
+.container-volver {
+    position: fixed;
+    top: 9.6rem;  /* Ajusta este valor según sea necesario */
+    left: 48.2rem; /* Ajusta este valor según sea necesario */   
+}
+
+.container-volver img {
+    width: 1.9rem;
+}
+
 .container-register img {
     width: 5rem;
     margin-bottom: 0.5rem;
