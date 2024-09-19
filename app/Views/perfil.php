@@ -20,17 +20,17 @@
         <div class="perfil-info">
             <div>
                 <label>Nombre</label>
-                <span><?= session('userData')['nombre']; ?></span>
+                <span><?= session('DatosUsuario')['nombre']; ?></span>
             </div>
 
             <div>
                 <label>Apellido</label>
-                <span><?= session('userData')['apellido']; ?></span>
+                <span><?= session('DatosUsuario')['apellido']; ?></span>
             </div>
 
             <div>
                 <label>Email</label>
-                <span><?= session('userData')['email']; ?></span>
+                <span><?= session('DatosUsuario')['email']; ?></span>
             </div>
 
             <div>

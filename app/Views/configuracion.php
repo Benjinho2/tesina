@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,19 +17,19 @@
             <label for="nombre_planta">Nombre de la planta</label>
             <input type="text" name="nombre_planta" id="nombre_planta" required>
 
-            <label for="location-select">Su Planta es de:</label>
-            <select id="location-select" name="location" onchange="adjustHumidityValues()">
+            <label for="seleccionar-locacion">Su Planta es de:</label>
+            <select id="seleccionar-locacion" name="ubicacion" onchange="ValoresHumedad()">
                 <option value="interior">Interior</option>
                 <option value="exterior">Exterior</option>
             </select>
 
-            <label for="min-humidity">Humedad mínima</label>
-            <input type="number" name="nivel_minimo_humedad" id="min-humidity" readonly>
+            <label for="humedad-min">Humedad mínima</label>
+            <input type="number" name="nivel_minimo_humedad" id="humedad-min" readonly>
 
-            <label for="max-humidity">Humedad máxima</label>
-            <input type="number" name="nivel_maximo_humedad" id="max-humidity" readonly>
+            <label for="humedad-max">Humedad máxima</label>
+            <input type="number" name="nivel_maximo_humedad" id="humedad-max" readonly>
 
-            <button type="submit">Guardar</button>
+            <button type="submit">Agregar</button>
             </form>
         </div>
     </main>
@@ -37,13 +37,13 @@
     <?= $this->include('common/footer') ?>
 
     <script>
-    function adjustHumidityValues() {
-        const locationSelect = document.getElementById('location-select');
-        const minHumidityInput = document.getElementById('min-humidity');
-        const maxHumidityInput = document.getElementById('max-humidity');
+    function ValoresHumedad() {
+        const locationSelect = document.getElementById('seleccionar-locacion');
+        const minHumidityInput = document.getElementById('humedad-min');
+        const maxHumidityInput = document.getElementById('humedad-max');
         
         if (locationSelect.value === 'interior') {
-            minHumidityInput.value = 700;
+            minHumidityInput.value = 700;   
             maxHumidityInput.value = 1000;
         } else if (locationSelect.value === 'exterior') {
             minHumidityInput.value = 500;
@@ -52,7 +52,7 @@
     }
 
     // Inicializa los valores al cargar la página
-    adjustHumidityValues();
+    ValoresHumedad();
     </script>
 </body>
 </html>

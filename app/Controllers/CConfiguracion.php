@@ -7,11 +7,10 @@ use CodeIgniter\Controller;
 
 class CConfiguracion extends Controller{
 
-    
     public function configuracion()
     {
      // Verifica si el usuario ya está autenticado
-        if (!session()->get('userData')) {
+        if (!session()->get('DatosUsuario')) {
             // Redirige al usuario autenticado a la página principal
             return redirect()->to('/');
         }
@@ -21,32 +20,34 @@ class CConfiguracion extends Controller{
 
     public function guardar()
     {
-    $configuracionModel = new ConfiguracionModel();
+        $configuracionModel = new ConfiguracionModel();
+        
+        $iddispositivo  = 1;
+        $nombrePlanta   = $this->request->getPost('nombre_planta');
+        $ubicacion      = $this->request->getPost('ubicacion');
+        $nivelMinimo    = $this->request->getPost('nivel_minimo_humedad');
+        $nivelMaximo    = $this->request->getPost('nivel_maximo_humedad');
     
-    $iddispositivo  = 2;
-    $nombrePlanta   = $this->request->getPost('nombre_planta');
-    $ubicacion      = $this->request->getPost('location');
-    $nivelMinimo    = $this->request->getPost('nivel_minimo_humedad');
-    $nivelMaximo    = $this->request->getPost('nivel_maximo_humedad');
-
-    $array = [
-        'id_dispositivo'       =>  $iddispositivo,
-        'nivel_minimo_humedad' =>  $nivelMinimo,
-        'nivel_maximo_humedad' =>  $nivelMaximo
-    ];
-
-    if ($configuracionModel->guardarConfiguracion($array)) {
-        return view('dispositivo', [
-            'success' => 'Configuración agregada correctamente.',
-            'nombre_planta' => $nombrePlanta,
-            'ubicacion' => $ubicacion,
+        $array = [
+            'id_dispositivo'       => $iddispositivo,
+            'nombrePlanta'         => $nombrePlanta,
+            'ubicacion'            => $ubicacion,
             'nivel_minimo_humedad' => $nivelMinimo,
             'nivel_maximo_humedad' => $nivelMaximo
-        ]);
-    } else {
-        echo "Error al agregar la configuración.";
+        ];  
+    
+        if ($configuracionModel->guardarConfiguracion($array)) {
+            
+            session()->set('InfoPlanta', $array);
+            
+            session()->set('exito', 'Configuración agregada correctamente.');
+
+            return redirect()->to('dispositivo');
+        } else {
+            echo "Error al agregar la configuración.";
+        }
     }
-}
+
 }
 
 

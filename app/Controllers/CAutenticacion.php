@@ -9,7 +9,7 @@ class CAutenticacion extends BaseController
     public function login()
     {
         // Verifica si el usuario ya está autenticado
-        if (session()->get('userData')) {
+        if (session()->get('DatosUsuario')) {
             // Redirige al usuario autenticado a la página principal
             return redirect()->to('/');
         }
@@ -20,7 +20,7 @@ class CAutenticacion extends BaseController
     public function register()
     {
         // Verifica si el usuario ya está autenticado
-        if (session()->get('userData')) {
+        if (session()->get('DatosUsuario')) {
             // Redirige al usuario autenticado a la página principal
             return redirect()->to('/');
         }
@@ -47,6 +47,7 @@ class CAutenticacion extends BaseController
             session()->set('error', 'El apellido solo puede contener letras.');
             return redirect()->to('autenticacion/register');
         }
+
         if ($usuarioModel->existenteEmail($email)) {
             session()->set('error', 'El correo electrónico ya está registrado.');
             return redirect()->to('autenticacion/register');
@@ -85,7 +86,7 @@ class CAutenticacion extends BaseController
             return redirect()->to('autenticacion/login');
         }
         session()->set('Tipo', 'Usuario');
-        session()->set('userData', $informacionUsuario);
+        session()->set('DatosUsuario', $informacionUsuario);
         return redirect()->to('/');
     }
     

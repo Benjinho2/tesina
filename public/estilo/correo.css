@@ -37,6 +37,17 @@ form label {
     text-align: center; /* Alinea el texto del label a la izquierda */
 }
 
+.container-volver {
+    position: fixed;
+    top: 30.5%;  /* Ajusta este valor según sea necesario */
+    left: 38.5%; /* Ajusta este valor según sea necesario */   
+}
+
+.container-volver img {
+    width: 1.6rem;
+}
+
+
 input[type="text"],
 input[type="password"] {
     width: 100%;

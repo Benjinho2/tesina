@@ -19,10 +19,10 @@
                 <li>
                     <a href="<?= base_url('sobrenosotros'); ?>"">Sobre nosotros</a>
                 </li>
-                <?php if (session('userData')): ?>
+                <?php if (session('DatosUsuario')): ?>
                 <li>
                     <a href="<?= base_url('configuracion'); ?>">Configuración</a>
-                    <a href="<?= base_url('perfil'); ?>""><?= session('userData')['nombre']; ?></a>
+                    <a href="<?= base_url('perfil'); ?>""><?= session('DatosUsuario')['nombre']; ?></a>
                 </li>
                 <?php else: ?>
                 <li>

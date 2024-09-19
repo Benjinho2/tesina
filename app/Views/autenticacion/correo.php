@@ -12,6 +12,11 @@
 
     <main>
     <div class="login-container">
+        <!-- <div class="container-volver">
+          <a href="<?= base_url('autenticacion/login'); ?>">
+            <img src="<?= base_url('imagenes/volver.png') ?>" alt="Volver al login">
+          </a>
+        </div> -->
         <form action="<?= base_url('correo') ?>" method="post">
             <h1>Olvide Mi Contraseña</h1>
             <p>Ingresa tu correo electrónico para recibir un código de verificación</p>       

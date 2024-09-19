@@ -14,6 +14,7 @@ $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
+$routes->get('dispositivo','Home::dispositivo');
 
 // Vista Login ,Register 
 $routes->get('autenticacion/login', 'CAutenticacion::login');
@@ -35,6 +36,6 @@ $routes->post('enviar', 'CContacto::enviar');
 $routes->post('correo', 'CCorreo::correo');
 $routes->post('actualizar', 'CNuevacontrasena::actualizar');
 
-// Funcionamiento Guardar
+// Funcionamiento Guardar configuración riego
 $routes->post('guardar', 'CConfiguracion::guardar');
 

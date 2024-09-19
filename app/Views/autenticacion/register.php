@@ -12,11 +12,11 @@
 <?= $this->include('common/header') ?>
 
     <main>
-        <div class="container-volver">
+        <!-- <div class="container-volver">
           <a href="<?= base_url('autenticacion/login'); ?>">
             <img src="<?= base_url('imagenes/volver.png') ?>" alt="Volver al login">
           </a>
-        </div>
+        </div> -->
         <div class="container-register">
             <img src="<?= base_url('imagenes/login.png'); ?>">
             <h2>Register</h2>

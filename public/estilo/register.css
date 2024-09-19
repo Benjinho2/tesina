@@ -21,12 +21,14 @@ main {
 
 .container-volver {
     position: fixed;
-    top: 9.6rem;  /* Ajusta este valor según sea necesario */
-    left: 48.2rem; /* Ajusta este valor según sea necesario */   
+    top: 15.3%;  /* Ajusta este valor según sea necesario */
+    left: 40.1%; /* Ajusta este valor según sea necesario */   
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+
 }
 
 .container-volver img {
-    width: 1.9rem;
+    width: 1.6rem;
 }
 
 .container-register img {
@@ -101,6 +103,7 @@ main {
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
-    width: 100%;
+    width: 95%;
     text-align: center;
 }
+

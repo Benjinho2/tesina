@@ -1,0 +1,62 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+    padding: 1.5%;
+}   
+.plant-details-container {
+    padding: 20px;
+}
+
+.plant-details-box {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plant-details-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: hsl(108, 21%, 49%);
+}
+
+.plant-details-box div {
+    margin-bottom: 18px;
+}
+
+.plant-details-box label {
+    display: inline-block;
+    width: 10.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.plant-details-box span {
+    color: #555;
+}
+
+.plant-details-box .mas i
+{
+    color: black;
+}
+
+
+.alert {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.alert-exito {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    width: 95%;
+    text-align: center;
+}

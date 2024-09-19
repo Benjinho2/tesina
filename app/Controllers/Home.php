@@ -21,6 +21,14 @@ class Home extends BaseController
 
     public function perfil()
     {
+        // Verifica si el usuario ya está autenticado
+        if (!session()->get('DatosUsuario')) 
+        {
+            // Redirige al usuario autenticado a la página principal
+
+            return redirect()->to('/');
+        }
+
         return view('perfil');
     }
 
@@ -32,6 +40,11 @@ class Home extends BaseController
     public function consejo()
     {
         return view ('consejo-truco');
+    }
+
+    public function dispositivo()
+    {
+        return view('dispositivo');
     }
 
 }

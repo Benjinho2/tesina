@@ -24,8 +24,8 @@
             <?php endif ?>
 
             <div class="formulario-input">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <label for="motivo">Motivo</label>
+                <input type="text" id="motivo" name="motivo" required>
             </div>
             <div class="formulario-input">
                 <label for="email">Email</label>

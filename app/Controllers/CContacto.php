@@ -9,7 +9,7 @@ class CContacto extends Controller{
 
     public function enviar()
     {   
-        $nombre  = $this->request->getPost('nombre');
+        $motivo  = $this->request->getPost('motivo');
         $emails  = $this->request->getPost('email');
         $mensaje = $this->request->getPost('mensaje');
 
@@ -24,7 +24,7 @@ class CContacto extends Controller{
         $email = Services::email();
         $email->setFrom($emails);
         $email->setTo('aquabotinfo@gmail.com');
-        $email->setSubject($nombre);
+        $email->setSubject($motivo);
         $email->setMessage($mensaje);
 
         if ($email->send()) {

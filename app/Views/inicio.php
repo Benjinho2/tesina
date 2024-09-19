@@ -26,7 +26,7 @@
         </p>
         <ul>
             <li><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></li>
-            <?php if (session('userData')): ?>
+            <?php if (session('DatosUsuario')): ?>
                 <li><a href="<?= base_url('configuracion'); ?>">Configuración</a></li>
             <?php else: ?> 
                 <!-- Si no existe 'userData', no mostrar el enlace -->
