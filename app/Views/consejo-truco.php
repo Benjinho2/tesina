@@ -13,9 +13,8 @@
     <main>
         <section class="consejo">
             <h2>1. Cuidado de tus Plantas</h2>
-            <p>Para mantener tus plantas saludables, sigue estos consejos:</p>
+            <p>Para mantener tus plantas saludables, sigue estos consejos que te damos:</p>
             <ol>
-                <li>Riega tus plantas temprano en la mañana o tarde en la noche para evitar la evaporación rápida del agua.</li>
                 <li>Usa compost o abono orgánico para mejorar la calidad del suelo y proporcionar nutrientes esenciales.</li>
                 <li>Podar regularmente las plantas para promover el crecimiento saludable y prevenir enfermedades.</li>
             </ol>

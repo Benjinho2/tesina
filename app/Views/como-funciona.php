@@ -60,14 +60,14 @@
         </p>
         <ol>
             <li>
-                El sistema controla y ajusta las válvulas de riego para una distribución precisa del agua.
+                El sistema controla y ajusta el riego para una distribución precisa del agua.
             </li>
             <li>
                 El sistema continúa evaluando los niveles de humedad para evitar el riego excesivo 
                 y garantizar la absorción adecuada de agua por el suelo.
             </li>
             <li>
-                Una vez que recibe la cantidad adecuada de agua, el sistema desactivara el riego.
+                Una vez que la humedad sea la adectuada, el sistema desactivara el riego.
             </li>
         </ol>
     </div>
