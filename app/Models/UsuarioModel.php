@@ -8,7 +8,7 @@ class UsuarioModel extends Model
 {
     protected $table         = 'usuarios';
     protected $primaryKey    = 'id_usuario';
-    protected $allowedFields = ['nombre', 'apellido', 'email', 'contraseña'];
+    protected $allowedFields = ['nombre','apellido', 'email', 'contraseña'];
 
     public function insertarUsuario($array)
     {
