@@ -16,12 +16,6 @@ class CNuevacontrasena extends Controller
             return redirect()->to('/');
         }
 
-        $emailValido = session()->get('emailValido');
-        if (!$emailValido) {
-            session()->set('error', 'Ingrese su email para restablecer la ontraseña.');
-            return redirect()->to('autenticacion/correo');
-        }
-
         return view('autenticacion/nueva-contrasena');
     }
 
