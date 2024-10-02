@@ -18,7 +18,6 @@ class CodigoModel extends Model {
         return $this->where('codigo', $codigo)
                     ->first();      
     }
-    // En tu modelo CodigoModel
 
     public function obtenerUsuarioPorCodigoPorId($idUsuario) {
         return $this->where('id_usuario', $idUsuario)->first();
