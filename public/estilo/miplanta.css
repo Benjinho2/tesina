@@ -30,7 +30,7 @@ input[type="text"], select, button {
 
 button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: hsl(108, 21%, 49%);
     color: white;
     border: none;
     border-radius: 5px;
@@ -76,7 +76,7 @@ h2 {
 
 .planta-card a button {
     margin-top: 10px;
-    background-color: #28a745;
+    background-color: hsl(108, 21%, 49%);
     color: white;
 }
 

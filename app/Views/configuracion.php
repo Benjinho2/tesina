@@ -14,14 +14,9 @@
         <div class="configuracion">
             <h1>Configuración de Riego</h1>
             <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
-            <label for="nombre_planta">Nombre de la planta</label>
-            <input type="text" name="nombre_planta" id="nombre_planta" required>
+            <label for="nombre_planta">Nombre de la planta: "nombre"</label>
 
-            <label for="seleccionar-locacion">Su Planta es de:</label>
-            <select id="seleccionar-locacion" name="ubicacion" onchange="ValoresHumedad()">
-                <option value="interior">Interior</option>
-                <option value="exterior">Exterior</option>
-            </select>
+            <label for="seleccionar-locacion">Su Planta es de: "interior"</label>
 
             <label for="humedad-min">Humedad mínima</label>
             <input type="number" name="nivel_minimo_humedad" id="humedad-min" readonly>
@@ -35,24 +30,5 @@
     </main>
 
     <?= $this->include('common/footer') ?>
-
-    <script>
-    function ValoresHumedad() {
-        const locationSelect = document.getElementById('seleccionar-locacion');
-        const minHumidityInput = document.getElementById('humedad-min');
-        const maxHumidityInput = document.getElementById('humedad-max');
-        
-        if (locationSelect.value === 'interior') {
-            minHumidityInput.value = 700;   
-            maxHumidityInput.value = 1000;
-        } else if (locationSelect.value === 'exterior') {
-            minHumidityInput.value = 500;
-            maxHumidityInput.value = 800;
-        }
-    }
-
-    // Inicializa los valores al cargar la página
-    ValoresHumedad();
-    </script>
 </body>
 </html>

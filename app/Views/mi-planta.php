@@ -22,9 +22,11 @@
             </div>
         <?php endif; ?>
 
+        <li><a href="<?= base_url('configuracion'); ?>">Configuracion</a></li>
+
         <!-- Formulario para crear una nueva planta -->
         <form action="<?= base_url('crearPlanta') ?>" method="post">
-            <label for="nombre_planta">Nombre de<br>  la planta:</label>
+            <label for="nombre_planta">Nombre de la planta:</label>
             <input type="text" id="nombre_planta" name="nombre_planta" required>
             <br>
             <label for="ubicacio">Ubicacion:</label>
@@ -48,7 +50,7 @@
                     <p>Ubicación: <?= esc($planta['lugar_planta']) ?></p>
                     <p>Tipo: <?= esc($planta['tipo_lugar']) ?></p>
                     <!-- Botón para configurar humedad -->
-                    <a href="<?= base_url('configurar-humedad/' . $planta['id_planta']) ?>">
+                    <a href="<?= base_url('configuracion')?>">
                         <button>Configurar Humedad</button>
                     </a>
                     <!-- Botón para visualizar los datos -->
