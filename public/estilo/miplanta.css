@@ -4,13 +4,13 @@ body {
 
 main {
     padding: 20px;
+    margin-left: 10px;
     background-color: #f4f4f4;
 }
 
 
 form {
     max-width: 400px; 
-    margin-left: 0 auto; 
     padding: 20px;
     background-color: #f9f9f9; 
     border: 1px solid #ccc;
@@ -19,9 +19,9 @@ form {
 }
 
 input[type="text"], select, button {
-    width: 65%; 
+    width: 90%; 
     margin-bottom: 10px;
-    margin-left: 10px;
+
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -42,29 +42,27 @@ button:hover {
 }
 
 h2 {
-    text-align: center;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .plantas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-left: 20px; 
+    max-width: 400px;
 }
 
 .planta-card {
-    background-color: white;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px; /* Fijar ancho específico */
-    margin: 10px; /* Espaciado entre las tarjetas */
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    width: 100%; 
+    max-width: 100%; 
 }
-
-
 
 
 .planta-card h3 {
@@ -78,12 +76,12 @@ h2 {
 
 .planta-card a button {
     margin-top: 10px;
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
 }
 
 .planta-card a button:hover {
-    background-color: #0056b3;
+    background-color: #28a745;
 }
 
 .alert {

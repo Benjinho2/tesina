@@ -24,7 +24,7 @@
 
         <!-- Formulario para crear una nueva planta -->
         <form action="<?= base_url('crearPlanta') ?>" method="post">
-            <label for="nombre_planta">Nombre<br> de la planta:</label>
+            <label for="nombre_planta">Nombre de<br>  la planta:</label>
             <input type="text" id="nombre_planta" name="nombre_planta" required>
             <br>
             <label for="ubicacio">Ubicacion:</label>
