@@ -33,27 +33,37 @@ class CPlanta extends Controller
     }
 
     public function crearPlanta()
-    {
-        if ($this->request->getMethod() === 'post') {
-            $nombrePlanta = $this->request->getPost('nombre_planta');
-            $ubicacion = $this->request->getPost('ubicacion'); // Asegúrate de que este valor no sea nulo
-    
-            // Asegúrate de que estás pasando este valor a la consulta de inserción
-            $array = [
-                'nombre_planta' => $nombrePlanta,
-                'id_ubicacion' => $ubicacion // Aquí asignas el valor de ubicación
-            ];
-    
-            // Inserta en la base de datos
-            $plantaModel = new PlantaModel();
-            $plantaModel->insertDatos($array);
-    
-            // Establece el mensaje de éxito
-            session()->set('exito', 'Planta creada correctamente.');
-    
-            // Redirecciona a la vista mi-planta
-            return redirect()->to('mi-planta');
+{
+    if ($this->request->getMethod() === 'post') {
+        $nombrePlanta = $this->request->getPost('nombre_planta');
+        $ubicacion = $this->request->getPost('ubicacion');
+
+        // Validar que el nombre de la planta solo contenga letras
+        if (!preg_match('/^[a-zA-Z\s]+$/', $nombrePlanta)) {
+            session()->set('error', 'El nombre de la planta solo puede contener letras.');
+            return redirect()->back()->withInput(); // Redirecciona y mantiene los valores del formulario
         }
+
+        // Asegurarse de que se pasan los valores correctos
+        $array = [
+            'nombre_planta' => $nombrePlanta,
+            'id_ubicacion' => $ubicacion
+        ];
+
+        // Intenta insertar los datos
+        $plantaModel = new PlantaModel();
+        if ($plantaModel->insertDatos($array)) {
+            // Establece el mensaje de éxito si se inserta correctamente
+            session()->set('exito', 'Planta creada correctamente.');
+        } else {
+            // Establece un mensaje de error si falla la inserción
+            session()->set('error', 'Error al crear la planta. Intenta nuevamente.');
+        }
+
+        // Redirecciona a la página de "mi-planta"
+        return redirect()->to('mi-planta');
     }
+}
+
     
 }

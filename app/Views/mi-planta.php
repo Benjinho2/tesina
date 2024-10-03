@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi planta</title>
+    <link rel="stylesheet" href="<?= base_url('estilo/miplanta.css'); ?>"> 
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
 </head>
 
 <body>
     <?= $this->include('common/header'); ?>
     <main>
+    <div class="hero">
+    <div class="letras">
         <!-- Mostrar mensaje de éxito -->
         <?php if (session()->get('exito')): ?>
             <div class="alert alert-success">
@@ -21,9 +24,9 @@
 
         <!-- Formulario para crear una nueva planta -->
         <form action="<?= base_url('crearPlanta') ?>" method="post">
-            <label for="nombre_planta">Nombre de la planta:</label>
+            <label for="nombre_planta">Nombre<br> de la planta:</label>
             <input type="text" id="nombre_planta" name="nombre_planta" required>
-
+            <br>
             <label for="ubicacio">Ubicacion:</label>
             <select id="ubicacio" name="ubicacion" required>
                 <option value="1">Interior</option>
@@ -32,12 +35,15 @@
 
             <button type="submit">Crear Planta</button>
         </form>
-
+        </div>
+        </div>
+            
         <!-- Mostrar las plantas del usuario actual -->
-        <?php if (!empty($plantas)): ?>
-            <h2>Mis Plantas</h2>
+    <?php if (!empty($plantas)): ?>
+        <h2>Mis Plantas</h2>
+            <div class="plantas-container">
             <?php foreach ($plantas as $planta): ?>
-                <div>
+                <div class="planta-card">
                     <h3><?= esc($planta['nombre_planta']) ?></h3>
                     <p>Ubicación: <?= esc($planta['lugar_planta']) ?></p>
                     <p>Tipo: <?= esc($planta['tipo_lugar']) ?></p>
@@ -52,9 +58,26 @@
                     <a href="<?= base_url('eliminar'); ?>"><button>Eliminar</button></a>
                 </div>
             <?php endforeach; ?>
-        <?php else: ?>
-            <p>No tienes plantas registradas.</p>
-        <?php endif; ?>
+        </div>
+
+    <?php if (session()->get('error')): ?>
+        <div class="alert alert-danger">
+            <?= session()->get('error') ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (session()->get('exito')): ?>
+        <div class="alert alert-success">
+            <?= session()->get('exito') ?>
+        </div>
+    <?php endif; ?>
+
+
+    
+    <?php else: ?>
+        <p>No tienes plantas registradas.</p>
+    <?php endif; ?>
+        
     </main>
     <?= $this->include('common/footer') ?>
 </body>

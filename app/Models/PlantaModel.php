@@ -3,14 +3,14 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PlantaModel extends Model {
-    protected $table         = 'planta';
-    protected $primaryKey    = 'id_planta';
-    protected $allowedFields = ['nombre_planta', 'id_ubicacion', 'id_usuario'];
+class PlantaModel extends Model
+{
+    protected $table = 'planta';
+    protected $allowedFields = ['nombre_planta', 'id_ubicacion'];
 
-    public function insertarDatos($array)
+    public function insertDatos($data)
     {
-        return $this->insert($array);
+        return $this->insert($data);
     }
     // Método para obtener las plantas del usuario
     public function obtenerPlantasPorUsuario($id_usuario)
@@ -27,3 +27,5 @@ class PlantaModel extends Model {
             ->getResultArray();
     }
 }
+
+

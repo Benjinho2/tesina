@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+form {
+    max-width: 400px; 
+    margin-left: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+input[type="text"], select, button {
+    width: 65%; 
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plantas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.planta-card {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Fijar ancho específico */
+    margin: 10px; /* Espaciado entre las tarjetas */
+}
+
+
+
+
+.planta-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.planta-card p {
+    margin: 10px 0;
+}
+
+.planta-card a button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+}
+
+.planta-card a button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
