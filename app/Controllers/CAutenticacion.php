@@ -85,9 +85,9 @@ class CAutenticacion extends BaseController
             session()->set('error', 'Correo electrónico o contraseña incorrecto.');
             return redirect()->to('autenticacion/login');
         }
-        session()->set('Tipo', 'Usuario');
-        session()->set('DatosUsuario', $informacionUsuario);
-        return redirect()->to('/');
+            session()->set('Tipo', 'Usuario');
+            session()->set('DatosUsuario', $informacionUsuario);
+            return redirect()->to('/');
     }
     
     public function cerrarSesion()

@@ -12,6 +12,9 @@ $routes->get('perfil', 'Home::perfil');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('configuracion', 'CConfiguracion::configuracion');
+$routes->get('mi-planta', 'CPlanta::miplanta');
+$routes->post('crearPlanta', 'CPlanta::crearPlanta');
+
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('dispositivo','Home::dispositivo');
@@ -38,4 +41,3 @@ $routes->post('actualizar', 'CNuevacontrasena::actualizar');
 
 // Funcionamiento Guardar configuración riego
 $routes->post('guardar', 'CConfiguracion::guardar');
-

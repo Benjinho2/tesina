@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <button class="btn" type="submit">Login</button>
                 </div>
-                <p >¿No tienes cuenta?, <a href="<?= base_url('autenticacion/register'); ?>">Crea tu usuario.</a></p>            
+                <p >¿No tienes una cuenta?, <a href="<?= base_url('autenticacion/register'); ?>">Crea tu usuario.</a></p>            
                 <p>¿Olvidaste tu contraseña?, <a href="<?= base_url('autenticacion/correo'); ?>">Restablece tu contraseña.</a></p>
             </form>
         </div>

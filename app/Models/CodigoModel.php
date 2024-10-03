@@ -16,10 +16,18 @@ class CodigoModel extends Model {
     public function obtenerUsuarioPorCodigo($codigo)
     {
         return $this->where('codigo', $codigo)
-                    ->where('codigo_expires')
-                    ->first();
+                    ->first();      
     }
 
+    public function obtenerUsuarioPorCodigoPorId($idUsuario) {
+        return $this->where('id_usuario', $idUsuario)->first();
+    }
+
+    public function actualizarCodigo($idUsuario, $nuevoCodigo) {
+        return $this->where('id_usuario', $idUsuario)->set('codigo', $nuevoCodigo)->update();
+    }
+
+    
     public function eliminarCodigoPorUsuario($idUsuario)
     {
         $this->where('id_usuario', $idUsuario)->delete();

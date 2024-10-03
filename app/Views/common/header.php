@@ -21,7 +21,7 @@
                 </li>
                 <?php if (session('DatosUsuario')): ?>
                 <li>
-                    <a href="<?= base_url('configuracion'); ?>">Configuración</a>
+                    <a href="<?= base_url('mi-planta'); ?>">Mí planta</a>
                     <a href="<?= base_url('perfil'); ?>""><?= session('DatosUsuario')['nombre']; ?></a>
                 </li>
                 <?php else: ?>

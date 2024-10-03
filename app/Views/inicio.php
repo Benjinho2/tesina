@@ -13,7 +13,7 @@
   <main>
     <div class="hero">
       <div class="letras">
-        <h1>Bienvenido a nuestro sistema de riego automático</h1>
+        <h1>Bienvenido a tu sistema de riego automático inteligente</h1>
         <p><strong>Riega Inteligentemente, Crece Saludablemente</strong></p>
         <p>
             Este sistema está diseñado para facilitar y optimizar el riego de tus cultivos.
@@ -21,16 +21,11 @@
             las necesidades específicas de cada planta y las condiciones climáticas.
         </p>
         <p>
-            En las próximas secciones, podrás encontrar más información sobre cómo funciona el sistema,
-            cómo configurarlo y consejos para obtener el máximo beneficio de su uso.
+            En las próximas secciones, podrás encontrar más información sobre cómo funciona el sistema
+            y consejos para obtener el máximo beneficio de su uso.
         </p>
         <ul>
             <li><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></li>
-            <?php if (session('DatosUsuario')): ?>
-                <li><a href="<?= base_url('configuracion'); ?>">Configuración</a></li>
-            <?php else: ?> 
-                <!-- Si no existe 'userData', no mostrar el enlace -->
-            <?php endif; ?>
             <li><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></li>
         </ul>
       </div>
@@ -73,6 +68,14 @@
             El sistema utiliza sensores para medir la humedad del suelo 
             y ajusta el riego en consecuencia. Para más información, <a href="<?= base_url('como-funciona'); ?>">haz click aquí.</a>
         </p>
+
+        <h3>2) ¿Qué cuidados son esenciales para mantener saludables mis plantas?</h3>
+        <p>
+        Usar abono orgánico es clave para mejorar la calidad del suelo y proporcionar los nutrientes esenciales que tus plantas necesitan. Para más recomendaciones y consejos, <a href="<?= base_url('consejo-truco'); ?>">haz clic aquí.</a></p>
+
+        <h3>3) ¿Quienes somos?</h3>
+        <p>
+        Somos personas comprometidas con la creación de un mundo mejor, libre de contaminantes y enfocados en la sostenibilidad. Para más información sobre nosotros, <a href="<?= base_url('sobrenosotros'); ?>">haz clic aquí.</a></p>
       </div>
     </section>
 
