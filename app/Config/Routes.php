@@ -15,7 +15,7 @@ $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->post('crearPlanta', 'CPlanta::crearPlanta');
 $routes->post('data', 'CData::datos');
-$routes->get('data', 'CData::datos');
+$routes->get('CData/datos', 'CData::getDatos');
 
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');

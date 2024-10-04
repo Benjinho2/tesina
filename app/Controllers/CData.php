@@ -28,4 +28,13 @@ class CData extends BaseController
                 ]);
             }
         }
+
+        public function getDatos()
+        {
+            // Aquí puedes manejar la solicitud GET
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Método GET recibido correctamente'
+            ]);
+        }
 }
