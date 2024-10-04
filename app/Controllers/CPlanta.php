@@ -13,24 +13,25 @@ class CPlanta extends Controller
         if (!session()->get('DatosUsuario')) {
             return redirect()->to('/');
         }
-    
-        $plantaModel = new PlantaModel();
-        $ubicacionModel = new UbicacionModel();
-    
-        $id_usuario = session()->get('DatosUsuario')['id_usuario'];
-        // Llama al método que obtiene las plantas con la ubicación
-        $data['plantas'] = $plantaModel->getPlantasConUbicacion($id_usuario);
-    
-        foreach ($data['plantas'] as &$planta) {
-            // Cambia el texto según el booleano
-            $planta['tipo_lugar'] = $planta['lugar_planta'] ? 'Interior' : 'Exterior';
-        }
-    
-        // Obtener todas las ubicaciones para el formulario
-        $data['ubicaciones'] = $ubicacionModel->findAll();
-    
-        return view('mi-planta', $data);
+    // Funcionalidad para solicitudes GET (o si no es POST)
+    $plantaModel = new PlantaModel();
+    $ubicacionModel = new UbicacionModel();
+
+    $id_usuario = session()->get('DatosUsuario')['id_usuario'];
+    // Llama al método que obtiene las plantas con la ubicación
+    $data['plantas'] = $plantaModel->getPlantasConUbicacion($id_usuario);
+
+    foreach ($data['plantas'] as &$planta) {
+        // Cambia el texto según el booleano
+        $planta['tipo_lugar'] = $planta['lugar_planta'] ? 'Interior' : 'Exterior';
     }
+
+    // Obtener todas las ubicaciones para el formulario
+    $data['ubicaciones'] = $ubicacionModel->findAll();
+
+    return view('mi-planta', $data);
+    }
+
 
     public function crearPlanta()
     {
