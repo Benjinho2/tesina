@@ -13,13 +13,17 @@ $routes->get('contacto', 'Home::contacto');
 $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
-$routes->post('crearPlanta', 'CPlanta::crearPlanta');
-
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('dispositivo','Home::dispositivo');
 
-// Vista Login ,Register 
+// Funcionamiento de crear planta 
+$routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
+$routes->get('/visualizar-datos/(:num)', 'CPlanta::visualizarDatos/$1');
+$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
+$routes->post('crearPlanta', 'CPlanta::crearPlanta');
+
+// Vista del Login ,Register 
 $routes->get('autenticacion/login', 'CAutenticacion::login');
 $routes->get('autenticacion/register', 'CAutenticacion::register');
 
@@ -40,4 +44,5 @@ $routes->post('correo', 'CCorreo::correo');
 $routes->post('actualizar', 'CNuevacontrasena::actualizar');
 
 // Funcionamiento Guardar configuración riego
-$routes->post('guardar', 'CConfiguracion::guardar');
+$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
+

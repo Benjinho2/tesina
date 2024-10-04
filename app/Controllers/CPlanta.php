@@ -2,7 +2,6 @@
 namespace App\Controllers;
 
 use App\Models\PlantaModel;
-use App\Models\UbicacionModel;
 use CodeIgniter\Controller;
 
 class CPlanta extends Controller
@@ -13,59 +12,52 @@ class CPlanta extends Controller
         if (!session()->get('DatosUsuario')) {
             return redirect()->to('/');
         }
-    
-        $plantaModel = new PlantaModel();
-        $ubicacionModel = new UbicacionModel();
-    
+
+        $plantaModel = new PlantaModel;
+        // Obtener las plantas del usuario autenticado usando el método del modelo
         $id_usuario = session()->get('DatosUsuario')['id_usuario'];
-        // Llama al método que obtiene las plantas con la ubicación
-        $data['plantas'] = $plantaModel->getPlantasConUbicacion($id_usuario);
-    
-        foreach ($data['plantas'] as &$planta) {
-            // Cambia el texto según el booleano
-            $planta['tipo_lugar'] = $planta['lugar_planta'] ? 'Interior' : 'Exterior';
-        }
-    
-        // Obtener todas las ubicaciones para el formulario
-        $data['ubicaciones'] = $ubicacionModel->findAll();
-    
+        $data['plantas'] = $plantaModel->obtenerPlantasPorUsuario($id_usuario);
+
         return view('mi-planta', $data);
     }
 
     public function crearPlanta()
     {
-        if ($this->request->getMethod() === 'post') {
-            $nombrePlanta = $this->request->getPost('nombre_planta');
-            $ubicacion = $this->request->getPost('ubicacion');
-            $idUsuario = session()->get('id_usuario'); // Asegúrate de que el usuario esté en sesión
-    
-            // Validación simple para asegurar que no esté vacío
-            if (empty($nombrePlanta) || empty($ubicacion)) {
-                session()->set('error', 'Todos los campos son obligatorios.');
-                return redirect()->back();
-            }
-    
-            // Prepara los datos para la inserción
-            $data = [
-                'nombre_planta' => $nombrePlanta,
-                'id_ubicacion' => $ubicacion,
-                'id_usuario' => $idUsuario // Asegúrate de que este campo esté correcto
-            ];
-    
-            // Llamada al modelo para insertar los datos
-            $plantaModel = new PlantaModel();
-    
-            // Intentar insertar los datos
-            if ($plantaModel->insert($data)) {
-                session()->set('exito', 'Planta creada correctamente.');
-            } else {
-                session()->set('error', 'Error al crear la planta.');
-            }
-    
+        $plantaModel = new PlantaModel;
+        // Obtener datos del formulario
+        $nombre_planta = $this->request->getPost('nombre_planta');
+        $id_ubicacion = $this->request->getPost('ubicacion');
+        $id_usuario = session()->get('DatosUsuario')['id_usuario'];
+
+        // Insertar la nueva planta
+        $array = [
+            'nombre_planta' => $nombre_planta,
+            'id_ubicacion' => $id_ubicacion,
+            'id_usuario' => $id_usuario
+        ];
+
+        if($plantaModel->insertarDatos($array)){
+        // Redireccionar y mostrar mensaje de éxito
+            session()->setFlashdata('exito', 'Planta creada exitosamente.');
             return redirect()->to('mi-planta');
         }
     }
     
 
-    
+    public function eliminarPlanta($id_planta)
+    {
+        $plantaModel = new PlantaModel;
+
+        // Obtener el id del usuario
+        $id_usuario = session()->get('DatosUsuario')['id_usuario'];
+        // Verificar que la planta pertenezca al usuario actual utilizando el método del modelo
+        $planta = $plantaModel->obtenerPlantaPorIdYUsuario($id_planta, $id_usuario);
+        
+        if($plantaModel->delete($id_planta)){
+            session()->setFlashdata('exito', 'Planta eliminada exitosamente.');
+        }
+ 
+        return redirect()->to('mi-planta');
+    }
+
 }

@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('estilo/configuracion.css'); ?>">   
-    <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
-    <title>Configuracion | AquaBot</title>
+    <title>Configuración de Humedad</title>
 </head>
 <body>
-    <?= $this->include('common/header') ?>
-
+    <?= $this->include('common/header'); ?>
     <main>
-        <div class="configuracion">
-            <h1>Configuración de Riego</h1>
-            <form action="<?= base_url('guardar'); ?>" method="post" class="config-form">
-            <label for="nombre_planta">Nombre de la planta: "nombre"</label>
+        <h1>Configuración de Humedad para <?= $planta['nombre_planta']; ?></h1>
+        
+        <?php if (session()->get('exito')): ?>
+            <div class="alert alert-success">
+                <?= session()->get('exito'); ?>
+                <?php session()->remove('exito'); ?>
+            </div>
+        <?php endif; ?>
 
-            <label for="seleccionar-locacion">Su Planta es de: "interior"</label>
+        <?php if (session()->get('error')): ?>
+            <div class="alert alert-danger">
+                <?= session()->get('error'); ?>
+                <?php session()->remove('error'); ?>
+            </div>
+        <?php endif; ?>
 
-            <label for="humedad-min">Humedad mínima</label>
-            <input type="number" name="nivel_minimo_humedad" id="humedad-min" readonly>
-
-            <label for="humedad-max">Humedad máxima</label>
-            <input type="number" name="nivel_maximo_humedad" id="humedad-max" readonly>
-
-            <button type="submit">Agregar</button>
-            </form>
-        </div>
+        <form action="<?= base_url('guardarConfiguracion') ?>" method="post">
+            <input type="hidden" name="id_planta" value="<?= $planta['id_planta']; ?>">
+            <label for="nivel_minimo_humedad">Nivel Mínimo de Humedad:</label>
+            <input type="number" id="nivel_minimo_humedad" name="nivel_minimo_humedad" required>
+            <br>
+            <label for="nivel_maximo_humedad">Nivel Máximo de Humedad:</label>
+            <input type="number" id="nivel_maximo_humedad" name="nivel_maximo_humedad" required>
+            <br>
+            <button type="submit">Guardar Configuración</button>
+        </form>
     </main>
-
-    <?= $this->include('common/footer') ?>
+    <?= $this->include('common/footer'); ?>
 </body>
 </html>

@@ -17,7 +17,7 @@
                 <?php if (session()->get('exito')) : ?>
                     <div class="alert alert-exito"><?= session()->get('exito'); ?></div>
                         <?php session()->remove('exito'); ?>
-                        <?php session()->remove('emailValido'); ?>
+                        <?php session()->remove('emailIngresado'); ?>
                 <?php endif ?>
                 <?php if (session()->get('error')) : ?>
                     <div class="alert alert-danger"><?= session()->get('error'); ?></div>

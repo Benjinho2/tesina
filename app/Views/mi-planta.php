@@ -12,74 +12,57 @@
 <body>
     <?= $this->include('common/header'); ?>
     <main>
-    <div class="hero">
-    <div class="letras">
-        <!-- Mostrar mensaje de éxito -->
-        <?php if (session()->get('exito')): ?>
-            <div class="alert alert-success">
-                <?= session()->get('exito') ?>
-                <?php session()->remove('exito'); // Limpiar el mensaje después de mostrarlo ?>
+        <div class="hero">
+            <div class="letras">
+                <?php if (session()->get('exito')): ?>
+                    <div class="alert alert-success">
+                        <?= session()->get('exito') ?>
+                        <?php session()->remove('exito');?>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Formulario para crear una nueva planta -->
+                <form action="<?= base_url('crearPlanta') ?>" method="post">
+                    <label for="nombre_planta">Nombre de la planta:</label>
+                    <input type="text" id="nombre_planta" name="nombre_planta" required>
+                    <br>
+                    <label for="ubicacion">Ubicación:</label>
+                    <select id="ubicacion" name="ubicacion" required>
+                        <option value="1">Interior</option>
+                        <option value="2">Exterior</option>
+                    </select>
+
+                    <button type="submit">Crear Planta</button>
+                </form>
             </div>
-        <?php endif; ?>
-
-        <li><a href="<?= base_url('configuracion'); ?>">Configuracion</a></li>
-
-        <!-- Formulario para crear una nueva planta -->
-        <form action="<?= base_url('crearPlanta') ?>" method="post">
-            <label for="nombre_planta">Nombre de la planta:</label>
-            <input type="text" id="nombre_planta" name="nombre_planta" required>
-            <br>
-            <label for="ubicacio">Ubicacion:</label>
-            <select id="ubicacio" name="ubicacion" required>
-                <option value="1">Interior</option>
-                <option value="0">Exterior</option>
-            </select>
-
-            <button type="submit">Crear Planta</button>
-        </form>
         </div>
-        </div>
-            
+
         <!-- Mostrar las plantas del usuario actual -->
-    <?php if (!empty($plantas)): ?>
-        <h2>Mis Plantas</h2>
+        <?php if (!empty($plantas)): ?>
+            <h2>Mis Plantas</h2>
             <div class="plantas-container">
-            <?php foreach ($plantas as $planta): ?>
-                <div class="planta-card">
-                    <h3><?= esc($planta['nombre_planta']) ?></h3>
-                    <p>Ubicación: <?= esc($planta['lugar_planta']) ?></p>
-                    <p>Tipo: <?= esc($planta['tipo_lugar']) ?></p>
-                    <!-- Botón para configurar humedad -->
-                    <a href="<?= base_url('configuracion')?>">
-                        <button>Configurar Humedad</button>
-                    </a>
-                    <!-- Botón para visualizar los datos -->
-                    <a href="<?= base_url('visualizar-datos/' . $planta['id_planta']) ?>">
-                        <button>Visualizar Datos</button>
-                    </a>
-                    <a href="<?= base_url('eliminar'); ?>"><button>Eliminar</button></a>
-                </div>
-            <?php endforeach; ?>
-        </div>
+                <?php foreach ($plantas as $planta): ?>
+                    <div class="planta-card">
+                        <h3><?= $planta['nombre_planta']; ?></h3>
+                        <p>Ubicación: <?= $planta['id_ubicacion'] == 1 ? 'Interior' : 'Exterior' ?></p>
+                        
+                        <a href="<?= base_url('configuracion/' . $planta['id_planta']) ?>">
+                            <button>Configurar Humedad</button>
+                        </a>
 
-    <?php if (session()->get('error')): ?>
-        <div class="alert alert-danger">
-            <?= session()->get('error') ?>
-        </div>
-    <?php endif; ?>
+                        <a href="<?= base_url('visualizar-datos/' . $planta['id_planta']) ?>">
+                            <button>Visualizar Datos</button>
+                        </a>
 
-    <?php if (session()->get('exito')): ?>
-        <div class="alert alert-success">
-            <?= session()->get('exito') ?>
-        </div>
-    <?php endif; ?>
-
-
-    
-    <?php else: ?>
-        <p>No tienes plantas registradas.</p>
-    <?php endif; ?>
-        
+                        <a href="<?= base_url('eliminar-planta/' . $planta['id_planta']) ?>">
+                            <button>Eliminar</button>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <p>No tienes plantas registradas.</p>
+        <?php endif; ?>
     </main>
     <?= $this->include('common/footer') ?>
 </body>
