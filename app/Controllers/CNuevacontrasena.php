@@ -29,7 +29,7 @@ class CNuevacontrasena extends Controller
         $confirmarContrasena = $this->request->getPost('confirmar_contrasena');
 
         // Verificar el código
-        $codigoData = $codigoModel->obtenerUsuarioPorCodigo($codigo);
+        $codigoData = $codigoModel->obtenerUsuarioPorCodigoPorId($codigo);
 
         if (!$codigoData) {
             session()->set('error', 'Código inválido o expirado.');

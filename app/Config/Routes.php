@@ -15,11 +15,12 @@ $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
+$routes->get('visualizarDatos','CVisualizarDatos::visualizarDatos');
 $routes->get('dispositivo','Home::dispositivo');
 
 // Funcionamiento de crear planta 
 $routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
-$routes->get('/visualizar-datos/(:num)', 'CPlanta::visualizarDatos/$1');
+$routes->get('/visualizarDatos/(:num)', 'CVisualizarDatos::visualizarDatos/$1');
 $routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
 $routes->post('crearPlanta', 'CPlanta::crearPlanta');
 

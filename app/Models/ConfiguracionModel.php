@@ -14,4 +14,9 @@ class ConfiguracionModel extends Model{
         return $this->insert($array);
     }
     
+    public function eliminarConfiguracionesPorPlanta($id_planta)
+    {
+        return $this->where('id_planta', $id_planta)->delete();
+    }
+
 }

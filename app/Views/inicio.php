@@ -26,7 +26,7 @@
         </p>
         <ul>
             <li><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></li>
-            <li><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></li>
+            <li><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></li>  
         </ul>
       </div>
     </div>  

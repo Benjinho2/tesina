@@ -15,7 +15,6 @@ class CConfiguracion extends Controller
         return redirect()->to('/');
     }
 
-
     $plantaModel = new PlantaModel;
     $id_usuario = session()->get('DatosUsuario')['id_usuario'];
     $planta = $plantaModel->obtenerPlantaPorIdYUsuario($id_planta, $id_usuario);

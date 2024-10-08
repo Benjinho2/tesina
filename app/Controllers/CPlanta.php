@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\PlantaModel;
+use App\Models\ConfiguracionModel;
 use CodeIgniter\Controller;
 
 class CPlanta extends Controller
@@ -42,22 +43,30 @@ class CPlanta extends Controller
             return redirect()->to('mi-planta');
         }
     }
-    
 
     public function eliminarPlanta($id_planta)
     {
-        $plantaModel = new PlantaModel;
-
+        $plantaModel        = new PlantaModel;
+        $configuracionModel = new ConfiguracionModel;
+    
         // Obtener el id del usuario
         $id_usuario = session()->get('DatosUsuario')['id_usuario'];
-        // Verificar que la planta pertenezca al usuario actual utilizando el método del modelo
+    
+        // Verificar que la planta pertenezca al usuario actual
         $planta = $plantaModel->obtenerPlantaPorIdYUsuario($id_planta, $id_usuario);
-        
-        if($plantaModel->delete($id_planta)){
-            session()->setFlashdata('exito', 'Planta eliminada exitosamente.');
-        }
- 
+    
+        if ($planta) {
+            // Eliminar todas las configuraciones asociadas a la planta usando el método del modelo
+            $configuracionModel->eliminarConfiguracionesPorPlanta($id_planta);
+    
+            // Eliminar la planta
+            if ($plantaModel->delete($id_planta)) {
+                session()->setFlashdata('exito', 'Planta eliminada exitosamente.');
+            } else {
+                session()->setFlashdata('error', 'Error al eliminar la planta.');
+            }
         return redirect()->to('mi-planta');
+        }
     }
 
 }
