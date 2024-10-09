@@ -14,7 +14,10 @@ $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->post('crearPlanta', 'CPlanta::crearPlanta');
-$routes->post('CData/datos', 'CData::datos');
+$routes->get('CData/datos', 'CData::getDatos'); // Ruta para manejar solicitudes GET
+$routes->post('CData/datos', 'CData::datos');   // Ruta para manejar solicitudes POST
+
+
 
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');

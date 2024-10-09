@@ -1,13 +1,20 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dato1 = $_POST['dato1'];
-    $dato2 = $_POST['dato2'];
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexión Wi-Fi</title>
+</head>
+<body>
+    <h1>Enviar datos de Wi-Fi</h1>
+    <form action="http://IP_DE_LA_Nodemcu" method="post">
+        <label for="ssid">SSID (Nombre de la red):</label><br>
+        <input type="text" id="ssid" name="ssid"><br><br>
 
-    // Puedes procesar los datos aquí, por ejemplo, guardarlos en la base de datos
+        <label for="password">Contraseña:</label><br>
+        <input type="text" id="password" name="password"><br><br>
 
-    // Devuelve una respuesta en JSON
-    echo json_encode(['status' => 'success', 'dato1' => $dato1, 'dato2' => $dato2]);
-} else {
-    echo json_encode(['status' => 'error', 'message' => 'Método no permitido']);
-}
-?>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
