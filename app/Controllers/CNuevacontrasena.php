@@ -11,7 +11,7 @@ class CNuevacontrasena extends Controller
     public function index()
     {  
           // Verifica si hay datos de usuario en la sesión
-        if (session()->get('DatosUsuario')) {
+        if (!session()->get('emailIngresado')) {
             // Redirige al usuario autenticado a la página principal
             return redirect()->to('/');
         }
@@ -29,7 +29,7 @@ class CNuevacontrasena extends Controller
         $confirmarContrasena = $this->request->getPost('confirmar_contrasena');
 
         // Verificar el código
-        $codigoData = $codigoModel->obtenerUsuarioPorCodigo($codigo);
+        $codigoData = $codigoModel->obtenerUsuarioPorCodigoPorId($codigo);
 
         if (!$codigoData) {
             session()->set('error', 'Código inválido o expirado.');

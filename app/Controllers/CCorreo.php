@@ -25,7 +25,7 @@ class CCorreo extends Controller{
     
         $emailUsuario = $this->request->getPost('email');
         $informacionUsuario = $usuarioModel->obtenerUsuarioEmail($emailUsuario);
-    
+        session()->set('emailIngresado', $emailUsuario);
         if ($informacionUsuario) {
             // Verifica si el usuario ya tiene un código de recuperación
             $codigoData = $codigoModel->obtenerUsuarioPorCodigoPorId($informacionUsuario['id_usuario']);
@@ -44,7 +44,7 @@ class CCorreo extends Controller{
                 ];  
                 $codigoModel->insertarCodigo($array);
             }
-    
+            
             // Enviar el correo
             $email = Services::email();
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
@@ -53,7 +53,7 @@ class CCorreo extends Controller{
             $email->setMessage("Use el siguiente código para restablecer su contraseña: $codigo. El código es válido por 15 minutos.");
     
             if ($email->send()) {
-                session()->set('exito',  ' Ingresa el código enviado por email.');
+                session()->set('exito',  'Ingresa el código enviado por email.');
                 return redirect()->to('autenticacion/nueva-contrasena');
             } else {
                 session()->set('error', 'Error al enviar el correo.');

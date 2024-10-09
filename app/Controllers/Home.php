@@ -42,11 +42,6 @@ class Home extends BaseController
         return view ('consejo-truco');
     }
 
-    public function dispositivo()
-    {
-        return view('dispositivo');
-    }
-
 }
 
 
