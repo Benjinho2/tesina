@@ -1,25 +1,26 @@
 body {
     background-color: #f3f4f6;
     margin: 0;
-    font-family: 'Arial', sans-serif; /* Puedes cambiar a una fuente diferente si prefieres */
+    font-family: 'Arial', sans-serif;
 }
 
 main {
     background-color: #ffffff;
-    padding: 40px; /* Aumentado para más espacio interno */
-    border-radius: 15px; /* Bordes más redondeados */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 900px;
-    width: 90%; /* Aumentado para mejor uso del espacio */
-    margin: 20px auto; /* Añadido margen superior */
+    width: 90%;
+    margin: 20px auto;
     animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(15px); /* Más movimiento hacia abajo */
+        transform: translateY(15px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -27,12 +28,12 @@ main {
 }
 
 h2 {
-    font-size: 2.8rem; /* Aumentado para mejor impacto visual */
-    color: #2c3e50; /* Un tono más oscuro para el texto */
+    font-size: 2.8rem;
+    color: #2c3e50;
     text-align: center;
-    margin-bottom: 30px; /* Aumentado para mejor separación */
+    margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 3px; /* Más separación */
+    letter-spacing: 3px;
 }
 
 table {
@@ -41,17 +42,17 @@ table {
     background-color: #f9fafc;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 thead {
-    background-color: #2980b9; /* Color más oscuro para el encabezado */
+    background-color: #2980b9;
     color: #ffffff;
 }
 
 thead th {
-    padding: 20px; /* Más espacio en el encabezado */
-    font-size: 1.1rem; /* Aumentado para mejor legibilidad */
+    padding: 20px;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -62,13 +63,13 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background-color: #ecf0f1; /* Color de fondo más suave en hover */
+    background-color: #ecf0f1;
     transform: scale(1.02);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f7f9fa; /* Color más suave para filas pares */
+    background-color: #f7f9fa;
 }
 
 tbody td {
@@ -80,20 +81,20 @@ tbody td {
 
 tbody td:first-child {
     font-weight: 600;
-    color: #34495e; /* Color más oscuro para mayor énfasis */
+    color: #34495e;
 }
 
 button {
     background-color: #3498db;
     color: #ffffff;
-    padding: 12px 25px; /* Más espacio en el botón */
+    padding: 12px 25px;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     display: inline-block;
-    margin-top: 25px; /* Más separación superior */
+    margin-top: 25px;
 }
 
 button:hover {
@@ -107,7 +108,7 @@ button:active {
 }
 
 footer {
-    margin-top: 40px; /* Aumentado para más espacio antes del pie de página */
+    margin-top: 40px;
     text-align: center;
     color: #777;
     font-size: 0.9rem;
@@ -121,5 +122,5 @@ footer a {
 
 footer a:hover {
     color: #2980b9;
-    text-decoration: underline; /* Añadido subrayado en hover */
-}
+    text-decoration: underline;
+}   
