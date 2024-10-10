@@ -21,11 +21,8 @@ class Home extends BaseController
 
     public function perfil()
     {
-        // Verifica si el usuario ya está autenticado
         if (!session()->get('DatosUsuario')) 
         {
-            // Redirige al usuario autenticado a la página principal
-
             return redirect()->to('/');
         }
 

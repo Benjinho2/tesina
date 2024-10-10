@@ -27,4 +27,13 @@ class PlantaModel extends Model
                     ->where('id_usuario', $id_usuario)
                     ->first();
     }
-}
+
+    public function obtenerPlantasConUbicacion($id_usuario)
+    {
+        return $this->select('planta.*, ubicacion.lugar_planta')
+                    ->join('ubicacion', 'planta.id_ubicacion = ubicacion.id_ubicacion')
+                    ->where('planta.id_usuario', $id_usuario)
+                    ->findAll();
+    }
+
+}   
