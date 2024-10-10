@@ -17,6 +17,8 @@ $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('visualizarDatos','CLectura::visualizarDatos');
 $routes->get('dispositivo','Home::dispositivo');
+$routes->post('CData/datos','CData::datos');
+$routes->get('data','CData::datos');
 
 // Funcionamiento de crear planta 
 $routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
