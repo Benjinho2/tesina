@@ -4,34 +4,41 @@ namespace App\Controllers;
 
 class CData extends BaseController
 {
-
     public function datos()
     {
         if ($this->request->getMethod() === 'post') {
-            $dispositivoID = $this->request->getPost('dispositivo_id');
-            $ipAddress = $this->request->getPost('ip_address');
-    
+            $humedad = $this->request->getPost('humedad');
+            $fecha = $this->request->getPost('fecha');
+
+            // Aquí puedes agregar la lógica para almacenar los datos en la base de datos
+            $data = [
+                'humedad' => $humedad,
+                'fecha' => $fecha
+            ];
+
+            // Supongamos que tienes un modelo de base de datos llamado HistorialRiegoModel
+
             return $this->response->setJSON([
                 'status' => 'success',
-                'dispositivo_id' => $dispositivoID,
-                'ip_address' => $ipAddress
+                'message' => 'Datos recibidos y almacenados correctamente',
+                'data' => $data
             ]);
         } else {
-            // Si no es una solicitud POST, devolver un error
             return $this->response->setJSON([
                 'status' => 'error',
                 'message' => 'Método no permitido'
             ]);
         }
     }
-    
 
     public function getDatos()
     {
         return $this->response->setJSON([
             'status' => 'success',
-            'message' => 'Método GET recibido correctamente'
+            'message' => 'Método GET recibido correctamente',
+            'data' => [
+                'example_data' => 'Aquí puedes agregar más datos si lo necesitas'
+            ]
         ]);
     }
 }
-
