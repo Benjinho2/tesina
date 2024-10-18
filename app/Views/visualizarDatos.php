@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="<?= base_url('imagenes/imagotipo.ico'); ?>">
+    <link rel="stylesheet" href="<?= base_url('estilo/visualizar.css'); ?>">   
     <title>Datos en tiempo real</title>
 </head>
 <body>
@@ -12,9 +13,7 @@
         <h2>Visualizar Datos en Tiempo Real</h2>
         <table border="1">
             <thead>
-                <tr>
-                    <th>ID Lectura</th>
-                    <th>ID Dispositivo</th>
+                <tr>    
                     <th>Fecha y Hora</th>
                     <th>Nivel de Humedad (%)</th>
                 </tr>
@@ -23,10 +22,8 @@
                 <?php if (!empty($lecturas)): ?>
                     <?php foreach ($lecturas as $lectura): ?>
                         <tr>
-                            <td><?= esc($lectura['id_lectura']); ?></td>
-                            <td><?= esc($lectura['id_dispositivo']); ?></td>
-                            <td><?= esc($lectura['fecha_hora']); ?></td>
-                            <td><?= esc($lectura['nivel_humedad']); ?>%</td>
+                            <td><?= ($lectura['fecha_hora']); ?></td>
+                            <td><?= ($lectura['nivel_humedad']); ?>%    </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>

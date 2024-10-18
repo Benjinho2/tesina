@@ -14,17 +14,19 @@ $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->get('como-funciona', 'Home::funcionamiento');
+$routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('visualizarDatos','CLectura::visualizarDatos');
-$routes->get('dispositivo','Home::dispositivo');
-$routes->post('datos', 'CData::datos');      
-$routes->get('get-datos', 'CData::getDatos'); 
+$routes->post('datos-nodemcu', 'NodemcuController::recibirDatos');
+$routes->get('ver-datos-nodemcu', 'NodemcuController::mostrarDatos');
+
 
 
 // Funcionamiento de crear planta 
 $routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
 $routes->get('/visualizarDatos/(:num)', 'CLectura::visualizarDatos/$1');
 $routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
+$routes->get('historial/(:num)', 'CHistorial::historial/$1');
 $routes->post('crearPlanta', 'CPlanta::crearPlanta');
 
 // Vista del Login ,Register 

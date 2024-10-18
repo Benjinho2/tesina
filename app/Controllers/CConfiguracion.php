@@ -32,7 +32,7 @@ class CConfiguracion extends Controller
 public function guardarConfiguracion()
 {
     // Obtener datos del formulario
-    $id_dispositivo = 2;
+    $id_dispositivo = 1;
     $id_planta = $this->request->getPost('id_planta'); // Asegúrate de que el ID de la planta se envíe en el formulario
     $nivelMinimo = $this->request->getPost('nivel_minimo_humedad');
     $nivelMaximo = $this->request->getPost('nivel_maximo_humedad');
