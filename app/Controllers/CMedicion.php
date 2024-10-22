@@ -29,11 +29,14 @@ class CMedicion extends BaseController
         }
     }
 
-    public function mostrarMediciones()
-    {
+    public function mostrarMediciones() {
         $medicionModel = new MedicionModel();
-        $data['mediciones'] = $medicionModel->getMediciones();
+        
+        // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
+        $data['mediciones'] = $medicionModel->orderBy('fecha', 'DESC')->findAll(10);
+        
         return view('mediciones', $data);
     }
+    
 }
 

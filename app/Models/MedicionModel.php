@@ -15,9 +15,5 @@ class MedicionModel extends Model
     {
         return $this->findAll();
     }
-
-    public function getMediciones() {
-        return $this->findAll();
-    }
     
 }
