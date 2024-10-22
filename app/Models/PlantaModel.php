@@ -7,7 +7,7 @@ class PlantaModel extends Model
 {
     protected $table = 'planta';
     protected $primaryKey = 'id_planta';
-    protected $allowedFields = ['nombre_planta', 'id_ubicacion', 'id_usuario'];
+    protected $allowedFields = ['nombre_planta', 'id_ubicacion', 'id_usuario',];
 
     public function insertarDatos($array)
     {
@@ -35,5 +35,5 @@ class PlantaModel extends Model
                     ->where('planta.id_usuario', $id_usuario)
                     ->findAll();
     }
-
 }   
+
