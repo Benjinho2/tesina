@@ -6,6 +6,14 @@ use App\Models\MedicionModel;
 
 class CMedicion extends BaseController
 {
+    public function mostrarMediciones() {
+        $medicionModel = new MedicionModel();
+        
+        // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
+        $data['mediciones'] = $medicionModel->orderBy('fecha', 'DESC')->findAll(10);
+        
+        return view('mediciones', $data);
+    }
     public function recibirMedicion()
     {
         $id_planta = $this->request->getPost('id_planta');
@@ -29,14 +37,6 @@ class CMedicion extends BaseController
         }
     }
 
-    public function mostrarMediciones() {
-        $medicionModel = new MedicionModel();
-        
-        // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
-        $data['mediciones'] = $medicionModel->orderBy('fecha', 'DESC')->findAll(10);
-        
-        return view('mediciones', $data);
-    }
     
 }
 
