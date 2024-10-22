@@ -11,7 +11,6 @@ $routes->get('/', 'Home::index');
 $routes->get('perfil', 'Home::perfil');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('sobrenosotros', 'Home::sobrenosotros');
-$routes->get('configuracion', 'CConfiguracion::configuracion');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('historial', 'CHistorial::historial');
@@ -20,12 +19,12 @@ $routes->get('visualizarDatos','CLectura::visualizarDatos');
 
 //nodemcu
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
-
 $routes->get('mostrar-mediciones', 'CMedicion::mostrarMediciones');
 
-
-
-
+//configuracion
+// Cargar el controlador de configuraciones
+$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1'); // Para mostrar la configuración de una planta específica
+$routes->post('guardar-configuracion', 'CConfiguracion::guardarConfiguracion'); // Para guardar la configuración
 
 
 // Funcionamiento de crear planta 
