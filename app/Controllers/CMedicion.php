@@ -3,10 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\MedicionModel;
+use App\Models\PlantaModel; // Modelo para plantas
 
 class CMedicion extends BaseController
 {
-    public function mostrarMediciones() {
+    public function mostrarMediciones($id_planta) {
+           // Verifica si el usuario está autenticado
+           if (!session()->get('DatosUsuario')) {
+            return redirect()->to('/');
+        }
+        
         $medicionModel = new MedicionModel();
         
         // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
@@ -14,6 +20,7 @@ class CMedicion extends BaseController
         
         return view('mediciones', $data);
     }
+
     public function recibirMedicion()
     {
         $id_planta = $this->request->getPost('id_planta');

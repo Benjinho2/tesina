@@ -17,22 +17,21 @@ $routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('visualizarDatos','CLectura::visualizarDatos');
 
-//nodemcu
+// Nodemcu
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
-$routes->get('mostrar-mediciones', 'CMedicion::mostrarMediciones');
+$routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1');
 
-//configuracion
-// Cargar el controlador de configuraciones
-$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1'); // Para mostrar la configuración de una planta específica
-$routes->post('guardar-configuracion', 'CConfiguracion::guardarConfiguracion'); // Para guardar la configuración
+// Funcionamiento Guardar configuración riego
+$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
 
+// Funcionamiento de crear planta
+$routes->post('crearPlanta', 'CPlanta::crearPlanta');
 
-// Funcionamiento de crear planta 
+// Funcionamiento de crear planta
 $routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
 $routes->get('/visualizarDatos/(:num)', 'CLectura::visualizarDatos/$1');
 $routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
 $routes->get('historial/(:num)', 'CHistorial::historial/$1');
-$routes->post('crearPlanta', 'CPlanta::crearPlanta');
 
 // Vista del Login ,Register 
 $routes->get('autenticacion/login', 'CAutenticacion::login');
@@ -53,7 +52,4 @@ $routes->post('enviar', 'CContacto::enviar');
 // Funcionamiento para el Restablecer
 $routes->post('correo', 'CCorreo::correo');
 $routes->post('actualizar', 'CNuevacontrasena::actualizar');
-
-// Funcionamiento Guardar configuración riego
-$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
 

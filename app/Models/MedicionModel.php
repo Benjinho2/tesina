@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MedicionModel extends Model
 {
     protected $table = 'medicion';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_medicion';
     protected $allowedFields = ['id_planta', 'humedad', 'id_usuario', 'fecha'];
 
     // Método para obtener todas las mediciones
