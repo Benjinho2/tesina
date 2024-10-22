@@ -10,27 +10,34 @@ class NodemcuController extends BaseController
         $password = $this->request->getPost('password');
         $humidity = $this->request->getPost('humidity');
 
-        session()->set('ssid', $ssid);
-        session()->set('password', $password);
-        session()->set('humidity', $humidity);
-
-        echo "Datos recibidos de la NodeMCU:<br>";
-        echo "SSID: " . esc($ssid) . "<br>";
-        echo "Contraseña: " . esc($password) . "<br>";
-        echo "Humedad: " . esc($humidity) . "<br>";
+        // Verifica si llegan los datos correctamente
+        if ($ssid && $password && $humidity) {
+            session()->set('ssid', $ssid);
+            session()->set('password', $password);
+            session()->set('humidity', $humidity);
+            return redirect()->to('/mostrar-datos'); // Redirigir después de guardar
+        } else {
+            return "No se han recibido datos válidos.";
+        }
     }
 
     public function mostrarDatos()
     {
-     
         $ssid = session()->get('ssid');
         $password = session()->get('password');
         $humidity = session()->get('humidity');
 
-        return view('datos_nodemcu', [
-            'ssid' => $ssid,
-            'password' => $password,
-            'humidity' => $humidity
-        ]);
+        // Verifica si hay datos en la sesión
+        if ($ssid && $password && $humidity) {
+            return view('ver_datos_nodemcu', [
+                'ssid' => $ssid,
+                'password' => $password,
+                'humidity' => $humidity
+            ]);
+        } else {
+            return "No hay datos disponibles.";
+        }
     }
 }
+
+    

@@ -17,8 +17,9 @@ $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 $routes->get('visualizarDatos','CLectura::visualizarDatos');
-$routes->post('datos-nodemcu', 'NodemcuController::recibirDatos');
-$routes->get('ver-datos-nodemcu', 'NodemcuController::mostrarDatos');
+$routes->post('recibir-datos', 'NodemcuController::recibirDatos');
+$routes->get('mostrar-datos', 'NodemcuController::mostrarDatos');
+
 
 
 
