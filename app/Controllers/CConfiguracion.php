@@ -54,5 +54,18 @@ class CConfiguracion extends Controller
     
         return redirect()->to('/mi-planta');
     }
+
+    public function obtenerConfiguracion($id_planta)
+{
+    $configuracionModel = new ConfiguracionModel();
+    $configuracion = $configuracionModel->obtenerConfiguracionPorPlantaYDispositivo($id_planta, 1); // ID de dispositivo fijo
+
+    if ($configuracion) {
+        return $this->response->setJSON($configuracion);
+    } else {
+        return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontró configuración.']);
+    }
+}
+
     
 }
