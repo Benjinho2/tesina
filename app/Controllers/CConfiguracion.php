@@ -58,7 +58,7 @@ class CConfiguracion extends Controller
     public function obtenerConfiguracion($id_planta)
 {
     $configuracionModel = new ConfiguracionModel();
-    $configuracion = $configuracionModel->obtenerConfiguracionPorPlantaYDispositivo($id_planta, 1); // ID de dispositivo fijo
+    $configuracion = $configuracionModel->obtenerConfiguracionPorPlantaYDispositivo($id_planta, 1); 
 
     if ($configuracion) {
         return $this->response->setJSON($configuracion);

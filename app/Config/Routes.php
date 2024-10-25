@@ -22,8 +22,8 @@ $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
 $routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1');
 
 // Funcionamiento Guardar configuración riego
+$routes->get('configuracion /(:num)', 'CConfiguracion::configuracion/$1'); 
 $routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
-$routes->get('configuracion/(:num)', 'CConfiguracion::obtenerConfiguracion/$1');
 
 
 // Funcionamiento de crear planta
