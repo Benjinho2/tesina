@@ -16,7 +16,7 @@
                 <p>&copy; 2024 AquaBot<br>Todos los derechos reservados.</p>
             </div>
             <div class="footer-section">
-                <h4>Enlaces</h4>
+                <h4>Recursos</h4>
                 <p><a href="<?= base_url('consejo-truco'); ?>">Consejos y trucos</a></p>
                 <p><a href="<?= base_url('como-funciona'); ?>">Cómo funciona</a></p>
                 <p><a href="<?= base_url('sobrenosotros'); ?>">Sobre nosotros</a></p>
@@ -32,7 +32,7 @@
             <div class="footer-section">
                 <h4>Seguinos</h4>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Desarrollador Full-Stack.</a><br>
+                    <a href="https://www.instagram.com/nahuelalvarez._/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Nahuel Alvarez - Desarrollador Backend.</a><br>
                     <a href="https://www.instagram.com/oviedo_benj4/"><img src="<?= base_url('imagenes/instagram.png'); ?>" class="social-icon">Benja Oviedo - Desarrolador Fronted.</a>
                 </div>
             </div>

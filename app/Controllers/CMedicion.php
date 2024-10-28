@@ -28,13 +28,13 @@ class CMedicion extends BaseController
         $id_usuario = $this->request->getPost('id_usuario');
 
         // Validar si los datos son nulos
-        if ($id_planta !== null && $humedad !== null && $id_usuario !== null) {
+        if ($id_planta !== null && $humedad !== null && $fecha!== null) {
             // Guardar la medición en la base de datos
             $medicionModel = new MedicionModel();
             $medicionModel->save([
                 'id_planta' => $id_planta,
                 'humedad' => $humedad,
-                'id_usuario' => $id_usuario,
+                'fecha' => $fecha
             ]);
             // Devuelve una respuesta exitosa
             return $this->response->setJSON(['status' => 'success', 'message' => 'Medición registrada']);

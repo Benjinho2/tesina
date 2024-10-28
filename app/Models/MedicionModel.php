@@ -16,4 +16,9 @@ class MedicionModel extends Model
         return $this->findAll();
     }
     
+     // Método para eliminar configuraciones por planta
+     public function eliminarMedicionesPorPlanta($id_planta) {
+        return $this->where('id_planta', $id_planta)->delete();
+    }
+
 }

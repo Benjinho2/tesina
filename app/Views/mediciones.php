@@ -16,15 +16,15 @@
                 <tr>
                     <th>ID Planta</th>
                     <th>Humedad</th>
-                    <th>ID Usuario</th>
+                    <th>Fecha</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($mediciones as $medicion): ?>
                 <tr>
-                    <td><?= ($medicion['id_planta']) ?></td>
-                    <td><?= ($medicion['humedad']) ?></td>
-                    <td><?= ($medicion['id_usuario']) ?></td>
+                    <td><?= $medicion['id_planta'] ?></td>
+                    <td><?= $medicion['humedad'] ?></td>
+                    <td><?= $medicion['fecha']?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

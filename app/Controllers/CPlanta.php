@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\PlantaModel;
 use App\Models\UbicacionModel;
 use App\Models\ConfiguracionModel;
+use App\Models\MedicionModel;
 use CodeIgniter\Controller;
 
 class CPlanta extends Controller
@@ -61,17 +62,21 @@ class CPlanta extends Controller
     {
         $plantaModel = new PlantaModel();
         $configuracionModel = new ConfiguracionModel();
+        $medicionModel = new MedicionModel();
         
         // Obtener el id del usuario de la sesión
         $id_usuario = session()->get('DatosUsuario')['id_usuario'];
-
+    
         // Verificar que la planta pertenezca al usuario actual
         $planta = $plantaModel->obtenerPlantaPorIdYUsuario($id_planta, $id_usuario);
-
+    
         if ($planta) {
             // Eliminar todas las configuraciones asociadas a la planta
             $configuracionModel->eliminarConfiguracionesPorPlanta($id_planta);
-
+    
+            // Eliminar todas las mediciones asociadas a la planta
+            $medicionModel->eliminarMedicionesPorPlanta($id_planta);
+    
             // Eliminar la planta
             if ($plantaModel->delete($id_planta)) {
                 session()->setFlashdata('exito', 'Planta eliminada exitosamente.');
@@ -81,10 +86,10 @@ class CPlanta extends Controller
         } else {
             session()->setFlashdata('error', 'No tienes permiso para eliminar esta planta.');
         }
-
+    
         return redirect()->to('mi-planta');
     }
-
+    
 
 
 }
