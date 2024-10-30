@@ -38,26 +38,35 @@ class CPlanta extends Controller
     {
         $plantaModel = new PlantaModel;
         $ubicacionModel = new UbicacionModel;
+        
         // Obtener datos del formulario
         $nombre_planta = $this->request->getPost('nombre_planta');
         $id_ubicacion = $this->request->getPost('ubicacion');
-        $id_usuario = session()->get('DatosUsuario')['id_usuario'];
-
-        // Insertar la nueva planta
-        $array = [
-            'nombre_planta' => $nombre_planta,
-            'id_ubicacion' => $id_ubicacion,
-            'id_usuario' => $id_usuario
-        ];
-
-        if($plantaModel->insertarDatos($array)){
-        // Redireccionar y mostrar mensaje de éxito
-            session()->setFlashdata('exito', 'Planta creada exitosamente.');
-            return redirect()->to('mi-planta');
+        $datosUsuario = session()->get('DatosUsuario');
+        
+        if (isset($datosUsuario['id_usuario'])) {
+            $id_usuario = $datosUsuario['id_usuario'];
+    
+            // Insertar la nueva planta
+            $array = [
+                'nombre_planta' => $nombre_planta,
+                'id_ubicacion' => $id_ubicacion,
+                'id_usuario' => $id_usuario
+            ];
+    
+            if ($plantaModel->insertarDatos($array)) {
+                // Redireccionar y mostrar mensaje de éxito
+                session()->setFlashdata('exito', 'Planta creada exitosamente.');
+                return redirect()->to('mi-planta');
+            }
+        } else {
+            session()->setFlashdata('error', 'No se encontró el usuario en la sesión.');
+            return redirect()->to('login'); // Redirecciona al login si no hay sesión activa
         }
-    return view('mi-planta', $data);
+    
+        return view('mi-planta');
     }
-
+    
     public function eliminarPlanta($id_planta)
     {
         $plantaModel = new PlantaModel();

@@ -15,7 +15,6 @@ $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
-$routes->get('visualizarDatos','CLectura::visualizarDatos');
 
 // Nodemcu
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');

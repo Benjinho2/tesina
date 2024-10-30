@@ -45,9 +45,6 @@
                         <button>Configurar Humedad</button>
                     </a>
 
-                    <a href="<?= base_url('visualizarDatos/' . $planta['id_planta']) ?>">
-                        <button>Visualizar Datos</button>
-                    </a>
                     <a href="<?= base_url('mediciones/' . $planta['id_planta']) ?>">
                         <button>Historial de medición</button>
                     </a>
