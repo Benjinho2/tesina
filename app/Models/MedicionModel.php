@@ -21,4 +21,10 @@ class MedicionModel extends Model
         return $this->where('id_planta', $id_planta)->delete();
     }
 
+      // Función para obtener las 10 mediciones más recientes
+      public function getUltimasMediciones($limit = 10)
+      {
+          return $this->orderBy('fecha', 'DESC')->findAll($limit);
+      }
+
 }

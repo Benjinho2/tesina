@@ -12,12 +12,12 @@ class CMedicion extends BaseController
            if (!session()->get('DatosUsuario')) {
             return redirect()->to('/');
         }
-        
+            
         $medicionModel = new MedicionModel();
         
         // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
-        $data['mediciones'] = $medicionModel->orderBy('fecha', 'DESC')->findAll(10);
-        
+        $data['mediciones'] = $medicionModel->getUltimasMediciones(10);        
+
         return view('mediciones', $data);
     }
 
