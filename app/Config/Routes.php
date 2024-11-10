@@ -17,17 +17,11 @@ $routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 
 
-// Ruta para recibir mediciones (POST)
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
-
-// Ruta para mostrar mediciones específicas según el ID numérico (GET)
 $routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1');
+$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');  // Obtener configuración de riego
+$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');  // Guardar configuración de riego
 
-// Ruta para obtener configuración de riego para un usuario específico
-$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
-
-// Ruta para guardar configuración de riego (POST)
-$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
 
 
 

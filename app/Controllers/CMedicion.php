@@ -2,49 +2,58 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
 use App\Models\MedicionModel;
-use App\Models\PlantaModel; // Modelo para plantas
 
-class CMedicion extends BaseController
+class CMedicion extends Controller
 {
-    public function mostrarMediciones($id_planta) {
-        // Verifica si el usuario está autenticado
-        if (!session()->get('DatosUsuario')) {
-            return redirect()->to('/');
-        }
-        
-        $medicionModel = new MedicionModel();
-        
-        // Obtener las últimas 10 mediciones, ordenadas por fecha (o el campo correspondiente)
-        $data['mediciones'] = $medicionModel->getUltimasMediciones(10);
-
-        return view('mediciones', $data);
-    }
-    
+    // Método para recibir la medición de humedad del sensor
     public function recibirMedicion()
     {
+        // Recibir datos de la solicitud POST
         $id_planta = $this->request->getPost('id_planta');
         $humedad = $this->request->getPost('humedad');
         $id_usuario = $this->request->getPost('id_usuario');
-    
-        // Log para verificar los datos recibidos
-        log_message('error', 'Datos recibidos: id_planta = ' . $id_planta . ', humedad = ' . $humedad . ', id_usuario = ' . $id_usuario);
-        echo "Datos recibidos: id_planta = $id_planta, humedad = $humedad, id_usuario = $id_usuario"; // Esto lo verás en el navegador o consola
-    
-        // Validar si los datos son nulos
-        if ($id_planta !== null && $humedad !== null && $id_usuario !== null) {
+
+        // Validar los datos (por ejemplo, asegurarse de que la humedad esté en el rango adecuado)
+        if (is_numeric($humedad) && $humedad >= 0 && $humedad <= 100) {
             // Guardar la medición en la base de datos
             $medicionModel = new MedicionModel();
-            $medicionModel->save([
+            $data = [
                 'id_planta' => $id_planta,
                 'humedad' => $humedad,
-                'id_usuario' => $id_usuario,  // Agregar el id_usuario a la base de datos
-            ]);
-            // Devuelve una respuesta exitosa
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Medición registrada']);
+                'id_usuario' => $id_usuario,
+                'fecha' => date('Y-m-d H:i:s')
+            ];
+            $medicionModel->save($data);
+
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Medición recibida correctamente']);
         } else {
-            // Devuelve un error si los datos son nulos
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Datos incompletos']);
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Valor de humedad no válido']);
+        }
+    }
+
+    // Método para mostrar las mediciones específicas según el ID de la planta
+    public function mostrarMediciones($id_planta)
+    {
+        $medicionModel = new MedicionModel();
+        $mediciones = $medicionModel->where('id_planta', $id_planta)->findAll();
+
+        // Verificamos que haya mediciones
+        if (!empty($mediciones)) {
+            // Mapeamos solo los campos necesarios (id_planta, humedad, id_usuario y fecha)
+            $resultados = array_map(function($medicion) {
+                return [
+                    'id_planta' => $medicion['id_planta'],
+                    'humedad' => $medicion['humedad'],
+                    'id_usuario' => $medicion['id_usuario'],
+                    'fecha' => $medicion['fecha']
+                ];
+            }, $mediciones);
+
+            return $this->response->setJSON($resultados);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontraron mediciones']);
         }
     }
 }
