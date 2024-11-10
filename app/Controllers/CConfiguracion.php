@@ -31,28 +31,57 @@ class CConfiguracion extends BaseController
     }
 
     // Método para guardar la configuración de humedad
-    public function guardarConfiguracion()
-    {
-        $id_planta = $this->request->getPost('id_planta');
-        $nivelMinimo = $this->request->getPost('nivel_minimo_humedad');
-        $nivelMaximo = $this->request->getPost('nivel_maximo_humedad');
-
-        // Validar datos
-        if (!$id_planta || !$nivelMinimo || !$nivelMaximo) {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Datos incompletos']);
-        }
-
-        $configuracionModel = new ConfiguracionModel();
-        $array = [
-            'id_planta' => $id_planta,
-            'nivel_minimo_humedad' => $nivelMinimo,
-            'nivel_maximo_humedad' => $nivelMaximo
-        ];
-
-        if ($configuracionModel->save($array)) {
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Configuración guardada correctamente']);
-        } else {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Error al guardar configuración']);
-        }
-    }
-}
+     // Método para mostrar la vista de configuración de humedad
+     public function configuracionvista($id_planta)
+     {
+         // Cargar la planta
+         $plantaModel = new \App\Models\PlantaModel();
+         $planta = $plantaModel->find($id_planta);
+ 
+         // Verificar si la planta existe
+         if (!$planta) {
+             return redirect()->to('/')->with('error', 'Planta no encontrada.');
+         }
+ 
+         // Cargar los datos de configuración de humedad si existen
+         $configuracionModel = new ConfiguracionModel();
+         $configuracion = $configuracionModel->where('id_planta', $id_planta)
+                                             ->orderBy('id_configuracion', 'DESC')
+                                             ->first();
+ 
+         // Pasar los datos a la vista
+         return view('configuracion_usuario', [
+             'planta' => $planta,
+             'configuracion' => $configuracion
+         ]);
+     }
+ 
+     // Método para guardar la configuración de humedad
+     public function guardarConfiguracion()
+     {
+         // Obtener los datos del formulario
+         $id_planta = $this->request->getPost('id_planta');
+         $nivelMinimo = $this->request->getPost('nivel_minimo_humedad');
+         $nivelMaximo = $this->request->getPost('nivel_maximo_humedad');
+ 
+         // Validar datos
+         if (!$id_planta || !$nivelMinimo || !$nivelMaximo) {
+             return redirect()->back()->with('error', 'Datos incompletos');
+         }
+ 
+         // Crear el modelo de configuración
+         $configuracionModel = new ConfiguracionModel();
+         $data = [
+             'id_planta' => $id_planta,
+             'nivel_minimo_humedad' => $nivelMinimo,
+             'nivel_maximo_humedad' => $nivelMaximo
+         ];
+ 
+         // Guardar la configuración
+         if ($configuracionModel->save($data)) {
+             return redirect()->to("/configuracion_usuario/{$id_planta}")->with('exito', 'Configuración guardada correctamente');
+         } else {
+             return redirect()->back()->with('error', 'Error al guardar configuración');
+         }
+     }
+ }

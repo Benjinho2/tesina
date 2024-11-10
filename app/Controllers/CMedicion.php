@@ -56,4 +56,27 @@ class CMedicion extends Controller
             return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontraron mediciones']);
         }
     }
+
+    // Método para mostrar el historial de mediciones en la vista
+    public function historialMediciones($id_planta)
+    {
+        $medicionModel = new MedicionModel();
+        
+        // Obtener las últimas 7 mediciones, ordenadas por fecha de forma descendente
+        $mediciones = $medicionModel->where('id_planta', $id_planta)
+                                    ->orderBy('fecha', 'DESC')
+                                    ->limit(7)
+                                    ->findAll();
+    
+        // Verificar si existen mediciones
+        if (empty($mediciones)) {
+            return redirect()->to('/')->with('error', 'No se encontraron mediciones para esta planta');
+        }
+    
+        // Pasar los datos a la vista
+        return view('historial-mediciones', [
+            'mediciones' => $mediciones
+        ]);
+    }
+    
 }

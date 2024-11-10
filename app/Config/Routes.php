@@ -18,9 +18,12 @@ $routes->get('consejo-truco', 'Home::consejo');
 
 
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
-$routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1');
-$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');  // Obtener configuración de riego
-$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');  // Guardar configuración de riego
+$routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1'); //ruta nodemcu
+$routes->get('historial-mediciones/(:num)', 'CMedicion::historialMediciones/$1'); //ruta vista
+
+$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1'); //ruta nodemcu
+$routes->get('configuracion_usuario/(:num)', 'CConfiguracion::configuracionvista/$1'); //ruta vista
+$routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
 
 
 

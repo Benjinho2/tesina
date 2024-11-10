@@ -41,11 +41,11 @@
                     <h3><?= $planta['nombre_planta']; ?></h3>
                     <p>Ubicación: <?= $planta['id_ubicacion'] == 1 ? 'Interior' : 'Exterior' ?></p>
                     
-                    <a href="<?= base_url('configuracion/' . $planta['id_planta']) ?>">
+                    <a href="<?= base_url('configuracion_usuario/' . $planta['id_planta']) ?>">
                         <button>Configurar Humedad</button>
                     </a>
 
-                    <a href="<?= base_url('mediciones/' . $planta['id_planta']) ?>">
+                    <a href="<?= base_url('historial-mediciones/' . $planta['id_planta']) ?>">
                         <button>Historial de medición</button>
                     </a>
 
