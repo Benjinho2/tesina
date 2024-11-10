@@ -6,19 +6,27 @@ use App\Models\ConfiguracionModel;
 
 class CConfiguracion extends BaseController
 {
-    // Método para obtener la configuración de la planta
+    // Método para obtener la configuración más reciente de la planta
     public function configuracion($id_planta)
     {
-        $configuracionModel = new ConfiguracionModel();
-        $configuracion = $configuracionModel->where('id_planta', $id_planta)->first();
+        try {
+            $configuracionModel = new ConfiguracionModel();
 
-        if ($configuracion) {
-            return $this->response->setJSON([
-                'nivel_minimo_humedad' => $configuracion['nivel_minimo_humedad'],
-                'nivel_maximo_humedad' => $configuracion['nivel_maximo_humedad']
-            ]);
-        } else {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontró configuración']);
+            // Obtener la configuración más reciente ordenando por id_configuracion en orden descendente
+            $configuracion = $configuracionModel->where('id_planta', $id_planta)
+                                                ->orderBy('id_configuracion', 'DESC') // Asegura obtener la más reciente
+                                                ->first();
+
+            if ($configuracion) {
+                return $this->response->setJSON([
+                    'nivel_minimo_humedad' => $configuracion['nivel_minimo_humedad'],
+                    'nivel_maximo_humedad' => $configuracion['nivel_maximo_humedad']
+                ]);
+            } else {
+                return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontró configuración']);
+            }
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Ocurrió un error: ' . $e->getMessage()]);
         }
     }
 
