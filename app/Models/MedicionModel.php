@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models;
+php
 
-use CodeIgniter\Model;
+namespace AppModels;
+
+use CodeIgniterModel;
 
 class MedicionModel extends Model
 {
@@ -13,18 +15,19 @@ class MedicionModel extends Model
     // Método para obtener todas las mediciones
     public function getMediciones()
     {
-        return $this->findAll();
-    }
-    
-     // Método para eliminar configuraciones por planta
-     public function eliminarMedicionesPorPlanta($id_planta) {
-        return $this->where('id_planta', $id_planta)->delete();
+        return $this-findAll();
     }
 
-      // Función para obtener las 10 mediciones más recientes
-      public function getUltimasMediciones($limit = 10)
-      {
-          return $this->orderBy('fecha', 'DESC')->findAll($limit);
-      }
+    // Función para obtener las 10 mediciones más recientes
+    public function getUltimasMediciones($limit = 10)
+    {
+        return $this-orderBy('fecha', 'DESC')-findAll($limit);
+    }
 
+    // Modificar la firma del método save()
+    public function save($data)// bool
+    {
+        log_message('error', 'Guardando medición ' . print_r($data, true)); // Agregar log para depurar
+        return parentsave($data);  //Llamar a la función save de la clase base
+    }
 }

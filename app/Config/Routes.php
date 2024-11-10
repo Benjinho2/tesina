@@ -16,13 +16,19 @@ $routes->get('como-funciona', 'Home::funcionamiento');
 $routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 
-// Nodemcu
+
+// Ruta para recibir mediciones (POST)
 $routes->post('recibir-medicion', 'CMedicion::recibirMedicion');
+
+// Ruta para mostrar mediciones específicas según el ID numérico (GET)
 $routes->get('mediciones/(:num)', 'CMedicion::mostrarMediciones/$1');
 
-// Funcionamiento Guardar configuración riego
-$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1'); 
+// Ruta para obtener configuración de riego para un usuario específico
+$routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
+
+// Ruta para guardar configuración de riego (POST)
 $routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
+
 
 
 // Funcionamiento de crear planta

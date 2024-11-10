@@ -1,13 +1,13 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
 use App\Models\ConfiguracionModel;
 use App\Models\PlantaModel;
-use CodeIgniter\Controller;
 
-class CConfiguracion extends Controller
-{   
+class CConfiguracion extends BaseController
+{
+    // Método para mostrar la configuración de la planta
     public function configuracion($id_planta) 
     {
         // Verifica si el usuario ya está autenticado
@@ -15,7 +15,7 @@ class CConfiguracion extends Controller
             return redirect()->to('/');
         }
 
-        $plantaModel = new PlantaModel;
+        $plantaModel = new PlantaModel();
         $id_usuario = session()->get('DatosUsuario')['id_usuario'];
         $planta = $plantaModel->obtenerPlantaPorIdYUsuario($id_planta, $id_usuario);
 
@@ -24,14 +24,23 @@ class CConfiguracion extends Controller
             return redirect()->to('/mi-planta');
         }
 
-        // Cargar la vista de configuración con los datos de la planta
+
+        if (!$configuracion) {
+            session()->setFlashdata('error', 'No se encontró configuración para esta planta.');
+            return redirect()->to('/mi-planta');
+        }
+
+        // Cargar la vista de configuración con los datos de la planta y configuración
         $datos['planta'] = $planta; // Pasar los datos de la planta a la vista
+        $datos['configuracion'] = $configuracion; // Pasar la configuración a la vista
+
+        // Retornar la vista con los datos
         return view('configuracion', $datos);
     }
 
+    // Método para guardar la configuración de humedad
     public function guardarConfiguracion()
     {
-
         $id_dispositivo = 1; // ID de dispositivo fijo
         $id_planta = $this->request->getPost('id_planta');
         $nivelMinimo = $this->request->getPost('nivel_minimo_humedad');
@@ -55,17 +64,22 @@ class CConfiguracion extends Controller
         return redirect()->to('/mi-planta');
     }
 
+    // Método para obtener la configuración de la planta
     public function obtenerConfiguracion($id_planta)
-{
-    $configuracionModel = new ConfiguracionModel();
-    $configuracion = $configuracionModel->obtenerConfiguracionPorPlantaYDispositivo($id_planta, 1); 
-
-    if ($configuracion) {
-        return $this->response->setJSON($configuracion);
-    } else {
-        return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontró configuración.']);
+    {
+        $configuracionModel = new ConfiguracionRiegoModel();  // Asegúrate de usar el modelo correcto
+        $configuracion = $configuracionModel->where('id_planta', $id_planta)
+                                            ->orderBy('id_configuracion', 'DESC') // Asegúrate de ordenar por el ID más reciente
+                                            ->first(); // Obtén el último registro
+    
+        if ($configuracion) {
+            return $this->response->setJSON([
+                'nivel_minimo_humedad' => $configuracion['nivel_minimo_humedad'],
+                'nivel_maximo_humedad' => $configuracion['nivel_maximo_humedad']
+            ]);
+        } else {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'No se encontró configuración.']);
+        }
     }
-}
-
     
 }
