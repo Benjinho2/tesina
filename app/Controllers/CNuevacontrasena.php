@@ -29,10 +29,10 @@ class CNuevacontrasena extends Controller
         $confirmarContrasena = $this->request->getPost('confirmar_contrasena');
 
         // Verificar el código
-        $codigoData = $codigoModel->obtenerUsuarioPorCodigoPorId($codigo);
+        $codigoData = $codigoModel->obtenerUsuarioPorCodigo($codigo);
 
         if (!$codigoData) {
-            session()->set('error', 'Código inválido o expirado.');
+            session()->set('error', 'Código incorrecto.');
             return redirect()->back();
         }
 
@@ -40,6 +40,7 @@ class CNuevacontrasena extends Controller
 
         // Verificar que la nueva contraseña no sea igual a la antigua
         $usuario = $usuarioModel->find($idUsuario);
+        
         if (password_verify($nuevaContrasena, $usuario['contraseña'])) {
             session()->set('error', 'La nueva contraseña no puede ser igual a la contraseña anterior.');
             return redirect()->back();

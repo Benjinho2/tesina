@@ -14,7 +14,7 @@ class CMedicion extends Controller
         $id_planta = $this->request->getPost('id_planta');
         $humedad = $this->request->getPost('humedad');
         $id_usuario = $this->request->getPost('id_usuario');
-
+        
         // Validar los datos (por ejemplo, asegurarse de que la humedad esté en el rango adecuado)
         if (is_numeric($humedad) && $humedad >= 0 && $humedad <= 100) {
             // Guardar la medición en la base de datos
@@ -37,8 +37,8 @@ class CMedicion extends Controller
     public function mostrarMediciones($id_planta)
     {
         $medicionModel = new MedicionModel();
-        $mediciones = $medicionModel->where('id_planta', $id_planta)->findAll();
-
+        $mediciones = $medicionModel->obtenerMedicionesPorPlanta($idPlanta);
+        
         // Verificamos que haya mediciones
         if (!empty($mediciones)) {
             // Mapeamos solo los campos necesarios (id_planta, humedad, id_usuario y fecha)
@@ -62,15 +62,11 @@ class CMedicion extends Controller
     {
         $medicionModel = new MedicionModel();
         
-        // Obtener las últimas 7 mediciones, ordenadas por fecha de forma descendente
-        $mediciones = $medicionModel->where('id_planta', $id_planta)
-                                    ->orderBy('fecha', 'DESC')
-                                    ->limit(7)
-                                    ->findAll();
-    
+        $mediciones = $medicionModel->obtenerUltimasMediciones($id_planta);
+
         // Verificar si existen mediciones
         if (empty($mediciones)) {
-            return redirect()->to('/')->with('error', 'No se encontraron mediciones para esta planta');
+            return redirect()->to('/mi-planta')->with('error', 'No se encontraron mediciones para esta planta');
         }
     
         // Pasar los datos a la vista

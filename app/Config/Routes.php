@@ -13,7 +13,6 @@ $routes->get('contacto', 'Home::contacto');
 $routes->get('sobrenosotros', 'Home::sobrenosotros');
 $routes->get('mi-planta', 'CPlanta::miplanta');
 $routes->get('como-funciona', 'Home::funcionamiento');
-$routes->get('historial', 'CHistorial::historial');
 $routes->get('consejo-truco', 'Home::consejo');
 
 
@@ -26,16 +25,12 @@ $routes->get('configuracion_usuario/(:num)', 'CConfiguracion::configuracionvista
 $routes->post('guardarConfiguracion', 'CConfiguracion::guardarConfiguracion');
 
 
-
-
 // Funcionamiento de crear planta
 $routes->post('crearPlanta', 'CPlanta::crearPlanta');
 
 // Funcionamiento de crear planta
 $routes->get('/eliminar-planta/(:num)', 'CPlanta::eliminarPlanta/$1');
-$routes->get('/visualizarDatos/(:num)', 'CLectura::visualizarDatos/$1');
 $routes->get('configuracion/(:num)', 'CConfiguracion::configuracion/$1');
-$routes->get('historial/(:num)', 'CHistorial::historial/$1');
 
 // Vista del Login ,Register 
 $routes->get('autenticacion/login', 'CAutenticacion::login');

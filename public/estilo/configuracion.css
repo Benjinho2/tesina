@@ -77,3 +77,23 @@ button:hover {
 button:active {
     transform: translateY(0); /* Efecto de retorno al hacer clic */
 }
+
+/* Alerta de éxito */
+.alert {
+    padding: 15px;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.alert-exito {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    width: 100%;
+    text-align: center;
+}

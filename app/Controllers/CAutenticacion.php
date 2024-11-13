@@ -87,7 +87,7 @@ class CAutenticacion extends BaseController
         }
             session()->set('Tipo', 'Usuario');
             session()->set('DatosUsuario', $informacionUsuario);
-            return redirect()->to('/');
+            return redirect()->to('/perfil');
     }
     
     public function cerrarSesion()

@@ -14,6 +14,11 @@ class PlantaModel extends Model
         return $this->insert($array);
     }
     
+        public function obtenerPlantaPorId($id_planta)
+    {
+        return $this->find($id_planta);
+    }
+
     // Obtener todas las plantas del usuario
     public function obtenerPlantasPorUsuario($id_usuario)
     {

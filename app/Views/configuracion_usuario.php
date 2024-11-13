@@ -12,11 +12,10 @@
 <body>
     <?= $this->include('common/header'); ?>
     <main>
-        <h1>Configuración de Humedad para <?= $planta['nombre_planta']; ?></h1>
-
+        
         <!-- Mensajes de éxito o error -->
         <?php if (session()->get('exito')): ?>
-            <div class="alert alert-success">
+            <div class="alert alert-exito">
                 <?= session()->get('exito'); ?>
                 <?php session()->remove('exito'); ?>
             </div>
@@ -28,16 +27,17 @@
                 <?php session()->remove('error'); ?>
             </div>
         <?php endif; ?>
+        <h1>Configuración de Humedad para <?= $planta['nombre_planta']; ?></h1>
 
         <form action="<?= base_url('guardarConfiguracion') ?>" method="post">
             <input type="hidden" name="id_planta" value="<?= $planta['id_planta']; ?>">
             
             <label for="nivel_minimo_humedad">Nivel Mínimo de Humedad (%):</label>
-            <input type="number" id="nivel_minimo_humedad" name="nivel_minimo_humedad" required placeholder="Ejemplo: 30">
+            <input type="number" id="nivel_minimo_humedad" name="nivel_minimo_humedad" required placeholder="Recomendamos a partir de un 30">
             <br>
             
             <label for="nivel_maximo_humedad">Nivel Máximo de Humedad (%):</label>
-            <input type="number" id="nivel_maximo_humedad" name="nivel_maximo_humedad" required placeholder="Ejemplo: 70">
+            <input type="number" id="nivel_maximo_humedad" name="nivel_maximo_humedad" required placeholder="Recomendamos un máximo de 70">
             <br>
             
             <button type="submit">Guardar Configuración</button>
@@ -58,6 +58,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

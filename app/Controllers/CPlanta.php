@@ -29,7 +29,7 @@ class CPlanta extends Controller
         }
 
         // Obtener todas las ubicaciones para el formulario
-        $data['ubicaciones'] = $ubicacionModel->findAll();
+        $data['ubicaciones'] = $ubicacionModel->obtenerTodasLasUbicaciones();
 
         return view('mi-planta', $data);
     }

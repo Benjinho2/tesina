@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ConfiguracionModel;
+use App\Models\PlantaModel;
 
 class CConfiguracion extends BaseController
 {
@@ -12,10 +13,7 @@ class CConfiguracion extends BaseController
         try {
             $configuracionModel = new ConfiguracionModel();
 
-            // Obtener la configuración más reciente ordenando por id_configuracion en orden descendente
-            $configuracion = $configuracionModel->where('id_planta', $id_planta)
-                                                ->orderBy('id_configuracion', 'DESC') // Asegura obtener la más reciente
-                                                ->first();
+            $configuracion = $configuracionModel->obtenerUltimaConfiguracion($id_planta);
 
             if ($configuracion) {
                 return $this->response->setJSON([
@@ -35,9 +33,9 @@ class CConfiguracion extends BaseController
      public function configuracionvista($id_planta)
      {
          // Cargar la planta
-         $plantaModel = new \App\Models\PlantaModel();
-         $planta = $plantaModel->find($id_planta);
- 
+         $plantaModel = new PlantaModel();
+         $planta = $plantaModel->obtenerPlantaPorId($id_planta);
+
          // Verificar si la planta existe
          if (!$planta) {
              return redirect()->to('/')->with('error', 'Planta no encontrada.');
@@ -45,10 +43,8 @@ class CConfiguracion extends BaseController
  
          // Cargar los datos de configuración de humedad si existen
          $configuracionModel = new ConfiguracionModel();
-         $configuracion = $configuracionModel->where('id_planta', $id_planta)
-                                             ->orderBy('id_configuracion', 'DESC')
-                                             ->first();
- 
+         $configuracion = $configuracionModel->obtenerUltimaConfiguracion($id_planta);
+
          // Pasar los datos a la vista
          return view('configuracion_usuario', [
              'planta' => $planta,
@@ -71,14 +67,15 @@ class CConfiguracion extends BaseController
  
          // Crear el modelo de configuración
          $configuracionModel = new ConfiguracionModel();
-         $data = [
+         $array = 
+         [
              'id_planta' => $id_planta,
              'nivel_minimo_humedad' => $nivelMinimo,
              'nivel_maximo_humedad' => $nivelMaximo
          ];
  
          // Guardar la configuración
-         if ($configuracionModel->save($data)) {
+         if ($configuracionModel->insertarDatos($array)) {
              return redirect()->to("/configuracion_usuario/{$id_planta}")->with('exito', 'Configuración guardada correctamente');
          } else {
              return redirect()->back()->with('error', 'Error al guardar configuración');

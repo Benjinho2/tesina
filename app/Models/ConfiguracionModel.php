@@ -10,8 +10,19 @@ class ConfiguracionModel extends Model
     protected $primaryKey = 'id_configuracion';  // Campo de clave primaria
     protected $allowedFields = ['id_planta', 'nivel_minimo_humedad', 'nivel_maximo_humedad']; // Campos a permitir
 
-    // Si necesitas configurar el acceso de las fechas, puedes incluir los campos creados y actualizados
-    // protected $useTimestamps = true;
-    // protected $createdField  = 'created_at';
-    // protected $updatedField  = 'updated_at';
+    public function obtenerUltimaConfiguracion($id_planta)
+    {
+        return $this->where('id_planta', $id_planta)
+                    ->orderBy('id_configuracion', 'DESC')
+                    ->first();
+    }
+    
+    public function insertarDatos($array)
+    {
+        return $this->insert($array);
+    }
+    public function eliminarConfiguracionesPorPlanta($idPlanta) {
+        // Realizar la eliminación
+        return $this->where('id_planta', $idPlanta)->delete();
+    }
 }

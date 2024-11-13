@@ -50,7 +50,7 @@ class CCorreo extends Controller{
             $email->setFrom('aquabotinfo@gmail.com', 'AquaBot');
             $email->setTo($emailUsuario);
             $email->setSubject('Código de verificación para restablecer contraseña');
-            $email->setMessage("Use el siguiente código para restablecer su contraseña: $codigo. El código es válido por 15 minutos.");
+            $email->setMessage("Use el siguiente código para restablecer su contraseña: $codigo");
     
             if ($email->send()) {
                 session()->set('exito',  'Ingresa el código enviado por email.');
